@@ -1,3 +1,9 @@
+
+#  The following article looks to describe the cutting edge training/modeling params
+
+#    https://erogol.com/solving-attention-problems-of-tts-models-with-double-decoder-consistency/
+
+
 ####
 # Switch to a python under your own control (e.g. through VirtualEnv)
 ####
