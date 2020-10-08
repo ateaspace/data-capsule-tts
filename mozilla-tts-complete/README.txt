@@ -1,18 +1,126 @@
+####
+# Switch to a python under your own control (e.g. through VirtualEnv)
+####
 
-git clone https://github.com/mozilla/TTS.git
-
-# sudo apt-get install python3-pip
-sudo apt-get install python3-venv
+  # sudo apt-get install python3-pip
+  sudo apt-get install python3-venv
 
 python3 -mvenv `pwd`/virtualenv-python3
 
-mkdir /mnt/disks/atea-scratch/davidb-home
-mkdir/mnt/disks/atea-scratch/tmp
+  mkdir /mnt/disks/atea-scratch/davidb-home
+  mkdir/mnt/disks/atea-scratch/tmp
 
 export HOME=/mnt/disks/atea-scratch/davidb-home
 export TMPDIR=/mnt/disks/atea-scratch/tmp
 
 . virtualenv-python3/bin/activate
+
+####
+
+
+git clone https://github.com/mozilla/TTS.git TTS-c7296b3
+
+git checkout c7296b3
+
+# pip3 install wheel
+## pip3 install torch
+
+pip install -r requirements.txt
+
+# python3 setup.py develop
+python setup.py install
+
+
+# sudo apt-get install espeak
+
+#  # The following is probably already installed via requirements.txt, but safety first ...
+#  pip3 install soundfile
+
+
+# If looking to control version of tensorflow to match a model downloaded via gdown ...
+# e.g., for TFlite example page that the time of writing
+
+# pip install tensorflow==2.3.0rc0
+
+
+
+cd ..
+
+
+####
+# Synthesize speech example
+####
+
+pwd
+
+# /home/davidb/research/code-managed/data-capsule-tts/mozilla-tts-complete
+
+
+#  https://github.com/mozilla/TTS/blob/master/notebooks/DDC_TTS_and_MultiBand_MelGAN_Example.ipynb
+
+mkdir data-pytorch
+pip install gdown
+
+gdown --id 1dntzjWFg7ufWaTaFy80nRz-Tu02xWZos -O data-pytorch/tts_model.pth.tar
+gdown --id 18CQ6G6tBEOfvCHlPqP8EBI4xWbrr9dBc -O data-pytorch/config.json
+
+gdown --id 1Ty5DZdOc0F7OTGj9oJThYbL5iVu_2G0K -O data-pytorch/vocoder_model.pth.tar
+gdown --id 1Rd0R_nRCrbjEdpOwq6XwZAktvugiBvmu -O data-pytorch/config_vocoder.json
+gdown --id 11oY3Tv0kQtxK_JPgxrfesa99maVXHNxU -O data-pytorch/scale_stats.npy
+
+
+./RUN-TTS-PYTORCH.py
+
+# Takes a few seconds to run, generate as ouput:
+#
+#   test-pytorch--bill-got.wav
+
+
+####
+# Training
+####
+
+
+#  https://gist.github.com/erogol/97516ad65b44dbddb8cd694953187c5b
+#
+#  LJSpeech-1.1 is an example dataset of audio recordings used to train Mozilla TTS
+
+
+  mkdir Data
+  cd Data
+
+  wget https://data.keithito.com/data/speech/LJSpeech-1.1.tar.bz2
+  tar xvjf LJSpeech-1.1.tar.bz2 
+
+  cd ..
+
+./GEN-TRAIN-AND-VAL-SETS.sh 
+
+  cd data-pytorch
+  ./GEN-CONFIG-MTTS.sh
+  cd ..
+  
+  mkdir Models
+  mkdir Models/LJSpeech
+  mkdir phoneme-cache
+
+
+
+######
+
+#scale_stats.npy
+
+# erogol commented on 19 Aug
+#
+# scale stats is the mean spectrogram frame therefore anythong about spec. computation pertains it.
+#
+# You can compute it yourself using ```bin/compute_statistics.py`` for your dataset.
+#
+# I'll share the model I've trained which will include the file for LibriTTS
+
+
+#######
+
 
 cd TTS
 
@@ -26,10 +134,7 @@ cd TTS
   python ./setup.py install
 
 
-  sudo apt-get install espeak
 
-  # The following is probably already installed via requirements.txt, but safety first ...
-  pip3 install soundfile
 
 
 # To run some of the Jupyter notebooks
@@ -68,6 +173,4 @@ pwd
 =====
 Training
 
-  https://gist.github.com/erogol/97516ad65b44dbddb8cd694953187c5b
 
-  LJSpeech-1.1 is an example dataset of audio recordings used to train Mozilla TTS
