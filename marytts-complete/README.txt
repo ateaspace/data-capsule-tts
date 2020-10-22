@@ -1,4 +1,4 @@
-
+########
 # Project recommends working with 5.x release if looking to use their language
 # building tools
 
@@ -13,8 +13,9 @@ export PATH=$JAVA_HOME/bin:$PATH
 ##   JDK1.11 resulted in the following maven/JAXBException
 ##    [ERROR] Failed to execute goal org.apache.maven.plugins:maven-failsafe-plugin:2.20:integration-test (integration-test) on project marytts: Execution integration-test of goal org.apache.maven.plugins:maven-failsafe-plugin:2.20:integration-test failed: A required class was missing while executing org.apache.maven.plugins:maven-failsafe-plugin:2.20:integration-test: javax/xml/bind/JAXBException
 
-
+#
 # If you need maven:
+#
   wget https://apache.inspire.net.nz/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz
   tar xvzf apache-maven-3.6.3-bin.tar.gz 
   cd apache-maven-3.6.3/
@@ -22,8 +23,18 @@ export PATH=$JAVA_HOME/bin:$PATH
   export PATH=`pwd`:$PATH
   cd ../..
 
+#
+# If worried about how much disk space maven will use downloading packages
+# into your home rea
+#
+  mkdir /Scratch/$USER/scratch-home
+  export HOME=/Scratch/$USER/scratch-home
 
-# Check out and compile
+
+#
+# Check out and compile tagged release 5.x
+#
+
 git clone https://github.com/marytts/marytts.git marytts-5x
 
 cd marytts-5x
@@ -33,7 +44,8 @@ maven install
 
 
 
-# To run the latest version
+########
+# To run the latest version 
 
 git clone https://github.com/marytts/marytts.git
 
