@@ -3,11 +3,25 @@
 # building tools
 
 # For that, need older version of Java
-# JDK1.8 was found to be suitable (JDK1.11 resulted in a maven/Java Bean error)
+#   JDK1.8 was found to be suitable but *not* JDK1.11
 
 sudo apt-get install openjdk-8-jdk
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/
 export PATH=$JAVA_HOME/bin:$PATH
+
+# Note:
+##   JDK1.11 resulted in the following maven/JAXBException
+##    [ERROR] Failed to execute goal org.apache.maven.plugins:maven-failsafe-plugin:2.20:integration-test (integration-test) on project marytts: Execution integration-test of goal org.apache.maven.plugins:maven-failsafe-plugin:2.20:integration-test failed: A required class was missing while executing org.apache.maven.plugins:maven-failsafe-plugin:2.20:integration-test: javax/xml/bind/JAXBException
+
+
+# If you need maven:
+  wget https://apache.inspire.net.nz/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz
+  tar xvzf apache-maven-3.6.3-bin.tar.gz 
+  cd apache-maven-3.6.3/
+  cd bin/
+  export PATH=`pwd`:$PATH
+  cd ../..
+
 
 # Check out and compile
 git clone https://github.com/marytts/marytts.git marytts-5x
