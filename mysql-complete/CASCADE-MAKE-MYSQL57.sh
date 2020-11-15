@@ -1,24 +1,25 @@
 #!/bin/bash
 
-if [ ! -d mysql-server-v5.7 ] ; then
-    echo "git clone https://github.com/mysql/mysql-server.git mysql-server-v5.7"
-    git clone https://github.com/mysql/mysql-server.git mysql-server-v5.7
+source ./SETUP.bash
+
+package_version="mysql-server-v5.7"
+
+if [ ! -d $package_version ] ; then
+    echo "git clone https://github.com/mysql/mysql-server.git $package_version"
+    git clone https://github.com/mysql/mysql-server.git $package_version
     
     # To change to version v5.7
 
-    cd mysql-server-v5.7 \
+    cd $package_version \
 	&& git checkout 5.7
 fi
 
-if [ ! -d mysql-server-v5.7/bld ] ; then
+if [ ! -d $package_version/bld ] ; then
     echo "Making directory:"
-    echo "  mysql-server-v5.7/bld"
+    echo "  $package_version/bld"
 fi
 
-#mkdir bld \
-#    && cd bld/
-
-cd "mysql-server-v5.7/bld" && \
+cd "$package_version/bld" && \
     cmake .. -DDOWNLOAD_BOOST=1 -DWITH_BOOST=$MYSQL_COMPLETE_HOME/boost \
       -DWITH_SSL=$MYSQL_COMPLETE_INSTALLED \
       -DCURSES_LIBRARY=$MYSQL_COMPLETE_INSTALLED/lib/libncurses.a \
@@ -27,8 +28,30 @@ cd "mysql-server-v5.7/bld" && \
       -DCMAKE_C_FLAGS_RELWITHDEBINFO="-I$MYSQL_COMPLETE_INSTALLED/include/ncurses -O2 -g -DNDEBUG -DHAVE_TERMCAP_H=1" \
       -DCMAKE_INSTALL_PREFIX=$MYSQL_COMPLETE_INSTALLED/mysql
 
-cd "mysql-server-v5.7/bld" && \
-    make && \
+if [ $? != "0" ] ; then
+    echo "****" >&2
+    echo "* Error: failed to run 'cmake'" >&2
+    echo "****" >&2
+    exit 1
+fi
+
+cd "$package_version/bld" && \
+    make
+
+if [ $? != "0" ] ; then
+    echo "****" >&2
+    echo "* Error: failed to run 'make'" >&2
+    echo "****" >&2
+    exit 1
+fi
+
+
+cd "$package_version/bld" && \
     make install
 
-
+if [ $? != "0" ] ; then
+    echo "****" >&2
+    echo "* Error: failed to run 'make install'" >&2
+    echo "****" >&2
+    exit 1
+fi
