@@ -11,7 +11,7 @@ export CFLAGS="-fPIC -I$MYSQL_COMPLETE_INSTALLED/include -I$MYSQL_COMPLETE_INSTA
 export LDFLAGS="-L$MYSQL_COMPLETE_INSTALLED/lib"
 
 cd libedit-20191231-3.1 \
-    && ./configure --prefix=$MYSQL_COMPLETE_INSTALLED \
+    && ./configure --prefix=$MYSQL_COMPLETE_INSTALLED --disable-shared \
     && make \
     && make install
 

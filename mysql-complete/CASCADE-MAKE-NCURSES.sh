@@ -13,7 +13,7 @@ fi
 export CFLAGS="-fPIC"
 
 cd ncurses-5.9 \
-    && ./configure --prefix=$MYSQL_COMPLETE_INSTALLED --without-cxx-binding \
+    && ./configure --prefix=$MYSQL_COMPLETE_INSTALLED --without-cxx-binding --disable-shared \
     && make \
     && make install
 
