@@ -7,62 +7,75 @@
 #   https://dev.mysql.com/doc/mysql-sourcebuild-excerpt/8.0/en/installing-source-distribution.html
 
 # 'cmake' and 'gcc' are key for linux
+#
+# For building on Ubuntu (and quite likely other Linux distributions)
+# the source code to other required command-line tools and libraries
+# are provided here, and compile up through the scripts as detailed
+# below
 
+####
 # TLDR:
+
+# Review in a text edit, and adjust as needed:
+
+emacs _MYSQL-SETTINGS.bash
+
+
+# 1. Compiling
+
+  ./CASCADE-MAKE-ALL.sh
+
+# Then wait for a while, the mysql compliation in particular takes a while
+
+
+# 2. Init mysql and get server running
+
+  ./MYSQLD-INIT.sh
+  ./MYSQLD-RUN-SERVER.sh
+
+
+# 3. Connect to mysqld via the command-line
+
+  ./MYSQL-RUN-CLIENT.sh
+  
+
+####
+
+# In more detail ...
+
+# Concerning the compilation of mysql from source:
 #   You can trigger downloading 'boost' when mysql is configured with 'cmake'
 #   But you need to manually install the following if not already present:
 #     openssl, m4, bison, ncurses 
 #   See above web page for minimum version numbers
 #
 #   Appropriate *.tar.gz files for the above have already been downloaded and
-#   git commited into this folder for convenience, so the 'wget' lines can be
-#   skipped
-#   
+#   git commited into this folder for convenience.
+#
+#   The "cascade-make" scripts have been writting the run a wget command
+#   to download the source code tar-ball if not present on the system, and
+#   at the top of the script they use the variable 'package_version' to
+#   simplify the process of working with a different version number of the
+#   package source code, as/if needed.
 
 
 source ./SETUP.bash
 
-# wget "https://www.openssl.org/source/openssl-1.1.1h.tar.gz"
-tar xvzf openssl-1.1.1h.tar.gz
-cd openssl-1.1.1h/
-./config --prefix=$MYSQL_COMPLETE_INSTALLED
-make
-make install
+./CASCADE-MAKE-OPENSSL.sh
 
+# Note: The following runs a patch file after untarring as part of the script
+./CASCADE-MAKE-NURSES.sh
 
-# wget "https://ftp.gnu.org/pub/gnu/ncurses/ncurses-5.9.tar.gz"
-tar xvzf ncurses-5.9.tar.gz
+# To compile up mysql, need 'bison' on your PATH, however to compile up
+# bison that needs 'm4'
 
-# Apply patch to fix up MKlib_gen.sh within ncurses
-./APPLY-PATCH.sh
-
-cd ncurses-5.9/
-./configure --prefix=$MYSQL_COMPLETE_INSTALLED --without-cxx-binding
-make
-make install
-
-# To compile up mysql, need 'bison' on your PATH,
-# however to compile up bison that needs 'm4' 
-
-# wget "https://ftp.gnu.org/gnu/m4/m4-1.4.18.tar.gz"
-tar xvzf m4-1.4.18.tar.gz
-cd m4-1.4.18/
-./configure --prefix=$MYSQL_COMPLETE_INSTALLED
-make
-make install
-cd ..
-
-
-# wget "https://ftp.gnu.org/gnu/bison/bison-3.7.tar.gz"
-tar xvzf bison-3.7.tar.gz
-cd bison-3.7/
-make
-make install
-
+./CASCADE-MAKE-M4.sh
+./CASCADE-MAKE-BISON.sh
 
 
 # Compiling up mysql instructions adapted from:
 #   https://dev.mysql.com/doc/mysql-sourcebuild-excerpt/8.0/en/installing-source-distribution.html
+
 
 # Don't believe the demands on the mysql are that great, and so focus
 # in on a good-old fashioned stable version: v5.7
