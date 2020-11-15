@@ -11,7 +11,8 @@ if [ ! -d $package_version ] ; then
     # To change to version v5.7
 
     cd $package_version \
-	&& git checkout 5.7
+	&& git checkout 5.7 \
+	&& cd ..
 fi
 
 if [ ! -d $package_version/bld ] ; then
@@ -19,6 +20,7 @@ if [ ! -d $package_version/bld ] ; then
     echo "  $package_version/bld"
     mkdir "$package_version/bld"
 fi
+
 
 cd "$package_version/bld" && \
     cmake .. -DDOWNLOAD_BOOST=1 -DWITH_BOOST=$MYSQL_COMPLETE_HOME/boost \
