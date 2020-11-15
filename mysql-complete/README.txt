@@ -73,86 +73,51 @@ source ./SETUP.bash
 ./CASCADE-MAKE-BISON.sh
 
 
+####
+# MySQL Compilation
+####
+
 # Compiling up mysql instructions adapted from:
 #   https://dev.mysql.com/doc/mysql-sourcebuild-excerpt/8.0/en/installing-source-distribution.html
 
+./CASCADE-MAKE-MYSQL57.sh
 
-# Don't believe the demands on the mysql are that great, and so focus
-# in on a good-old fashioned stable version: v5.7
+####
+# MySQL Init/Setup
+####
 
-git clone https://github.com/mysql/mysql-server.git mysql-server-v5.7
+# Look at _MYSQL-SETTINGS.bash to check the values specified there work for
+# your computer's setup
 
-# Optional: To look at the branches available:
-cd mysql-server-v5.7 \
-  && git branch -r \
-  && cd ..
+# The following script:
+#  i)   creates a data directory,
+#  ii)  runs 'mysqld' with the --initialize flag on,
+#         which in turn populates the data directory and terminates by printing out
+#         the temporary 'root' password it has set
+#  iii) tops up the data directory with SSL RSA based authentication init/setup
 
-# To change to version v5.7
+./MYSQLD-INIT.sh
 
-cd mysql-server-v5.7 \
- && git checkout 5.7
+###
+# Running the MySQL server
+###
 
-mkdir bld \
-  && cd bld/
-
-cmake .. -DDOWNLOAD_BOOST=1 -DWITH_BOOST=$MYSQL_COMPLETE_HOME/boost \
-  -DWITH_SSL=$MYSQL_COMPLETE_INSTALLED \
-  -DCURSES_LIBRARY=$MYSQL_COMPLETE_INSTALLED/lib/libncurses.a \
-  -DCURSES_INCLUDE_PATH=$MYSQL_COMPLETE_INSTALLED/include \
-  -DCMAKE_C_FLAGS="-I$MYSQL_COMPLETE_INSTALLED/include/ncurses -DHAVE_TERMCAP_H=1" \
-  -DCMAKE_C_FLAGS_RELWITHDEBINFO="-I$MYSQL_COMPLETE_INSTALLED/include/ncurses -O2 -g -DNDEBUG -DHAVE_TERMCAP_H=1" \
-  -DCMAKE_INSTALL_PREFIX=$MYSQL_COMPLETE_INSTALLED/mysql
-
-
-
-
-
-
-cmake .. -DDOWNLOAD_BOOST=1 -DWITH_BOOST=$MYSQL_COMPLETE_HOME/boost \
-  -DWITH_SSL=$MYSQL_COMPLETE_INSTALLED \
-  -DCURSES_LIBRARY=$MYSQL_COMPLETE_INSTALLED/lib/libncurses.a \
-  -DCURSES_INCLUDE_PATH=$MYSQL_COMPLETE_INSTALLED/include/ \
-  -DWITH_EDITLINE=system \
-  -DEDITLINE_INCLUDE_DIR=$MYSQL_COMPLETE_INSTALLED/include/ \
-  -DEDITLINE_LIBRARY=$MYSQL_COMPLETE_INSTALLED/lib/libedit.a \
-  -DCMAKE_C_FLAGS="-I$MYSQL_COMPLETE_INSTALLED/include/ -I$MYSQL_COMPLETE_INSTALLED/include/ncurses -I$MYSQL_COMPLETE_INSTALLED/include/editline" \
-  -DCMAKE_CXX_FLAGS="-I$MYSQL_COMPLETE_INSTALLED/include/ -I$MYSQL_COMPLETE_INSTALLED/include/ncurses -I$MYSQL_COMPLETE_INSTALLED/include/editline" \
-  -DCMAKE_LD_FLAGS="-L$MYSQL_COMPLETE_INSTALLED/lib" \
-  -DCMAKE_INSTALL_PREFIX=$MYSQL_COMPLETE_INSTALLED/mysql
-
-  -DCMAKE_C_FLAGS_RELWITHDEBINFO="-I$MYSQL_COMPLETE_INSTALLED/include/ncurses -DTERMCAP_H=1 -O2 -g -DNDEBUG" \
-
-
-make
-make install 
+./MYSQLD-RUN-SERVER.sh
 
 
 ####
-# Setup
+# Connecting to the MySQL server
 ####
 
-cd "$MYSQL_COMPLETE_INSTALLED/mysql"
-
-# The following is not currently used, could it be the implicit
-# default name of what becomes the 'data' directory??
-
-mkdir mysql-files
-
-# Following needed if running mysqld as a different user
-#   chown mysql:mysql mysql-files
-#   chmod 750 mysql-files
-
-# Initialize database tables in 'data' area on file-system
-bin/mysqld --initialize --user=davidb --port=6606 --datadir=`pwd`/data
-
-# => take not of temporary password it generates
-
-# RSA init/setup/topup
-bin/mysql_ssl_rsa_setup --datadir=`pwd`/data
+./MYSQL-RUN-CLIENT.sh
 
 
-####
-# Running
+
+
+
+
+
+
 ####
 
 # In theory, you would then run the following command using the
