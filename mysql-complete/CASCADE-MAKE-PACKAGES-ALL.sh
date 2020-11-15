@@ -1,0 +1,5 @@
+
+./CASCADE-MADE-OPENSSL.sh \
+    && ./CASCADE-MADE-NCURSES.sh \
+    && ./CASCADE-MADE-M4.sh \
+    && ./CASCADE-MADE-BISON.sh
