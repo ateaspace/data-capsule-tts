@@ -17,6 +17,7 @@ fi
 if [ ! -d $package_version/bld ] ; then
     echo "Making directory:"
     echo "  $package_version/bld"
+    mkdir "$package_version/bld"
 fi
 
 cd "$package_version/bld" && \
@@ -35,8 +36,8 @@ if [ $? != "0" ] ; then
     exit 1
 fi
 
-cd "$package_version/bld" && \
-    make
+
+make
 
 if [ $? != "0" ] ; then
     echo "****" >&2
@@ -45,9 +46,7 @@ if [ $? != "0" ] ; then
     exit 1
 fi
 
-
-cd "$package_version/bld" && \
-    make install
+make install
 
 if [ $? != "0" ] ; then
     echo "****" >&2

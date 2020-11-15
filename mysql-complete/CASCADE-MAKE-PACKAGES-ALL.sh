@@ -1,5 +1,5 @@
 
-./CASCADE-MADE-OPENSSL.sh \
-    && ./CASCADE-MADE-NCURSES.sh \
-    && ./CASCADE-MADE-M4.sh \
-    && ./CASCADE-MADE-BISON.sh
+./CASCADE-MAKE-OPENSSL.sh \
+    && ./CASCADE-MAKE-NCURSES.sh \
+    && ./CASCADE-MAKE-M4.sh \
+    && ./CASCADE-MAKE-BISON.sh
