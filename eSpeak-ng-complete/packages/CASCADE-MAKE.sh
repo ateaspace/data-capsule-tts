@@ -2,7 +2,7 @@
 
 source ../cascade-make/lib/cascade-lib.bash $*
 
-for d in M4 AUTOCONF AUTOMAKE LIBTOOL PKG-CONFIG ALSA PCAUDIO ESPEAK-NG ; do
+for d in MAKE M4 AUTOCONF AUTOMAKE LIBTOOL PKG-CONFIG ALSA PCAUDIO ESPEAK-NG ; do
     echo "    Running CASCADE-MAKE-SCRIPTS/$d.sh"
 
     ./CASCADE-MAKE-SCRIPTS/$d.sh $*

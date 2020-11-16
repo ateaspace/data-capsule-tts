@@ -233,14 +233,11 @@ opt_run_configure()
     local version=$1; shift
     local prefix=$1; shift
 
-    # Check to see if a configure file actually exists
-    if [ ! -e "${package}${version}/configure"] ; then
-        print_error "A configuration file does not exist for $progname"
-    fi
-
-    # Check to see if we actually need to run the configuration
+    # Check to see if we actually need to run the configuration, and if so that we can
     if [ $auto_config = "1" ] ; then
-        if [ ! -e "${package}${version}/Makefile" ] &&  [ ! -e "${package}${version}/config.h" ] ; then
+        if [ ! -e "${package}${version}/configure" ] ; then
+            print_error "A configuration file does not exist for $progname"
+        elif [ ! -e "${package}${version}/Makefile" ] &&  [ ! -e "${package}${version}/config.h" ] ; then
             force_config=1
         else
             print_info "Found makefile for ${progname%.*} => no need to run ./configure"
@@ -268,14 +265,11 @@ opt_run_autogen() {
     local package=$1; shift
     local version=$1; shift
 
-    # Check to see if an autogen file actually exists
-    if [ ! -e "${package}${version}/autogen.sh"] ; then
-        print_error "A configuration file does not exist for $progname"
-    fi
-
-    # Check to see if we actually need to run the autogen
+    # Check to see if we actually need to run the autogen, and if so that we can
     if [ $auto_autogen = "1" ] ; then
-        if [ ! -e "${package}${version}/configure" ] ; then
+        if [ ! -e "${package}${version}/autogen.sh" ] ; then
+            print_error "A configuration file does not exist for $progname"
+        elif [ ! -e "${package}${version}/configure" ] ; then
             force_autogen=1
         else
             print_info "Found configuration file for ${progname%.*} => no need to run ./autogen.sh"
