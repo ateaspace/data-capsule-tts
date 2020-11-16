@@ -386,9 +386,38 @@ run_installclean()
 # Displays usage information for the script
 print_usage()
 {
-    echo "$0 [untar|autogen|configure|compile|install|clean|distclean|tarclean|makedist|makeminimal]+"
-    echo "    or"
-    echo "$0 [installclean|help]"
+    if [ -z "$1" ] ; then
+        echo "Usage: $0 [untar|autogen|configure|compile|install|clean|distclean|tarclean|makedist|makeminimal|installclean|help]"
+        echo "Run $0 help [command] to get information about each command"
+    elif [ "$1" == "untar" ] ; then
+        echo "$0 untar"
+        echo "Extracts a package from its tarball, overwriting any existing extractions"
+    elif [ "$1" == "autogen" ] ; then
+        echo "$0 autogen"
+        echo "Runs the autogen script of a package, if it exists"
+    elif [ "$1" == "configure" ] ; then
+        echo "$0 configure"
+        echo "Runs the configure script of a package, if it exists"
+    elif [ "$1" == "compile" ] ; then
+        echo "$0 compile"
+        echo "Runs the make script of a package, if it exists"
+    elif [ "$1" == "install" ] ; then
+        echo "$0 install"
+        echo "Runs make install on a package"
+    elif [ "$1" == "clean" ] ; then
+        echo "$0 clean"
+        echo "Runs make clean a package, allowing for a clean configuration"
+    elif [ "$1" == "distclean" ] ; then
+        echo "$0 distclean"
+        echo "Runs make distclean a package, allowing for a clean compile"
+    elif [ "$1" == "tarclean" ] ; then
+        echo "$0 tarclean"
+        echo "Removes the directory created when extracting a packages tarball, allowing for a quick package reset"
+    elif [ "$1" == "installclean" ] ; then
+        echo "$0 installclean"
+        echo "Removes the entire installation directory, allowing for a clean install"
+    fi
+
     exit 0
 }
 
@@ -419,9 +448,9 @@ makeminimal=0
 
 if [ $# -gt 0 ] ; then
   for cmd in "$@" ; do
-    echo $cmd
+    print_info $cmd
     if   [ $cmd = "untar" ]        ; then force_untar=1
-    elif [ "${cmd}" = "autogen" ]  ; then force_autogen=1
+    elif [ $cmd = "autogen" ]      ; then force_autogen=1
     elif [ $cmd = "configure" ]    ; then force_config=1
     elif [ $cmd = "compile" ]      ; then compile=1
     elif [ $cmd = "install" ]      ; then install=1
@@ -432,7 +461,7 @@ if [ $# -gt 0 ] ; then
     elif [ $cmd = "makeminimal" ]  ; then makeminimal=1
 
     elif [ $cmd = "installclean" ] ; then run_installclean
-    elif [ $cmd = "help" ]         ; then print_usage "$@"
+    elif [ $cmd = "help" ]         ; then print_usage "$2"
     fi
   done
 else
