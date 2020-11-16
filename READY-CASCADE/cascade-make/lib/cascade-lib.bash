@@ -43,6 +43,18 @@ if test $# -gt "0" ; then
     fi
 fi
 
+# Prints a pretty error message
+print_error()
+{
+    echo ">>>> [CASCADE-MAKE] $1 <<<<" 1>&2
+}
+
+# prints a pretty info message
+print_info()
+{
+    echo "[CASCADE-MAKE] $1"
+}
+
 # Extracts a tar package
 run_untar()
 {
@@ -75,7 +87,7 @@ run_untar()
     tar $tar_args $package$version$ext
 
     if [ $? != 0 ] ; then
-        echo "    Error encountered running *untar* stage of $progname"
+        print_error "Error encountered running *untar* stage of $progname"
         exit 1
     fi
 }
@@ -99,7 +111,7 @@ opt_run_tarclean()
             exit 1
         fi
         else 
-        echo "Unable to find directory $dir"
+        print_error "Unable to find directory $dir"
         fi
     fi
 }
@@ -205,7 +217,7 @@ opt_run_untar()
         run_untar $package $version $ext
     elif [ $auto_untar = "1" ] ; then
         if [ -d $package$version ] ; then
-        echo "Found untarred version of $package$version$ext => no need to untar"
+        print_info "Found untarred version of $package$version$ext => no need to untar"
         else
         run_untar $package $version $ext
         fi
@@ -221,20 +233,31 @@ opt_run_configure()
     local version=$1; shift
     local prefix=$1; shift
 
+    # Check to see if a configure file actually exists
+    if [ ! -e "${package}${version}/configure"] ; then
+        print_error "A configuration file does not exist for $progname"
+    fi
+
+    # Check to see if we actually need to run the configuration
+    if [ $auto_config = "1" ] ; then
+        if [ ! -e "${package}${version}/Makefile" ] &&  [ ! -e "${package}${version}/config.h" ] ; then
+            force_config=1
+        else
+            print_info "Found makefile for ${progname%.*} => no need to run ./configure"
+        fi
+    fi
+
+    # Attempt to run the configuration
     if [ $force_config = "1" ] ; then
         echo "[pushd $package$version]"
         ( cd $package$version ; \
             echo $CROSSCONFIGURE_VARS ./configure --prefix="$prefix" $CROSSCONFIGURE_ARGS $@ ;
             eval $CROSSCONFIGURE_VARS ./configure --prefix="$prefix" $CROSSCONFIGURE_ARGS $@ )
         if [ $? != 0 ] ; then
-            echo "    Error encountered running *configure* stage of $progname"
+            print_error "Error encountered running *configure* stage of $progname"
             exit 1
         fi
         echo "[popd]"
-    else
-        if [ $auto_config = "1" ] ; then
-        echo "Found top-level for ${progname%.*} => no need to run ./configure"
-        fi
     fi
 }
 
@@ -245,20 +268,30 @@ opt_run_autogen() {
     local package=$1; shift
     local version=$1; shift
 
+    # Check to see if an autogen file actually exists
+    if [ ! -e "${package}${version}/autogen.sh"] ; then
+        print_error "A configuration file does not exist for $progname"
+    fi
+
+    # Check to see if we actually need to run the autogen
+    if [ $auto_autogen = "1" ] ; then
+        if [ ! -e "${package}${version}/configure" ] ; then
+            force_autogen=1
+        else
+            print_info "Found configuration file for ${progname%.*} => no need to run ./autogen.sh"
+        fi
+    fi
+
     if [ $force_autogen = "1" ] ; then
         echo "[pushd ${package}${version}]"
         ( cd "${package}${version}" ; \
             echo ./autogen.sh ;
             eval ./autogen.sh )
         if [ $? != 0 ] ; then
-            echo "    Error encountered running *autogen* stage of $progname"
+            print_error "Error encountered running *autogen* stage of $progname"
             exit 1
         fi
         echo "[popd]"
-    else
-        if [ $auto_autogen = "1" ] ; then
-        echo "Found top-level for ${progname%.*} => no need to run ./autogen.sh"
-        fi
     fi
 }
 
@@ -350,12 +383,41 @@ run_installclean()
     exit 0
 }
 
-
+# Displays usage information for the script
 print_usage()
 {
-    echo "$0 [untar|autogen|configure|compile|install|clean|distclean|tarclean|makedist|makeminimal]+"
-    echo "  or"
-    echo "$0 [installclean|help]"
+    if [ -z "$1" ] ; then
+        echo "Usage: $0 [untar|autogen|configure|compile|install|clean|distclean|tarclean|makedist|makeminimal|installclean|help]"
+        echo "Run $0 help [command] to get information about each command"
+    elif [ "$1" == "untar" ] ; then
+        echo "$0 untar"
+        echo "Extracts a package from its tarball, overwriting any existing extractions"
+    elif [ "$1" == "autogen" ] ; then
+        echo "$0 autogen"
+        echo "Runs the autogen script of a package, if it exists"
+    elif [ "$1" == "configure" ] ; then
+        echo "$0 configure"
+        echo "Runs the configure script of a package, if it exists"
+    elif [ "$1" == "compile" ] ; then
+        echo "$0 compile"
+        echo "Runs the make script of a package, if it exists"
+    elif [ "$1" == "install" ] ; then
+        echo "$0 install"
+        echo "Runs make install on a package"
+    elif [ "$1" == "clean" ] ; then
+        echo "$0 clean"
+        echo "Runs make clean a package, allowing for a clean configuration"
+    elif [ "$1" == "distclean" ] ; then
+        echo "$0 distclean"
+        echo "Runs make distclean a package, allowing for a clean compile"
+    elif [ "$1" == "tarclean" ] ; then
+        echo "$0 tarclean"
+        echo "Removes the directory created when extracting a packages tarball, allowing for a quick package reset"
+    elif [ "$1" == "installclean" ] ; then
+        echo "$0 installclean"
+        echo "Removes the entire installation directory, allowing for a clean install"
+    fi
+
     exit 0
 }
 
@@ -386,9 +448,9 @@ makeminimal=0
 
 if [ $# -gt 0 ] ; then
   for cmd in "$@" ; do
-    echo $cmd
+    print_info $cmd
     if   [ $cmd = "untar" ]        ; then force_untar=1
-    elif [ "${cmd}" = "autogen" ]  ; then force_autogen=1
+    elif [ $cmd = "autogen" ]      ; then force_autogen=1
     elif [ $cmd = "configure" ]    ; then force_config=1
     elif [ $cmd = "compile" ]      ; then compile=1
     elif [ $cmd = "install" ]      ; then install=1
@@ -399,7 +461,7 @@ if [ $# -gt 0 ] ; then
     elif [ $cmd = "makeminimal" ]  ; then makeminimal=1
 
     elif [ $cmd = "installclean" ] ; then run_installclean
-    elif [ $cmd = "help" ]         ; then print_usage
+    elif [ $cmd = "help" ]         ; then print_usage "$2"
     fi
   done
 else
@@ -414,16 +476,4 @@ else
   tarclean=0
   makedist=0
   makeminimal=0
-fi
-
-if [ $auto_config = "1" ] ; then
-  if [ ! -e "${package}${version}/Makefile" ] &&  [ ! -e "${package}${version}/config.h" ] ; then
-    force_config=1
-  fi
-fi
-
-if [ $auto_autogen = "1" ] ; then
-    if [ ! -e "${package}${version}/configure" ] && [ -e "${package}${version}/autogen.sh" ] ; then
-        force_autogen=1
-    fi
 fi
