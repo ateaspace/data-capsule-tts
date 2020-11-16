@@ -233,7 +233,7 @@ opt_run_configure()
         echo "[popd]"
     else
         if [ $auto_config = "1" ] ; then
-        echo "Found top-level for ${progname%.*} => no need to run ./configure"
+        echo "Found make file for ${progname%.*} => no need to run ./configure"
         fi
     fi
 }
@@ -257,7 +257,7 @@ opt_run_autogen() {
         echo "[popd]"
     else
         if [ $auto_autogen = "1" ] ; then
-        echo "Found top-level for ${progname%.*} => no need to run ./autogen.sh"
+        echo "Found configuration file for ${progname%.*} => no need to run ./autogen.sh"
         fi
     fi
 }
@@ -417,9 +417,9 @@ else
 fi
 
 if [ $auto_config = "1" ] ; then
-  if [ ! -e "${package}${version}/Makefile" ] &&  [ ! -e "${package}${version}/config.h" ] ; then
-    force_config=1
-  fi
+    if [ ! -e "${package}${version}/Makefile" ] &&  [ ! -e "${package}${version}/config.h" ] ; then
+        force_config=1
+    fi
 fi
 
 if [ $auto_autogen = "1" ] ; then
