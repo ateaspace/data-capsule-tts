@@ -1,6 +1,6 @@
 #!/bin/bash
 
-package_desc="eSpeak-NG"
+package_desc="package_name_here"
 
 full_setup=`pwd`/${BASH_SOURCE}
 fulldir=${full_setup%/*}
