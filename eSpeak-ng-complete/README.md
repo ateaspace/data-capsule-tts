@@ -37,3 +37,5 @@ espeak ...
     * [pulseaudio-13.99.3](https://www.freedesktop.org/wiki/Software/PulseAudio/Download/)
         * [libsndfile-1.0.28](http://www.mega-nerd.com/libsndfile/)
         * [libatomic_ops-1.2](https://github.com/ivmai/libatomic_ops)
+        * [speexdsp-1.2rc3](https://www.speex.org/downloads/)
+        * [json-c-0.15-20200726](https://github.com/json-c/json-c)
