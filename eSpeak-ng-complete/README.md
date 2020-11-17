@@ -32,4 +32,6 @@ espeak ...
 * [libtool-2.4.6](https://www.gnu.org/software/libtool/)
 * [pkg-config-0.29.2](https://www.freedesktop.org/wiki/Software/pkg-config/)
 * [pcaudiolib-1.1](https://github.com/espeak-ng/pcaudiolib/)
-* []
+    * [pulseaudio-13.99.3](https://www.freedesktop.org/wiki/Software/PulseAudio/Download/)
+        * [libsndfile-1.0.28](http://www.mega-nerd.com/libsndfile/)
+        * [libatomic_ops-1.2](https://github.com/ivmai/libatomic_ops)
