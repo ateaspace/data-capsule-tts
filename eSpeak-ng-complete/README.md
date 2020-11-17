@@ -2,12 +2,14 @@
 
 This package contains a standalone collection of libraries and packages required to run the [eSpeak NG](https://github.com/espeak-ng/espeak-ng) program. The latest revision is setup to run **version 1.50** of eSpeak NG.
 
+This package builds eSpeak NG to use both `PulseAudio` and `Sonic`, and includes man pages/documentation via `ronn`/`kramdown`
+
 This package has been tested on the following configurations:
 * Ubuntu 18.04 LTS w/ gcc 7.5.0
 
 ### Setup
 
-The only dependency you'll need preinstalled to get this package running is a functional c compiler.
+The only dependency you'll need preinstalled to get this package running is a functional c compiler, that supports C99.
 
 You should only need to build once. To do so, source the `devel.bash` script and run `CASCADE-MAKE`
 
