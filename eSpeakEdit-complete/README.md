@@ -25,4 +25,6 @@ espeakedit ...
 
 ### Dependency Tree
 
-TODO
+* [libportaudio-v19-20111121]()
+* [wxWidgets-2.9.3]()
+    * [gtk2-]()

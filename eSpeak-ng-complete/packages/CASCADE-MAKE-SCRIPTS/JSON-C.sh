@@ -21,7 +21,9 @@ export LD_LIBRARY_PATH="$ESPEAK_NG_HOME_INSTALLED/lib"
 opt_run_untar $force_untar $auto_untar $package $version
 
 build_folder="json-c_build"
-opt_run_cmake $compile $package $version $build_folder "${ESPEAK_NG_HOME_INSTALLED}"
+opt_run_cmake_configure $force_config $auto_config $package $version $build_folder "${ESPEAK_NG_HOME_INSTALLED}"
+
+opt_run_make $compile $package $version $build_folder -j$ESPEAK_NG_MAKE_JOBS
 opt_run_cmake $install $package $version $build_folder "install" -j$ESPEAK_NG_MAKE_JOBS
 opt_run_cmake $clean $package $version $build_folder "clean" -j$ESPEAK_NG_MAKE_JOBS
 opt_run_cmake $distclean $package $version $build_folder "distclean" -j$ESPEAK_NG_MAKE_JOBS

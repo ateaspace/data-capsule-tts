@@ -224,6 +224,37 @@ opt_run_untar()
     fi
 }
 
+# Runs an autogen.sh script
+opt_run_autogen() {
+    local force_autogen=$1; shift
+    local auto_autogen=$1; shift
+    local package=$1; shift
+    local version=$1; shift
+
+    # Check to see if we actually need to run the autogen, and if so that we can
+    if [ $auto_autogen = "1" ] ; then
+        if [ ! -e "${package}${version}/autogen.sh" ] ; then
+            print_error "A configuration file does not exist for $progname"
+        elif [ ! -e "${package}${version}/configure" ] ; then
+            force_autogen=1
+        else
+            print_info "Found configuration file for ${progname%.*} => no need to run ./autogen.sh"
+        fi
+    fi
+
+    if [ $force_autogen = "1" ] ; then
+        echo "[pushd ${package}${version}]"
+        ( cd "${package}${version}" ; \
+            echo ./autogen.sh ;
+            eval ./autogen.sh )
+        if [ $? != 0 ] ; then
+            print_error "Error encountered running *autogen* stage of $progname"
+            exit 1
+        fi
+        echo "[popd]"
+    fi
+}
+
 # Runs a configuration script with the relevant prefix and any other desired arguments
 opt_run_configure()
 {
@@ -252,37 +283,6 @@ opt_run_configure()
             eval $CROSSCONFIGURE_VARS ./configure --prefix="$prefix" $CROSSCONFIGURE_ARGS $@ )
         if [ $? != 0 ] ; then
             print_error "Error encountered running *configure* stage of $progname"
-            exit 1
-        fi
-        echo "[popd]"
-    fi
-}
-
-# Runs an autogen.sh script
-opt_run_autogen() {
-    local force_autogen=$1; shift
-    local auto_autogen=$1; shift
-    local package=$1; shift
-    local version=$1; shift
-
-    # Check to see if we actually need to run the autogen, and if so that we can
-    if [ $auto_autogen = "1" ] ; then
-        if [ ! -e "${package}${version}/autogen.sh" ] ; then
-            print_error "A configuration file does not exist for $progname"
-        elif [ ! -e "${package}${version}/configure" ] ; then
-            force_autogen=1
-        else
-            print_info "Found configuration file for ${progname%.*} => no need to run ./autogen.sh"
-        fi
-    fi
-
-    if [ $force_autogen = "1" ] ; then
-        echo "[pushd ${package}${version}]"
-        ( cd "${package}${version}" ; \
-            echo ./autogen.sh ;
-            eval ./autogen.sh )
-        if [ $? != 0 ] ; then
-            print_error "Error encountered running *autogen* stage of $progname"
             exit 1
         fi
         echo "[popd]"
@@ -322,17 +322,11 @@ opt_run_make()
     local type=$1; shift
     local package=$1; shift
     local version=$1; shift
-    local build_cores=$1; shift
-    local opt_target=""
-
-    if [ ! -z "$1" ] ; then
-        opt_target=$1; shift
-    fi
 
     if [ $type = "1" ] ; then
-        ( cd $package$version ;
-            echo make $opt_target "$@" ;
-            make $opt_target "$@" )
+        ( cd "${package}${version}" ;
+            print_info "make $@" ;
+            make $@ )
 
         if [ $? != 0 ] ; then
             print_error "Error encountered running *make $target* stage of $progname"
@@ -342,29 +336,57 @@ opt_run_make()
 }
 
 # Runs cmake on the target. Requires a subdirectory as the fourth parameter, and a prefix as the fifth
-opt_run_cmake()
+opt_run_cmake_configure()
 {
-    # Set from the relevant $compile, $install etc. variables. Used to determine if we should run cmake
-    local type=$1; shift
+    local force_config=$1; shift
+    local auto_config=$1; shift
     local package=$1; shift
     local version=$1; shift
     local subdir=$1; shift
     local prefix=$1; shift
-    local opt_target=$1; shift
 
     if [ ! -d "${package}${version}/${subdir}" ] ; then
         mkdir "${package}${version}/${subdir}"
     fi
 
-    if [ $type = "1" ] ; then
-        if [ -z "${opt_target}" ] ; then
-            ( cd "${package}${version}/${subdir}" ;
-                cmake -DCMAKE_INSTALL_PREFIX="${prefix}" "$@" "../")
+    # Check to see if we can/need to configure the project
+    if [ $auto_config = "1" ] ; then
+        if [ ! -e "${package}${version}/CMakeLists.txt" ] ; then
+            print_error "A configuration file does not exist for $progname"
+        elif [ ! -e "${package}${version}/Makefile" ] &&  [ ! -e "${package}${version}/config.h" ] ; then
+            force_config=1
         else
-            ( cd "${package}${version}/${subdir}" ;
-                echo make $opt_target "$@" ;
-                make $opt_target "$@" )
+            print_info "Found makefile for ${progname%.*} => no need to run cmake configure"
         fi
+    fi
+
+    if [ $force_config = "1" ] ; then
+        ( cd "${package}${version}/${subdir}" ;
+            cmake -DCMAKE_INSTALL_PREFIX="${prefix}" "$@" "../")
+
+        if [ $? != 0 ] ; then
+            print_error "Error encountered running *cmake $target* stage of $progname"
+            exit 1
+        fi
+    fi
+}
+
+opt_run_cmake() {
+    # Set from the relevant $compile, $install etc. variables. Used to determine if we should run cmake
+    local type=$1; shift
+    local package=$1; shift
+    local version=$1; shift
+    local subdir=$1; shift
+
+    if [ ! -d "${package}${version}/${subdir}" ] ; then
+        print_error "Build subdirectory does not exist"
+        exit 1
+    fi
+
+    if [ $type = "1" ] ; then
+        ( cd "${package}${version}/${subdir}" ;
+            print_info "make $@" ;
+            make "$@" )
 
         if [ $? != 0 ] ; then
             print_error "Error encountered running *cmake $target* stage of $progname"
