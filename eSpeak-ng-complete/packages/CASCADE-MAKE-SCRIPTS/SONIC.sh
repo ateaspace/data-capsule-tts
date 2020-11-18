@@ -23,9 +23,9 @@ export LD_LIBRARY_PATH="$ESPEAK_NG_HOME_INSTALLED/lib"
 opt_run_untar $force_untar $auto_untar $package $version # Include an optional extension parameter here, e.g. '.tar.gz'
 
 # Set any of $compile, $install etc. to '0' to disable the corresponding make functions
-opt_run_make $compile $package $version
-opt_run_make $install $package $version "install"
-opt_run_make $clean $package $version "clean"
-opt_run_make $distclean $package $version "distclean"
+opt_run_make $compile $package $version -j$ESPEAK_NG_MAKE_JOBS
+opt_run_make $install $package $version "install" -j$ESPEAK_NG_MAKE_JOBS
+opt_run_make $clean $package $version "clean" -j$ESPEAK_NG_MAKE_JOBS
+opt_run_make $distclean $package $version "distclean" -j$ESPEAK_NG_MAKE_JOBS
 
 opt_run_tarclean $tarclean $package $version

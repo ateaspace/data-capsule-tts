@@ -2,13 +2,13 @@
 
 source ../cascade-make/lib/cascade-lib.bash $*
 
-for d in MAKE M4 AUTOCONF AUTOMAKE LIBTOOL PKG-CONFIG LIBSNDFILE PULSEAUDIO PCAUDIO ESPEAK-NG ; do
-    echo "    Running CASCADE-MAKE-SCRIPTS/$d.sh"
+for d in MAKE CMAKE M4 AUTOCONF AUTOMAKE LIBTOOL PKG-CONFIG LIBSNDFILE LIBATOMIC_OPS SPEEXDSP JSON-C GETTEXT PULSEAUDIO PCAUDIO ESPEAK-NG ; do
+    print_info "Running CASCADE-MAKE-SCRIPTS/$d.sh"
 
     ./CASCADE-MAKE-SCRIPTS/$d.sh $*
 
     if [ $? != 0 ] ; then
-	echo "Error encountered running CASCADE-MAKE/$d.sh"
+	print_error "Error encountered running CASCADE-MAKE/$d.sh"
 	exit 1
     fi
 done

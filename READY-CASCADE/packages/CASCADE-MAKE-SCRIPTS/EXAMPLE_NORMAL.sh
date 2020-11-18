@@ -28,9 +28,9 @@ opt_run_configure $force_config $auto_config $package $version $prefix #\
 #  --disable-shared # Use this if other software is having issues linking against this library
 
 # Set any of $compile, $install etc. to '0' to disable the corresponding make functions
-opt_run_make $compile $package $version
-opt_run_make $install $package $version "install"
-opt_run_make $clean $package $version "clean"
-opt_run_make $distclean $package $version "distclean"
+opt_run_make $compile $package $version -j$EXAMPLE_MAKE_JOBS
+opt_run_make $install $package $version "install" -j$EXAMPLE_MAKE_JOBS
+opt_run_make $clean $package $version "clean" -j$EXAMPLE_MAKE_JOBS
+opt_run_make $distclean $package $version "distclean" -j$EXAMPLE_MAKE_JOBS
 
 opt_run_tarclean $tarclean $package $version
