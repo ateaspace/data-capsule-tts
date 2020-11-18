@@ -29,9 +29,9 @@ opt_run_autogen $force_autogen $auto_autogen $package $version
 opt_run_configure $force_config $auto_config $package $version $prefix #\
 #  --disable-shared # Use this if other software is having issues linking against this library
 
-opt_run_make $compile $package $version $ESPEAK_NG_MAKE_JOBS
-opt_run_make $install $package $version $ESPEAK_NG_MAKE_JOBS "install"
-opt_run_make $clean $package $version $ESPEAK_NG_MAKE_JOBS "clean"
-opt_run_make $distclean $package $version $ESPEAK_NG_MAKE_JOBS "distclean"
+opt_run_make $compile $package $version
+opt_run_make $install $package $version "install"
+opt_run_make $clean $package $version "clean"
+opt_run_make $distclean $package $version "distclean"
 
 opt_run_tarclean $tarclean $package $version

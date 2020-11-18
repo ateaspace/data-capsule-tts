@@ -28,9 +28,9 @@ opt_run_configure $force_config $auto_config $package $version $prefix --without
 #  --disable-shared # Use this if other software is having issues linking against this library
 
 # Set any of $compile, $install etc. to '0' to disable the corresponding make functions
-opt_run_make $compile $package $version $ESPEAK_NG_MAKE_JOBS
-opt_run_make $install $package $version $ESPEAK_NG_MAKE_JOBS "install"
-opt_run_make $clean $package $version $ESPEAK_NG_MAKE_JOBS "clean"
-opt_run_make $distclean $package $version $ESPEAK_NG_MAKE_JOBS "distclean"
+opt_run_make $compile $package $version -j$ESPEAK_NG_MAKE_JOBS
+opt_run_make $install $package $version "install" -j$ESPEAK_NG_MAKE_JOBS
+opt_run_make $clean $package $version "clean" -j$ESPEAK_NG_MAKE_JOBS
+opt_run_make $distclean $package $version "distclean" -j$ESPEAK_NG_MAKE_JOBS
 
 opt_run_tarclean $tarclean $package $version

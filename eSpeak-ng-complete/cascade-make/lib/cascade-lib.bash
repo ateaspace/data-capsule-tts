@@ -330,8 +330,9 @@ opt_run_make()
     fi
 
     if [ $type = "1" ] ; then
-        ( cd $package$version ; \
-            make -j$build_cores $opt_target $@ )
+        ( cd $package$version ;
+            echo make $opt_target "$@" ;
+            make $opt_target "$@" )
 
         if [ $? != 0 ] ; then
             print_error "Error encountered running *make $target* stage of $progname"
@@ -348,7 +349,6 @@ opt_run_cmake()
     local package=$1; shift
     local version=$1; shift
     local subdir=$1; shift
-    # Will either be the cmake install prefix, or the make parallel job count
     local prefix=$1; shift
     local opt_target=$1; shift
 
@@ -358,12 +358,12 @@ opt_run_cmake()
 
     if [ $type = "1" ] ; then
         if [ -z "${opt_target}" ] ; then
-            ( cd "${package}${version}/${subdir}" ; \
+            ( cd "${package}${version}/${subdir}" ;
                 cmake -DCMAKE_INSTALL_PREFIX="${prefix}" "$@" "../")
         else
             ( cd "${package}${version}/${subdir}" ;
-                echo make -j$build_cores "${opt_target}" "$@" ;
-                make -j$prefix "${opt_target}" "$@" )
+                echo make $opt_target "$@" ;
+                make $opt_target "$@" )
         fi
 
         if [ $? != 0 ] ; then
