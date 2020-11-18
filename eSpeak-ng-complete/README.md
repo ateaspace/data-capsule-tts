@@ -2,7 +2,7 @@
 
 This package contains a standalone collection of libraries and packages required to run the [eSpeak NG](https://github.com/espeak-ng/espeak-ng) program. The latest revision is setup to run **version 1.50** of eSpeak NG.
 
-This package builds eSpeak NG to use both `PulseAudio` and `Sonic`, and includes man pages/documentation via `ronn`/`kramdown`
+This package builds eSpeak NG to use `PulseAudio` as the audio output engine.
 
 This package has been tested on the following configurations:
 * Ubuntu 18.04 LTS w/ gcc 7.5.0
