@@ -9,7 +9,7 @@ This package has been tested on the following configurations:
 
 ### Setup
 
-The only dependency you'll need preinstalled to get this package running is a functional c compiler, that supports C99.
+To get this package running, you'll need a C compiler that supports C99, and a C++ compiler that supports C++11. Examples are gcc and g++.
 
 You should only need to build once. To do so, source the `devel.bash` script and run `CASCADE-MAKE`
 
@@ -39,3 +39,5 @@ espeak ...
         * [libatomic_ops-1.2](https://github.com/ivmai/libatomic_ops)
         * [speexdsp-1.2rc3](https://www.speex.org/downloads/)
         * [json-c-0.15-20200726](https://github.com/json-c/json-c)
+            * [cmake-3.18.4](https://cmake.org/download/)
+        * [gettext-0.21](https://www.gnu.org/software/gettext/)

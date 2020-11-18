@@ -2,15 +2,13 @@
 
 # These should match up with the name of the archive
 # e.g. for 'lib-example-2.5.32'; package=lib-example, version=-2.5.32
-package=json-c-jsonc-c
+package=json-c-json-c
 version=-0.15-20200726
 
 # Gets and stores the path to this script, relative from the working directory
 progname=$0
 
 source ../cascade-make/lib/cascade-lib.bash "$@"
-
-prefix=$ESPEAK_NG_HOME_INSTALLED
 
 export CFLAGS="$CFLAGS -I$ESPEAK_NG_HOME_INSTALLED/include"
 export CPPFLAGS="$CPPFLAGS -I$ESPEAK_NG_HOME_INSTALLED/include"
@@ -22,15 +20,15 @@ export LD_LIBRARY_PATH="$ESPEAK_NG_HOME_INSTALLED/lib"
 # $auto_untar - set to '0' to disable automatic untarring
 opt_run_untar $force_untar $auto_untar $package $version
 
-# $force_config - set to '1' to always configure the package
-# $auto_config - set to '0' to disable automatic configuration
-opt_run_configure $force_config $auto_config $package $version $prefix #\
-#  --disable-shared # Use this if other software is having issues linking against this library
+opt_run_cmake $compile $package $version "json-c_build" "${ESPEAK_NG_HOME_INSTALLED}"
+opt_run_cmake $install $package $version "json-c_build" $ESPEAK_NG_MAKE_JOBS "install"
+opt_run_cmake $clean $package $version "json-c_build" $ESPEAK_NG_MAKE_JOBS "clean"
+opt_run_cmake $distclean $package $version "json-c_build" $ESPEAK_NG_MAKE_JOBS "distclean"
 
 # Set any of $compile, $install etc. to '0' to disable the corresponding make functions
-opt_run_make $compile $package $version
-opt_run_make $install $package $version "install"
-opt_run_make $clean $package $version "clean"
-opt_run_make $distclean $package $version "distclean"
+#opt_run_make $compile $package $version $ESPEAK_NG_MAKE_JOBS
+#opt_run_make $install $package $version $ESPEAK_NG_MAKE_JOBS "install"
+#opt_run_make $clean $package $version $ESPEAK_NG_MAKE_JOBS "clean"
+#opt_run_make $distclean $package $version $ESPEAK_NG_MAKE_JOBS "distclean"
 
 opt_run_tarclean $tarclean $package $version

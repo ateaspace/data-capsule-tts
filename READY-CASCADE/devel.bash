@@ -14,4 +14,9 @@ else
     export PKG_CONFIG_PATH="$EXAMPLE_HOME_INSTALLED/lib/pkgconfig"
 fi
 
+# Determines the default number of jobs that each make process should run in parallel
+if [ -z $ESPEAK_NG_MAKE_JOBS ] ; then
+  export ESPEAK_NG_MAKE_JOBS=parallel_jobs_here
+fi
+
 

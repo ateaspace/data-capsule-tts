@@ -18,7 +18,7 @@ if test -z $PACKAGE_OS ; then
         PACKAGE_OS=$crossOS
     fi
 
-    echo "PACKAGE_OS was not set.  Setting it to '$PACKAGE_OS'"
+    print_info "PACKAGE_OS was not set.  Setting it to '$PACKAGE_OS'"
     export PACKAGE_OS
 fi
 
@@ -31,13 +31,13 @@ if test $# -gt "0" ; then
     eval package_home=`echo \\$$ext`
     if test -z "$package_home" ; then
         if test -f $reldir/setup.bash ; then
-            echo "Environment variable $ext for package extension not set"
-            echo "Sourcing $reldir/setup.bash"
+            print_info "Environment variable $ext for package extension not set"
+            print_info "Sourcing $reldir/setup.bash"
             source $reldir/setup.bash
       
             eval package_home=`echo \\$$ext`
         else
-            echo "Did not detect $reldir/setup.bash, Skipping"
+            print_info "Did not detect $reldir/setup.bash, Skipping"
         fi
         fi
     fi
@@ -77,8 +77,8 @@ run_untar()
     elif [ $ext = ".tar" ] ; then
         tar_args="xvf"
     else 
-        echo "Warning: Unrecognized extension: $ext"
-        echo "Assuming tarred, gzipped file"
+        print_info "Warning: Unrecognized extension: $ext"
+        print_info "Assuming tarred, gzipped file"
         tar_args="xvjf"
     fi
 
@@ -107,7 +107,7 @@ opt_run_tarclean()
         /bin/rm -rf $dir
 
         if [ $? != 0 ] ; then
-            echo "    Error encountered running *tarclean* stage of $progname"
+            print_error "Error encountered running *tarclean* stage of $progname"
             exit 1
         fi
         else 
@@ -304,13 +304,13 @@ opt_run_perl_configure()
       echo perl Makefile.PL PREFIX="$prefix" $CROSSCOMPILE $@ ;
       perl Makefile.PL PREFIX="$prefix" $CROSSCOMPILE $@)
     if [ $? != 0 ] ; then
-        echo "    Error encountered running *configure* stage of $progname"
+        print_error "Error encountered running *configure* stage of $progname"
         exit 1
     fi
     echo "[popd]"
   else
     if [ $auto_config = "1" ] ; then
-      echo "Found top-level for ${progname%.*} => no need to run perl configure"
+      print_info "Found top-level for ${progname%.*} => no need to run perl configure"
     fi
   fi
 }
@@ -322,6 +322,7 @@ opt_run_make()
     local type=$1; shift
     local package=$1; shift
     local version=$1; shift
+    local build_cores=$1; shift
     local opt_target=""
 
     if [ ! -z "$1" ] ; then
@@ -330,37 +331,61 @@ opt_run_make()
 
     if [ $type = "1" ] ; then
         ( cd $package$version ; \
-            make $opt_target $@)
+            make -j$build_cores $opt_target $@ )
 
         if [ $? != 0 ] ; then
-            echo "    Error encountered running *make $target* stage of $progname"
+            print_error "Error encountered running *make $target* stage of $progname"
             exit 1
         fi
     fi
 }
 
-# Runs make on the target. Requires a subdirectory as the fourth parameter
+# Runs cmake on the target. Requires a subdirectory as the fourth parameter, and a prefix as the fifth
 opt_run_cmake()
 {
-    # Set from the relevant $compile, $install etc. variables. Used to determine if we should run make
-    local type=$1
-    local package=$2
-    local version=$3
-    local subdir=$4
-    local opt_target=""
+    # Set from the relevant $compile, $install etc. variables. Used to determine if we should run cmake
+    local type=$1; shift
+    local package=$1; shift
+    local version=$1; shift
+    local subdir=$1; shift
+    # Will either be the cmake install prefix, or the make parallel job count
+    local prefix=$1; shift
+    local opt_target=$1; shift
 
-    if [ ! -z "$5" ] ; then
-        opt_target=$5
+    if [ ! -d "${package}${version}/${subdir}" ] ; then
+        mkdir "${package}${version}/${subdir}"
     fi
 
     if [ $type = "1" ] ; then
-        ( cd $package$version/$subdir ; \
-            make $opt_target)
+        if [ -z "${opt_target}" ] ; then
+            ( cd "${package}${version}/${subdir}" ; \
+                cmake -DCMAKE_INSTALL_PREFIX="${prefix}" "$@" "../")
+        else
+            ( cd "${package}${version}/${subdir}" ;
+                echo make -j$build_cores "${opt_target}" "$@" ;
+                make -j$prefix "${opt_target}" "$@" )
+        fi
 
         if [ $? != 0 ] ; then
-            echo "    Error encountered running *make $target* stage of $progname"
+            print_error "Error encountered running *cmake $target* stage of $progname"
             exit 1
         fi
+    fi
+}
+
+opt_run_ninja() {
+    local package=$1
+    local version=$2
+    local subdir=$3
+
+    if [ -e "${package}${version}/${subdir}/build.ninja" ] ; then
+        ( cd "${package}${version}/${subdir}" ; 
+            ninja )
+    fi
+
+    if [ $? != 0 ] ; then
+        print_error "Error encountered running *ninja* stage of $progname"
+        exit 1
     fi
 }
 
