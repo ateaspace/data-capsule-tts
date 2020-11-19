@@ -1,8 +1,7 @@
 #!/bin/bash
 
-# These should match up with the name of the archive
-# e.g. for 'lib-example-2.5.32'; package=lib-example, version=-2.5.32
-package=espeak-ng
+# Use our custom espeak with Maori support
+package=mi-espeak-ng
 version=-1.50
 
 # Gets the path to this script, relative from the working directory
@@ -18,9 +17,8 @@ export CXXFLAGS="$CXXFLAGS -I$ESPEAK_NG_HOME_INSTALLED/include"
 export LDFLAGS="$LDFLAGS -L$ESPEAK_NG_HOME_INSTALLED/lib"
 export LD_LIBRARY_PATH="$ESPEAK_NG_HOME_INSTALLED/lib"
 
-# $force_untar - set to/pass in '1' to always perform an extraction
-# $auto_untar - set to '0' to disable automatic untarring
-opt_run_untar $force_untar $auto_untar $package $version
+# Temporarily disable untarring while we work on adding the Maori language
+# opt_run_untar $force_untar $auto_untar $package $version
 
 # $force_autogen - set to '1' to always perform auto-generation
 # $auto_autogen - set to '0' to disable automatic autogen
@@ -34,4 +32,5 @@ opt_run_make $install $package $version "install"
 opt_run_make $clean $package $version "clean"
 opt_run_make $distclean $package $version "distclean"
 
-opt_run_tarclean $tarclean $package $version
+# Temporarily disable tarclean while we work on adding the Maori language
+# opt_run_tarclean $tarclean $package $version
