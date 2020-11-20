@@ -26,13 +26,6 @@ opt_run_untar $force_untar $auto_untar $package $version # Include an optional e
 # $auto_autogen - set to '0' to disable automatic autogen
 opt_run_autogen $force_autogen $auto_autogen $package $version
 
-# if [ -d "${package}${version}" ] && [ ! -f "${package}${version}/configure" ]
-# then
-#     pushd "${package}${version}"
-#     ./autogen.sh || exit 1
-#     popd
-# fi
-
 opt_run_configure $force_config $auto_config $package $version $prefix #\
 #  --disable-shared # Use this if other software is having issues linking against this library
 

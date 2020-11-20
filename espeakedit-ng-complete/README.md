@@ -1,8 +1,8 @@
-# eSpeak NG - Complete Package Setup
+# eSpeakEdit NG - Complete Package Setup
 
-This package contains a standalone collection of libraries and packages required to run the [eSpeak NG](https://github.com/espeak-ng/espeak-ng) program. The latest revision is setup to run **version 1.50** of eSpeak NG.
+This package contains a standalone collection of libraries and packages required to run the [eSpeakEdit-NG](https://github.com/valdisvi/espeak-ng-espeakedit) program. The latest revision is setup to run **commit 7fe8e92** of the project.
 
-This package builds eSpeak NG to use `PulseAudio` as the audio output engine.
+This package uses `PulseAudio` as the audio output engine.
 
 This package has been tested on the following configurations:
 * Ubuntu 18.04 LTS w/ gcc 7.5.0
@@ -33,11 +33,13 @@ espeak ...
         * [m4-1.4.18](https://www.gnu.org/software/m4/m4.html)
 * [libtool-2.4.6](https://www.gnu.org/software/libtool/)
 * [pkg-config-0.29.2](https://www.freedesktop.org/wiki/Software/pkg-config/)
-* [pcaudiolib-1.1](https://github.com/espeak-ng/pcaudiolib/)
-    * [pulseaudio-13.99.3](https://www.freedesktop.org/wiki/Software/PulseAudio/Download/)
-        * [libsndfile-1.0.28](http://www.mega-nerd.com/libsndfile/)
-        * [libatomic_ops-1.2](https://github.com/ivmai/libatomic_ops)
-        * [speexdsp-1.2rc3](https://www.speex.org/downloads/)
-        * [json-c-0.15-20200726](https://github.com/json-c/json-c)
-            * [cmake-3.18.4](https://cmake.org/download/)
-        * [gettext-0.21](https://www.gnu.org/software/gettext/)
+* [espeak-ng-1.50](https://github.com/espeak-ng/espeak-ng)
+    * [pcaudiolib-1.1](https://github.com/espeak-ng/pcaudiolib/)
+        * [pulseaudio-13.99.3](https://www.freedesktop.org/wiki/Software/PulseAudio/Download/)
+            * [libsndfile-1.0.28](http://www.mega-nerd.com/libsndfile/)
+            * [libatomic_ops-1.2](https://github.com/ivmai/libatomic_ops)
+            * [speexdsp-1.2rc3](https://www.speex.org/downloads/)
+            * [json-c-0.15-20200726](https://github.com/json-c/json-c)
+                * [cmake-3.18.4](https://cmake.org/download/)
+            * [gettext-0.21](https://www.gnu.org/software/gettext/)
+* [portaudio-v190600](http://portaudio.com/)

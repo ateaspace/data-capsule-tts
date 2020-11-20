@@ -16,6 +16,6 @@ if [ ! -f "ninja" ] ; then
 fi
 
 if [ -f "ninja" ] ; then
-    cp "ninja" "${ESPEAK_NG_HOME_INSTALLED}/bin"
+    cp "ninja" "${ESPEAKEDIT_NG_HOME_INSTALLED}/bin"
 fi
 
