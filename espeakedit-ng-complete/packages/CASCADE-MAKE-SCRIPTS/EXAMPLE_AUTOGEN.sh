@@ -10,13 +10,13 @@ progname=$0
 
 source ../cascade-make/lib/cascade-lib.bash $*
 
-prefix=$EXAMPLE_HOME_INSTALLED
+prefix=$ESPEAKEDIT_NG_HOME_INSTALLED
 
-export CFLAGS="$CFLAGS -I$EXAMPLE_HOME_INSTALLED/include"
-export CPPFLAGS="$CPPFLAGS -I$EXAMPLE_HOME_INSTALLED/include"
-export CXXFLAGS="$CXXFLAGS -I$EXAMPLE_HOME_INSTALLED/include"
-export LDFLAGS="$LDFLAGS -L$EXAMPLE_HOME_INSTALLED/lib"
-export LD_LIBRARY_PATH="$EXAMPLE_HOME_INSTALLED/lib"
+export CFLAGS="$CFLAGS -I$ESPEAKEDIT_NG_HOME_INSTALLED/include"
+export CPPFLAGS="$CPPFLAGS -I$ESPEAKEDIT_NG_HOME_INSTALLED/include"
+export CXXFLAGS="$CXXFLAGS -I$ESPEAKEDIT_NG_HOME_INSTALLED/include"
+export LDFLAGS="$LDFLAGS -L$ESPEAKEDIT_NG_HOME_INSTALLED/lib"
+export LD_LIBRARY_PATH="$ESPEAKEDIT_NG_HOME_INSTALLED/lib"
 
 # $force_untar - set to/pass in '1' to always perform an extraction
 # $auto_untar - set to '0' to disable automatic untarring
@@ -36,9 +36,9 @@ opt_run_autogen $force_autogen $auto_autogen $package $version
 opt_run_configure $force_config $auto_config $package $version $prefix #\
 #  --disable-shared # Use this if other software is having issues linking against this library
 
-opt_run_make $compile $package $version -j$EXAMPLE_MAKE_JOBS
-opt_run_make $install $package $version "install" -j$EXAMPLE_MAKE_JOBS
-opt_run_make $clean $package $version "clean" -j$EXAMPLE_MAKE_JOBS
-opt_run_make $distclean $package $version "distclean" -j$EXAMPLE_MAKE_JOBS
+opt_run_make $compile $package $version -j$ESPEAKEDIT_NG_MAKE_JOBS
+opt_run_make $install $package $version "install" -j$ESPEAKEDIT_NG_MAKE_JOBS
+opt_run_make $clean $package $version "clean" -j$ESPEAKEDIT_NG_MAKE_JOBS
+opt_run_make $distclean $package $version "distclean" -j$ESPEAKEDIT_NG_MAKE_JOBS
 
 opt_run_tarclean $tarclean $package $version

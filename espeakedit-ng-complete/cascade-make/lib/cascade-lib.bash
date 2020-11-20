@@ -1,5 +1,17 @@
 #!/bin/bash
 
+# Prints a pretty error message
+print_error()
+{
+    echo ">>>> [CASCADE-MAKE] $1 <<<<" 1>&2
+}
+
+# prints a pretty info message
+print_info()
+{
+    echo "[CASCADE-MAKE] $1"
+}
+
 # Make sure that the OS component of the install directory is set
 if test -z $PACKAGE_OS ; then
     PACKAGE_OS=`uname -s | tr '[A-Z]' '[a-z]'`
@@ -42,18 +54,6 @@ if test $# -gt "0" ; then
         fi
     fi
 fi
-
-# Prints a pretty error message
-print_error()
-{
-    echo ">>>> [CASCADE-MAKE] $1 <<<<" 1>&2
-}
-
-# prints a pretty info message
-print_info()
-{
-    echo "[CASCADE-MAKE] $1"
-}
 
 # Extracts a tar package
 run_untar()
