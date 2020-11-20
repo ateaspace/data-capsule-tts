@@ -43,3 +43,6 @@ espeak ...
                 * [cmake-3.18.4](https://cmake.org/download/)
             * [gettext-0.21](https://www.gnu.org/software/gettext/)
 * [portaudio-v190600](http://portaudio.com/)
+* [sox-14.4.2](http://sox.sourceforge.net)
+* [wxWidgets-3.0.5](https://www.wxwidgets.org/downloads/)
+    * [gtk-3.]
