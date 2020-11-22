@@ -289,6 +289,41 @@ opt_run_configure()
     fi
 }
 
+# Runs a configuration script with the relevant prefix and any other desired arguments
+opt_run_meson_configure()
+{
+    local force_config=$1; shift
+    local auto_config=$1; shift
+    local package=$1; shift
+    local version=$1; shift
+    local subdir=$1; shift
+    local prefix=$1; shift
+
+    # Check to see if we actually need to run the configuration, and if so that we can
+    if [ $auto_config = "1" ] ; then
+        if [ ! -e "${package}${version}/meson.build" ] ; then
+            print_error "A meson build file does not exist for $progname"
+        elif [ ! -e "${package}${version}/${subdir}" ] ; then
+            force_config=1
+        else
+            print_info "Found build directory for ${progname%.*} => no need to run meson"
+        fi
+    fi
+
+    # Attempt to run the configuration
+    if [ $force_config = "1" ] ; then
+        echo "[pushd $package$version]"
+        ( cd $package$version ;
+            echo $CROSSCONFIGURE_VARS meson "${subdir}" --prefix="$prefix" $CROSSCONFIGURE_ARGS $@ ;
+            eval $CROSSCONFIGURE_VARS meson "${subdir}" --prefix="$prefix" $CROSSCONFIGURE_ARGS $@ )
+        if [ $? != 0 ] ; then
+            print_error "Error encountered running *configure* stage of $progname"
+            exit 1
+        fi
+        echo "[popd]"
+    fi
+}
+
 
 opt_run_perl_configure()
 {
@@ -395,29 +430,35 @@ opt_run_cmake() {
     fi
 }
 
-opt_run_ninja() {
-    local package=$1
-    local version=$2
-    local subdir=$3
+opt_run_ninja()
+{
+    # Set from the relevant $compile, $install etc. variables. Used to determine if we should run make
+    local type=$1; shift
+    local package=$1; shift
+    local version=$1; shift
+    local subdir=$1; shift
 
-    if [ -e "${package}${version}/${subdir}/build.ninja" ] ; then
-        ( cd "${package}${version}/${subdir}" ; 
-            ninja )
-    fi
+    if [ $type = "1" ] ; then
+        if [ -e "${package}${version}/${subdir}/build.ninja" ] ; then
+            ( cd "${package}${version}/${subdir}" ;
+                ninja "$@" )
+        fi
 
-    if [ $? != 0 ] ; then
-        print_error "Error encountered running *ninja* stage of $progname"
-        exit 1
+        if [ $? != 0 ] ; then
+            print_error "Error encountered running *ninja* stage of $progname"
+            exit 1
+        fi
     fi
 }
 
 # Removes the installation directory
 run_installclean()
 {
-    local installation_dir="$package_home/$PACKAGE_OS"
+    local installation_dir="$PACKAGE_OS"
     echo ""
-    read -p "Delete $installation_dir [y/n]?" ans
+    read -p "Delete $installation_dir? [y/n]: " ans
     if [ $ans = "y" ] ; then
+        echo /bin/rm -rf "$installation_dir"
         /bin/rm -rf "$installation_dir"
     fi
 

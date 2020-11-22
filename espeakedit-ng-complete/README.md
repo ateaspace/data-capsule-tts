@@ -46,3 +46,11 @@ espeak ...
 * [sox-14.4.2](http://sox.sourceforge.net)
 * [wxWidgets-3.0.5](https://www.wxwidgets.org/downloads/)
     * [gtk-3.]
+        * [glib-2.67](https://download.gnome.org/sources/glib/)
+            * [meson-0.56.0](https://mesonbuild.com/)
+                * [python-3.9.0](https://www.python.org)
+                    * [libffi-3.3](https://github.com/libffi/libffi)
+                    * [openssl-1.1.1](https://www.openssl.org)
+                * [ninja-1.10.1](https://github.com/ninja-build/ninja)
+            * [libiconv-](https://www.gnu.org/software/libiconv/)
+            * [zlib-1.2.11](https://zlib.net)

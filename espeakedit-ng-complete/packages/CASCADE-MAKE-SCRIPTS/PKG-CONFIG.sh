@@ -18,14 +18,16 @@ export CXXFLAGS="$CXXFLAGS -I$ESPEAKEDIT_NG_HOME_INSTALLED/include"
 export LDFLAGS="$LDFLAGS -L$ESPEAKEDIT_NG_HOME_INSTALLED/lib"
 export LD_LIBRARY_PATH="$ESPEAKEDIT_NG_HOME_INSTALLED/lib"
 
+export GLIB_LIBS="-L${ESPEAKEDIT_NG_HOME_INSTALLED}/lib/x86_64-linux-gnu -lglib-2.0"
+export GLIB_CFLAGS="-I${ESPEAKEDIT_NG_HOME_INSTALLED}/include/glib-2.0 -I${ESPEAKEDIT_NG_HOME_INSTALLED}/lib/x86_64-linux-gnu/glib-2.0/include"
+
 # $force_untar - set to/pass in '1' to always perform an extraction
 # $auto_untar - set to '0' to disable automatic untarring
 opt_run_untar $force_untar $auto_untar $package $version
 
 # $force_config - set to '1' to always configure the package
 # $auto_config - set to '0' to disable automatic configuration
-opt_run_configure $force_config $auto_config $package $version $prefix \
-    --with-internal-glib
+opt_run_configure $force_config $auto_config $package $version $prefix
 #  --disable-shared # Use this if other software is having issues linking against this library
 
 # Set any of $compile, $install etc. to '0' to disable the corresponding make functions

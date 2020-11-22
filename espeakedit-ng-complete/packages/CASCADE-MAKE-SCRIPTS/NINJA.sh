@@ -15,7 +15,7 @@ if [ ! -f "ninja" ] ; then
     print_info "Ninja extracted"
 fi
 
-if [ -f "ninja" ] ; then
+if [ -f "ninja" ] && [ -d "${ESPEAKEDIT_NG_HOME_INSTALLED}/bin" ] ; then
     cp "ninja" "${ESPEAKEDIT_NG_HOME_INSTALLED}/bin"
 fi
 
