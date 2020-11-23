@@ -10,13 +10,14 @@ progname=$0
 
 source ../cascade-make/lib/cascade-lib.bash "$@"
 
-prefix=$ESPEAKEDIT_NG_HOME_INSTALLED
+prefix="$ESPEAKEDIT_NG_HOME_INSTALLED"
+opensslprefix="$prefix/openssl"
 
-export CFLAGS="$CFLAGS -I$ESPEAKEDIT_NG_HOME_INSTALLED/include"
-export CPPFLAGS="$CPPFLAGS -I$ESPEAKEDIT_NG_HOME_INSTALLED/include"
-export CXXFLAGS="$CXXFLAGS -I$ESPEAKEDIT_NG_HOME_INSTALLED/include"
-export LDFLAGS="$LDFLAGS -L$ESPEAKEDIT_NG_HOME_INSTALLED/lib"
-export LD_LIBRARY_PATH="$ESPEAKEDIT_NG_HOME_INSTALLED/lib"
+export CFLAGS="$CFLAGS -I$prefix/include -I$opensslprefix/include"
+export CPPFLAGS="$CPPFLAGS -I$prefix/include -I$opensslprefix/include"
+export CXXFLAGS="$CXXFLAGS -I$prefix/include -I$opensslprefix/include"
+export LDFLAGS="$LDFLAGS -L$prefix/lib -L$opensslprefix/lib"
+export LD_LIBRARY_PATH="$prefix/lib:$opensslprefix/lib"
 
 # $force_untar - set to/pass in '1' to always perform an extraction
 # $auto_untar - set to '0' to disable automatic untarring

@@ -27,8 +27,6 @@ opt_run_untar $force_untar $auto_untar $package $version # Include an optional e
 opt_run_configure $force_config $auto_config $package $version $prefix -- -DCMAKE_USE_OPENSSL=OFF -DCMAKE_BUILD_TYPE:STRING="Release" #\
 #  --disable-shared # Use this if other software is having issues linking against this library
 
-$parallel_jobs=$ESPEAKEDIT_NG_MAKE_JOBS
-
 # Set any of $compile, $install etc. to '0' to disable the corresponding make functions
 opt_run_make $compile $package $version -j$ESPEAKEDIT_NG_MAKE_JOBS
 opt_run_make $install $package $version "install" -j$ESPEAKEDIT_NG_MAKE_JOBS

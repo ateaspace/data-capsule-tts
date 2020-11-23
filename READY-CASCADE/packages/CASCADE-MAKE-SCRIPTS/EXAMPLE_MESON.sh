@@ -12,11 +12,11 @@ source ../cascade-make/lib/cascade-lib.bash "$@"
 
 prefix=$EXAMPLE_HOME_INSTALLED
 
-export CFLAGS="$CFLAGS -I$EXAMPLE_HOME_INSTALLED/include"
-export CPPFLAGS="$CPPFLAGS -I$EXAMPLE_HOME_INSTALLED/include"
-export CXXFLAGS="$CXXFLAGS -I$EXAMPLE_HOME_INSTALLED/include"
-export LDFLAGS="$LDFLAGS -L$EXAMPLE_HOME_INSTALLED/lib"
-export LD_LIBRARY_PATH="$EXAMPLE_HOME_INSTALLED/lib"
+export CFLAGS="$CFLAGS -I$prefix/include"
+export CPPFLAGS="$CPPFLAGS -I$prefix/include"
+export CXXFLAGS="$CXXFLAGS -I$prefix/include"
+export LDFLAGS="$LDFLAGS -L$prefix/lib"
+export LD_LIBRARY_PATH="$prefix/lib"
 
 # $force_untar - set to/pass in '1' to always perform an extraction
 # $auto_untar - set to '0' to disable automatic untarring

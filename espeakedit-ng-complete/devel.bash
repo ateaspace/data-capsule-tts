@@ -19,4 +19,5 @@ if [ -z $ESPEAKEDIT_NG_MAKE_JOBS ] ; then
   export ESPEAKEDIT_NG_MAKE_JOBS=7
 fi
 
-
+# Source local pip executables
+export PATH="${PATH}:$HOME/.local/bin"
