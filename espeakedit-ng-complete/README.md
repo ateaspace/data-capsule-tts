@@ -54,3 +54,7 @@ espeak ...
                 * [ninja-1.10.1](https://github.com/ninja-build/ninja)
             * [libiconv-](https://www.gnu.org/software/libiconv/)
             * [zlib-1.2.11](https://zlib.net)
+        * [shared-mime-info-](https://gitlab.freedesktop.org/xdg/shared-mime-info/)
+            * [glib]
+            * [itstool-2.0.6](http://itstool.org)
+                * [libxml2-2.9.10](http://www.xmlsoft.org)
