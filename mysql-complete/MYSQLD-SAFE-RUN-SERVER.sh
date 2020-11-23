@@ -9,5 +9,5 @@ source ./_MYSQL-SETTINGS.bash
 
 
 "$MYSQL_COMPLETE_INSTALLED/mysql/bin/mysqld" \
-    --user=$MYSQL_USER --port=$MYSQL_PORT \
+    --skip-grant-tables --user=$MYSQL_USER --port=$MYSQL_PORT \
     --datadir=$MYSQL_DATA
