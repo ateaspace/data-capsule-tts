@@ -22,10 +22,6 @@ export LD_LIBRARY_PATH="$ESPEAKEDIT_NG_HOME_INSTALLED/lib"
 # $auto_untar - set to '0' to disable automatic untarring
 opt_run_untar $force_untar $auto_untar $package $version # Include an optional extension parameter here, e.g. '.tar.gz'
 
-# $force_autogen - set to '1' to always perform auto-generation
-# $auto_autogen - set to '0' to disable automatic autogen
-opt_run_autogen $force_autogen $auto_autogen $package $version
-
 # $force_config - set to '1' to always configure the package
 # $auto_config - set to '0' to disable automatic configuration
 opt_run_configure $force_config $auto_config $package $version $prefix #\

@@ -19,8 +19,8 @@ export LDFLAGS="$LDFLAGS -L$ESPEAKEDIT_NG_HOME_INSTALLED/lib"
 export LD_LIBRARY_PATH="$ESPEAKEDIT_NG_HOME_INSTALLED/lib"
 
 # So that we can build glib before pkg-config
-export ZLIB_LIBS="-L${ESPEAKEDIT_NG_HOME_INSTALLED}/lib -L${ESPEAKEDIT_NG_HOME_INSTALLED}/lib -lz"
-export ZLIB_CFLAGS="-I${ESPEAKEDIT_NG_HOME_INSTALLED}/include"
+# export ZLIB_LIBS="-L${ESPEAKEDIT_NG_HOME_INSTALLED}/lib -L${ESPEAKEDIT_NG_HOME_INSTALLED}/lib -lz"
+# export ZLIB_CFLAGS="-I${ESPEAKEDIT_NG_HOME_INSTALLED}/include"
 
 # $force_untar - set to/pass in '1' to always perform an extraction
 # $auto_untar - set to '0' to disable automatic untarring
@@ -30,7 +30,7 @@ build_subdir="_build"
 
 # $force_config - set to '1' to always configure the package
 # $auto_config - set to '0' to disable automatic configuration
-opt_run_meson_configure $force_config $auto_config $package $version $build_subdir $prefix "-Diconv=external"
+opt_run_meson_configure $force_config $auto_config $package $version $build_subdir $prefix #"-Diconv=external"
 
 # Set any of $compile, $install etc. to '0' to disable the corresponding make functions
 opt_run_ninja $compile $package $version $build_subdir

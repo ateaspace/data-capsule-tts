@@ -11,7 +11,7 @@ This package has been tested on the following configurations:
 
 To get this package running, you'll need a C compiler that supports C99, and a C++ compiler that supports C++11. Examples are gcc and g++.
 
-You should only need to build once. To do so, source the `devel.bash` script and run `CASCADE-MAKE`
+You should only need to build once. To do so, source the `devel.bash` script and run `CASCADE-MAKE`. It is recommended to run this build in the background, as it will take some time.
 
 ``` bash
 source devel.bash
@@ -46,6 +46,10 @@ espeak ...
 * [sox-14.4.2](http://sox.sourceforge.net)
 * [wxWidgets-3.0.5](https://www.wxwidgets.org/downloads/)
     * [gtk-3.]
+        * [jpeg-v9d](https://ijg.org)
+        * [libpng-1.6.37](http://www.libpng.org/pub/png/libpng.html)
+        * [libtiff-4.1.0](http://www.simplesystems.org/libtiff/)
+        * [freetype-2.10.4](https://freetype.org)
         * [glib-2.67](https://download.gnome.org/sources/glib/)
             * [meson-0.56.0](https://mesonbuild.com/)
                 * [python-3.9.0](https://www.python.org)
@@ -54,11 +58,20 @@ espeak ...
                 * [ninja-1.10.1](https://github.com/ninja-build/ninja)
             * [libiconv-](https://www.gnu.org/software/libiconv/)
             * [zlib-1.2.11](https://zlib.net)
-        * [shared-mime-info-](https://gitlab.freedesktop.org/xdg/shared-mime-info/)
+        * [pango-1.48.0](https://download.gnome.org/sources/pango/)
+            * [fontconfig-2.13.92](https://www.freedesktop.org/wiki/Software/fontconfig/)
+                * [gperf-3.1](https://www.gnu.org/software/gperf/)
+            * [cairo-1.16.0](https://cairographics.org/download/)
+                * [pixman-0.40.0](https://cairographics.org/releases/)
+            * [harfbuzz-2.7.2](https://github.com/harfbuzz/harfbuzz)
+        * [libx11-1.7.0](https://gitlab.freedesktop.org/xorg/lib/libx11)
+            * [xorg-macros-1.19.2](https://gitlab.freedesktop.org/xorg/util/macros)
+            * [libxtrans-1.4.0](https://gitlab.freedesktop.org/xorg/lib/libxtrans)
+            * [xorgproto-2020.1](https://gitlab.freedesktop.org/xorg/proto/xorgproto)
+            * [libxcb-1.14](https://gitlab.freedesktop.org/xorg/lib/libxcb)
+                * [libxcbproto-1.14.1](https://gitlab.freedesktop.org/xorg/proto/xcbproto)
+                * [libxau-1.0.9](https://gitlab.freedesktop.org/xorg/lib/libxau)
+        * (Not in use) [shared-mime-info-](https://gitlab.freedesktop.org/xdg/shared-mime-info/)
             * [glib]
             * [itstool-2.0.6](http://itstool.org)
                 * [libxml2-2.9.10](http://www.xmlsoft.org)
-        * [jpeg-v9d](https://ijg.org)
-        * [libpng-1.6.37](http://www.libpng.org/pub/png/libpng.html)
-        * [libtiff-4.1.0](http://www.simplesystems.org/libtiff/)
-        * [freetype-2.10.4](https://freetype.org)

@@ -24,7 +24,7 @@ opt_run_untar $force_untar $auto_untar $package $version
 
 # $force_config - set to '1' to always configure the package
 # $auto_config - set to '0' to disable automatic configuration
-opt_run_configure 1 $auto_config $package $version $prefix
+opt_run_configure $force_config $auto_config $package $version $prefix
 
 # Set any of $compile, $install etc. to '0' to disable the corresponding make functions
 opt_run_make $compile $package $version -j$ESPEAKEDIT_NG_MAKE_JOBS

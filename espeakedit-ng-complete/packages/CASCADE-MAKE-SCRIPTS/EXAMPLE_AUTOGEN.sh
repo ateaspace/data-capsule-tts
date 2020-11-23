@@ -2,8 +2,8 @@
 
 # These should match up with the name of the archive
 # e.g. for 'lib-example-2.5.32'; package=lib-example, version=-2.5.32
-package=ex-a
-version=-1.5
+package=
+version=-
 
 # Gets the path to this script, relative from the working directory
 progname=$0
