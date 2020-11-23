@@ -58,3 +58,7 @@ espeak ...
             * [glib]
             * [itstool-2.0.6](http://itstool.org)
                 * [libxml2-2.9.10](http://www.xmlsoft.org)
+        * [jpeg-v9d](https://ijg.org)
+        * [libpng-1.6.37](http://www.libpng.org/pub/png/libpng.html)
+        * [libtiff-4.1.0](http://www.simplesystems.org/libtiff/)
+        * [freetype-2.10.4](https://freetype.org)
