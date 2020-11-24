@@ -8,10 +8,11 @@ if [ -z $ESPEAKEDIT_NG_HOME ] ; then
   source setup.bash
 fi
 
+pcp="$ESPEAKEDIT_NG_HOME_INSTALLED/lib/pkgconfig:$ESPEAKEDIT_NG_HOME_INSTALLED/lib/x86_64-linux-gnu/pkgconfig"
 if [ -z $PKG_CONFIG_PATH ] ; then
-    export PKG_CONFIG_PATH="$ESPEAKEDIT_NG_HOME_INSTALLED/lib/pkgconfig:$PKG_CONFIG_PATH"
+    export PKG_CONFIG_PATH="$pcp:$PKG_CONFIG_PATH"
 else
-    export PKG_CONFIG_PATH="$ESPEAKEDIT_NG_HOME_INSTALLED/lib/pkgconfig"
+    export PKG_CONFIG_PATH="$pcp"
 fi
 
 # Determines the default number of jobs that each make process should run in parallel
