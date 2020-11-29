@@ -20,7 +20,7 @@ export LD_LIBRARY_PATH="$prefix/lib"
 
 # $force_untar - set to/pass in '1' to always perform an extraction
 # $auto_untar - set to '0' to disable automatic untarring
-opt_run_untar $force_untar $auto_untar $package $version ".tar.xz"
+opt_run_untar $force_untar $auto_untar $package $version
 
 build_subdir="_build"
 

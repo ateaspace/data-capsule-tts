@@ -3,7 +3,7 @@
 # These should match up with the name of the archive
 # e.g. for 'lib-example-2.5.32'; package=lib-example, version=-2.5.32
 package=libxml2
-version=-2.9.10
+version=-2.9.7
 
 # Gets and stores the path to this script, relative from the working directory
 progname=$0
@@ -22,9 +22,12 @@ export LD_LIBRARY_PATH="$ESPEAKEDIT_NG_HOME_INSTALLED/lib"
 # $auto_untar - set to '0' to disable automatic untarring
 opt_run_untar $force_untar $auto_untar $package $version # Include an optional extension parameter here, e.g. '.tar.gz'
 
+# Point the package towards Python 2
+ export PYTHON="$prefix/bin/python2"
+
 # $force_config - set to '1' to always configure the package
 # $auto_config - set to '0' to disable automatic configuration
-opt_run_configure $force_config $auto_config $package $version $prefix #\
+opt_run_configure $force_config $auto_config $package $version $prefix --with-python-install-dir=$prefix/lib/python2.7/site-packages
 #  --disable-shared # Use this if other software is having issues linking against this library
 
 # Set any of $compile, $install etc. to '0' to disable the corresponding make functions

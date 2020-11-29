@@ -26,7 +26,7 @@ build_subdir="_build"
 
 # $force_config - set to '1' to always configure the package
 # $auto_config - set to '0' to disable automatic configuration
-opt_run_meson_configure $force_config $auto_config $package $version $build_subdir $prefix
+opt_run_meson_configure $force_config $auto_config $package $version $build_subdir $prefix -Dintrospection=disabled
 
 # Set any of $compile, $install etc. to '0' to disable the corresponding make functions
 opt_run_ninja $compile $package $version $build_subdir

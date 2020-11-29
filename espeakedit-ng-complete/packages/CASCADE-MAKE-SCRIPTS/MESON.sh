@@ -10,7 +10,18 @@ progname=$0
 
 source ../cascade-make/lib/cascade-lib.bash "$@"
 
-if [ ! -x "$(command -v meson)" ] ; then
-    pip3 install --user meson
-    source export PATH="${PATH}:$HOME/.local/bin"
+# $force_untar - set to/pass in '1' to always perform an extraction
+# $auto_untar - set to '0' to disable automatic untarring
+opt_run_untar $force_untar $auto_untar $package $version # Include an optional extension parameter here, e.g. '.tar.gz'
+
+meson_install_path="${ESPEAKEDIT_NG_HOME_INSTALLED}/bin/${package}"
+echo "Install: ${install}"
+
+if [ $install == "1" ] && [ ! -e "${meson_install_path}" ] ; then
+    cp -r "${package}${version}" "${ESPEAKEDIT_NG_HOME_INSTALLED}/bin/${package}/"
+    mv "${meson_install_path}/meson.py" "${meson_install_path}/meson"
+    export PATH="${meson_install_path}:${PATH}"
+    print_info "Meson installed to ${meson_install_path}"
 fi
+
+opt_run_tarclean $tarclean $package $version

@@ -81,7 +81,7 @@ run_untar()
         tar_args="xvJf"
     elif [ $ext = ".tar" ] ; then
         tar_args="xvf"
-    else 
+    else
         print_info "Warning: Unrecognized extension: $ext"
         print_info "Assuming tarred, gzipped file"
         tar_args="xvjf"
@@ -222,7 +222,7 @@ opt_run_untar()
         run_untar $package $version $ext
     elif [ $auto_untar = "1" ] ; then
         if [ -d $package$version ] ; then
-        print_info "Found untarred version of $package$version$ext => no need to untar"
+            print_info "Found untarred version of $package$version$ext => no need to untar"
         else
         run_untar $package $version $ext
         fi

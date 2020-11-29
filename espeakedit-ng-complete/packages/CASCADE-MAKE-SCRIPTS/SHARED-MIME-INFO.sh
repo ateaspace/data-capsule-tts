@@ -2,8 +2,8 @@
 
 # These should match up with the name of the archive
 # e.g. for 'lib-example-2.5.32'; package=lib-example, version=-2.5.32
-package=glib
-version=-2.67.0
+package=shared-mime-info
+version=-1.15
 
 # Gets and stores the path to this script, relative from the working directory
 progname=$0
@@ -22,14 +22,18 @@ export LD_LIBRARY_PATH="$ESPEAKEDIT_NG_HOME_INSTALLED/lib"
 # $auto_untar - set to '0' to disable automatic untarring
 opt_run_untar $force_untar $auto_untar $package $version ".tar.xz"
 
-build_subdir="_build"
-
 # $force_config - set to '1' to always configure the package
 # $auto_config - set to '0' to disable automatic configuration
-opt_run_meson_configure $force_config $auto_config $package $version $build_subdir $prefix "-Diconv=external"
+opt_run_configure $force_config $auto_config $package $version $prefix #\
+#  --disable-shared # Use this if other software is having issues linking against this library
+
+# Point the package towards Python 2
+ export PYTHON="$prefix/bin/python2"
 
 # Set any of $compile, $install etc. to '0' to disable the corresponding make functions
-opt_run_ninja $compile $package $version $build_subdir
-opt_run_ninja $install $package $version $build_subdir "install"
+opt_run_make $compile $package $version -j$ESPEAKEDIT_NG_MAKE_JOBS
+opt_run_make $install $package $version "install" -j$ESPEAKEDIT_NG_MAKE_JOBS
+opt_run_make $clean $package $version "clean" -j$ESPEAKEDIT_NG_MAKE_JOBS
+opt_run_make $distclean $package $version "distclean" -j$ESPEAKEDIT_NG_MAKE_JOBS
 
 opt_run_tarclean $tarclean $package $version
