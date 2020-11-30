@@ -1,0 +1,374 @@
+if test -z $GSDLOS ; then
+  GSDLOS=`uname -s | tr '[A-Z]' '[a-z]'`
+  # check for running bash under Cygwin
+  if test "`echo $GSDLOS | sed 's/cygwin//'`" != "$GSDLOS" ;
+  then
+    GSDLOS=windows
+  fi
+  # check for running bash under MinGW/MSys
+  if test "`echo $GSDLOS | sed 's/mingw//'`" != "$GSDLOS" ;
+  then
+    GSDLOS=windows
+  fi
+  if test ! -z $crossOS ; then
+    # Override derived value with value explicitly provided in crossOS
+    GSDLOS=$crossOS
+  fi
+
+  echo "GSDLOS was not set.  Setting it to '$GSDLOS'"
+  export GSDLOS
+fi
+
+if test $# -gt "0" ; then
+  if test -z ${1##GEXT*} ; then
+    
+    ext=$1 ; shift
+    reldir=$1 ; shift
+
+    eval exthome=`echo \\$$ext`
+    if test -z "$exthome" ; then
+      if test -f $reldir/setup.bash ; then
+        echo "Environment variable $ext for Greenstone extension not set"
+        echo "Sourcing $reldir/setup.bash"
+        source $reldir/setup.bash
+      
+        eval exthome=`echo \\$$ext`
+      else
+	 echo "Did not detect $reldir/setup.bash, Skipping"
+      fi
+    fi
+  fi
+fi
+
+run_untar()
+{
+  local package=$1
+  local version=$2
+  local ext=$3
+
+  tar_args="";
+
+  if [ $ext = ".tar.gz" ] ; then
+    tar_args="xvzf"
+  elif [ $ext = ".tgz" ] ; then
+    tar_args="xvzf"
+  elif [ $ext = ".tar.bz2" ] ; then
+    tar_args="xvjf"
+  elif [ $ext = ".tar.bz" ] ; then
+    tar_args="xvjf"
+  elif [ $ext = ".tar.xz" ] ; then
+    tar_args="xvJf"
+  elif [ $ext = ".tar" ] ; then
+    tar_args="xvf"
+  else 
+    echo "Warning: Unrecognized extension: $ext"
+    echo "Assuming tarred, gzipped file"
+    tar_args="xvjf"
+  fi
+
+
+  echo tar $tar_args $package$version$ext 
+  tar $tar_args $package$version$ext
+
+  if [ $? != 0 ] ; then
+    echo "      Error encountered running *untar* stage of $progname"
+    exit 1
+  fi
+}
+
+opt_run_tarclean()
+{
+  local type=$1
+  local package=$2
+  local version=$3
+
+  if [ $type = "1" ] ; then
+
+    local dir=$package$version
+    if [ -d $dir ] ; then
+      echo /bin/rm -rf $dir
+      /bin/rm -rf $dir
+
+      if [ $? != 0 ] ; then
+        echo "      Error encountered running *tarclean* stage of $progname"
+        exit 1
+      fi
+    else 
+      echo "Unable to find directory $dir"
+    fi
+  fi
+}
+
+toplevel_make_dist()
+{
+  local distos=$1 ; shift
+  local dirname=`basename $exthome` 
+
+  local checklist="$*"
+  local distlist=""
+
+  for d in $checklist ; do
+    if [ -e $d ] ; then
+	  distlist="$distlist $dirname/$d"
+    fi
+  done
+
+  pushd ..
+
+  tar cvzf $dirname-$distos.tar.gz $distlist
+  mv $dirname-$distos.tar.gz $dirname/.
+#  mv $dirname-$distos.tar.gz $dirname/imagemagick-$distos.tar.gz
+
+  popd
+}
+
+default_toplevel_make_dist()
+{
+  local distos=$1 ; shift
+  local dirname=`basename $exthome` 
+
+  local checklist="setup.bash setup.bat perllib $GSDLOS lib $*"
+  toplevel_make_dist $distos $checklist
+}
+
+toplevel_make_minimal()
+{
+  local distos=$1 ; shift
+  local dirname=`basename $exthome` 
+
+  local checklist="devel.bash setup.bash_old setup.bat_old $GSDLOS/lib $GSDLOS/bin $GSDLOS/include $*"
+  local distlist=""
+
+  for d in $checklist ; do
+    if [ -e $d ] ; then
+          distlist="$distlist $dirname/$d"
+    fi
+  done
+
+  pushd ..
+
+  echo "@@@@ LIST: $distlist"
+
+  local tarname="gnome-lib-minimal"
+
+  if [ $distos = "linux" ] ; then
+      tarname="$tarname-linux"
+
+      arch=`uname -m`
+      if [[ "$arch" == *"64"* ]]; then
+          tarname="$tarname-x64";
+      fi      
+  elif [ $distos = "darwin" ] ; then
+      if [ $OSTYPE != "darwin9.0" ] ; then
+	  tarname="$tarname-darwin-Lion-intel"
+      else
+	  tarname="$tarname-darwin-intel"
+      fi
+  fi
+
+  # copy all the files except $OS/lib/pkconfig/.fixed-prefix.awk across. The absence of that last file will ensure that gnome-lib-minimal
+  # does not point to the path where it was compiled when compiling wvware against a gnome-lib-minimal in a GS2 located elsewhere
+  # http://www.gnu.org/software/tar/manual/html_node/exclude.html and http://www.tldp.org/LDP/abs/html/comparison-ops.html
+  # Also need to remove all the *.la files generated (in the OS/lib folder), as happens on darwin, since these contain fixed paths
+  tar cvzf $tarname.tar.gz --exclude='.fixed-prefix.awk' --exclude='*.la' $distlist
+  mv $tarname.tar.gz $dirname/.
+
+  popd
+}
+
+opt_run_untar()
+{
+  local force_untar=$1
+  local auto_untar=$2
+  local package=$3
+  local version=$4
+
+  local ext="";
+
+  if [ ! -z "$5" ] ; then
+    ext=$5
+  else 
+    ext=".tar.gz"
+  fi
+
+  if [ $force_untar = "1" ] ; then
+    run_untar $package $version $ext
+  elif [ $auto_config = "1" ] ; then
+    if [ -d $package$version ] ; then
+      echo "Found untarred version of $package$version$ext => no need to untar"
+    else
+      run_untar $package $version $ext
+    fi
+  fi
+}
+
+
+opt_run_configure()
+{
+  local force_config=$1; shift
+  local auto_config=$1; shift
+  local package=$1; shift
+  local version=$1; shift
+  local prefix=$1; shift
+
+  if [ $force_config = "1" ] ; then
+    echo "[pushd $package$version]"
+    ( cd $package$version ; \
+      echo $CROSSCONFIGURE_VARS ./configure --prefix="$prefix" $CROSSCONFIGURE_ARGS $@ ; 
+      eval $CROSSCONFIGURE_VARS ./configure --prefix="$prefix" $CROSSCONFIGURE_ARGS $@ )
+    if [ $? != 0 ] ; then
+        echo "      Error encountered running *configure* stage of $progname"
+        exit 1
+    fi
+    echo "[popd]"
+  else
+    if [ $auto_config = "1" ] ; then
+      echo "Found top-level for ${progname%.*} => no need to run ./configure"
+    fi
+  fi
+}
+
+
+opt_run_perl_configure()
+{
+  local force_config=$1; shift
+  local auto_config=$1; shift
+  local package=$1; shift
+  local version=$1; shift
+  local prefix=$1; shift
+
+  if [ $force_config = "1" ] ; then
+    echo "[pushd $package$version]"
+    ( cd $package$version ; \
+      echo perl Makefile.PL PREFIX="$prefix" $CROSSCOMPILE $@ ;
+      perl Makefile.PL PREFIX="$prefix" $CROSSCOMPILE $@)
+    if [ $? != 0 ] ; then
+        echo "      Error encountered running *configure* stage of $progname"
+        exit 1
+    fi
+    echo "[popd]"
+  else
+    if [ $auto_config = "1" ] ; then
+      echo "Found top-level for ${progname%.*} => no need to run perl configure"
+    fi
+  fi
+}
+
+
+opt_run_make()
+{
+  local type=$1; shift
+  local package=$1; shift
+  local version=$1; shift
+  local opt_target=""
+
+  if [ ! -z "$1" ] ; then
+    opt_target=$1; shift
+  fi
+
+  if [ $type = "1" ] ; then
+    ( cd $package$version ; \
+      make $opt_target $@)
+
+    if [ $? != 0 ] ; then
+        echo "      Error encountered running *make $target* stage of $progname"
+        exit 1
+    fi
+  fi
+}
+
+
+opt_run_cmake()
+{
+  local type=$1
+  local package=$2
+  local version=$3
+  local subdir=$4
+  local opt_target=""
+
+  if [ ! -z "$5" ] ; then
+    opt_target=$5
+  fi
+
+  if [ $type = "1" ] ; then
+    ( cd $package$version/$subdir ; \
+      make $opt_target)
+
+    if [ $? != 0 ] ; then
+        echo "      Error encountered running *make $target* stage of $progname"
+        exit 1
+    fi
+  fi
+}
+
+
+run_installclean()
+{
+  local fulldir="$exthome/$GSDLOS"
+  echo ""
+  read -p "Delete $fulldir [y/n]?" ans
+  if [ $ans = "y" ] ; then
+    /bin/rm -rf "$fulldir"
+  fi
+
+  exit 0
+}
+
+
+print_usage()
+{
+  echo "$0 [untar|configure|comiple|install|clean|distclean|tarclean|makedist|makeminimal]+"
+  echo "  or"
+  echo "$0 [installclean|help]"
+  exit 0
+}
+
+force_untar=0
+auto_untar=0
+
+force_config=0
+auto_config=0
+
+compile=0
+install=0
+clean=0
+distclean=0
+tarclean=0
+makedist=0
+makeminimal=0
+
+if [ $# -gt 0 ] ; then
+  for cmd in $* ; do
+    echo $cmd
+    if   [ $cmd = "untar" ]        ; then force_untar=1
+    elif [ $cmd = "configure" ]    ; then force_config=1
+    elif [ $cmd = "compile" ]      ; then compile=1
+    elif [ $cmd = "install" ]      ; then install=1  
+    elif [ $cmd = "clean" ]        ; then clean=1  
+    elif [ $cmd = "distclean" ]    ; then distclean=1
+    elif [ $cmd = "tarclean" ]     ; then tarclean=1
+    elif [ $cmd = "makedist" ]     ; then makedist=1
+    elif [ $cmd = "makeminimal" ]     ; then makeminimal=1
+
+    elif [ $cmd = "installclean" ] ; then run_installclean
+    elif [ $cmd = "help" ]         ; then print_usage
+    fi
+  done
+else
+  # defaults
+  auto_untar=1
+  auto_config=1
+  compile=1
+  install=1
+  clean=0
+  distclean=0
+  tarclean=0
+  makedist=0
+  makeminimal=0
+fi
+
+if [ $auto_config = "1" ] ; then
+  if [ ! -e $package$version/Makefile ] &&  [ ! -e $package$version/config.h ] ; then
+    force_config=1
+  fi
+fi

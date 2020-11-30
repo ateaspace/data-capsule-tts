@@ -1,0 +1,38 @@
+@echo off
+
+if "%GSDLOS%" == "" (
+  set GSDLOS=windows
+)
+
+set force_untar=0
+set auto_untar=0
+
+set compile=0
+set install=0
+set clean=0
+set distclean=0
+set tarclean=0
+set installclean=0
+
+if "%*" NEQ "" (
+  for /D %%c IN (%*) do (
+    echo %%c
+    if "%%c" == "untar"        set force_untar=1
+    if "%%c" == "compile"      set compile=1
+    if "%%c" == "install"      set install=1  
+    if "%%c" == "clean"        set clean=1  
+    if "%%c" == "distclean"    set distclean=1
+    if "%%c" == "tarclean"     set tarclean=1
+    if "%%c" == "installclean" set installclean=1
+  )
+) else (
+  :: defaults
+  set auto_untar=1
+  set compile=1
+  set install=1
+  set clean=0
+  set distclean=0
+  set tarclean=0
+  set installclean=0
+)
+
