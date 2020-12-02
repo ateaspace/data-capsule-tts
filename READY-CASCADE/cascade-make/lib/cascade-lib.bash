@@ -92,7 +92,7 @@ run_untar()
     tar $tar_args $package$version$ext
 
     if [ $? != 0 ] ; then
-        print_error "Error encountered running *untar* stage of $progname"
+        print_error "Error encountered running *untar* stage of ${progname%.*}"
         exit 1
     fi
 }
@@ -112,7 +112,7 @@ opt_run_tarclean()
         /bin/rm -rf $dir
 
         if [ $? != 0 ] ; then
-            print_error "Error encountered running *tarclean* stage of $progname"
+            print_error "Error encountered running *tarclean* stage of ${progname%.*}"
             exit 1
         fi
         else 
@@ -239,7 +239,7 @@ opt_run_autogen() {
     # Check to see if we actually need to run the autogen, and if so that we can
     if [ $auto_autogen = "1" ] ; then
         if [ ! -e "${package}${version}/autogen.sh" ] ; then
-            print_error "A configuration file does not exist for $progname"
+            print_error "A configuration file does not exist for ${progname%.*}"
         elif [ ! -e "${package}${version}/${AUTOGEN_FILENAME}" ] ; then
             force_autogen=1
         else
@@ -253,7 +253,7 @@ opt_run_autogen() {
             echo ./autogen.sh ;
             eval ./autogen.sh )
         if [ $? != 0 ] ; then
-            print_error "Error encountered running *autogen* stage of $progname"
+            print_error "Error encountered running *autogen* stage of ${progname%.*}"
             exit 1
         else
             ( cd "${package}${version}" ;
@@ -275,7 +275,7 @@ opt_run_configure()
     # Check to see if we actually need to run the configuration, and if so that we can
     if [ $auto_config = "1" ] ; then
         if [ ! -e "${package}${version}/configure" ] ; then
-            print_error "A configuration file does not exist for $progname"
+            print_error "A configuration file does not exist for ${progname%.*}"
         elif [ ! -e "${package}${version}/${CONFIGURE_FILENAME}" ] ; then
             force_config=1
         else
@@ -290,7 +290,7 @@ opt_run_configure()
             echo $CROSSCONFIGURE_VARS ./configure --prefix="$prefix" $CROSSCONFIGURE_ARGS $@ ;
             eval $CROSSCONFIGURE_VARS ./configure --prefix="$prefix" $CROSSCONFIGURE_ARGS $@ )
         if [ $? != 0 ] ; then
-            print_error "Error encountered running *configure* stage of $progname"
+            print_error "Error encountered running *configure* stage of ${progname%.*}"
             exit 1
         else
             ( cd "${package}${version}" ;
@@ -323,7 +323,7 @@ opt_run_cmake_configure()
     # Check to see if we can/need to configure the project
     if [ $auto_config = "1" ] ; then
         if [ ! -e "${package}${version}/CMakeLists.txt" ] ; then
-            print_error "A configuration file does not exist for $progname"
+            print_error "A configuration file does not exist for ${progname%.*}"
         elif [ ! -e "${package}${version}/${CONFIGURE_FILENAME}" ] ; then
             force_config=1
         else
@@ -336,7 +336,7 @@ opt_run_cmake_configure()
             cmake -DCMAKE_INSTALL_PREFIX="${prefix}" "$@" "../")
 
         if [ $? != 0 ] ; then
-            print_error "Error encountered running *cmake $target* stage of $progname"
+            print_error "Error encountered running *cmake $target* stage of ${progname%.*}"
             exit 1
         else
             ( cd "${package}${version}" ;
@@ -363,7 +363,7 @@ opt_run_meson_configure()
     # Check to see if we actually need to run the configuration, and if so that we can
     if [ $auto_config = "1" ] ; then
         if [ ! -e "${package}${version}/meson.build" ] ; then
-            print_error "A meson build file does not exist for $progname"
+            print_error "A meson build file does not exist for ${progname%.*}"
         elif [ ! -e "${package}${version}/${CONFIGURE_FILENAME}" ] ; then
             force_config=1
         else
@@ -378,7 +378,7 @@ opt_run_meson_configure()
             print_info $CROSSCONFIGURE_VARS meson "${subdir}" --prefix="$prefix" $CROSSCONFIGURE_ARGS $@ ;
             eval $CROSSCONFIGURE_VARS meson "${subdir}" --prefix="$prefix" $CROSSCONFIGURE_ARGS $@ )
         if [ $? != 0 ] ; then
-            print_error "Error encountered running *configure* stage of $progname"
+            print_error "Error encountered running *configure* stage of ${progname%.*}"
             exit 1
         else
             ( cd "${package}${version}" ;
@@ -399,7 +399,7 @@ opt_run_perl_configure()
     # Check to see if we actually need to run the configuration, and if so that we can
     if [ $auto_config = "1" ] ; then
         if [ ! -e "${package}${version}/Makefile.PL" ] ; then
-            print_error "A perl makefile does not exist for $progname"
+            print_error "A perl makefile does not exist for ${progname%.*}"
         elif [ ! -e "${package}${version}/${CONFIGURE_FILENAME}" ] ; then
             force_config=1
         else
@@ -414,7 +414,7 @@ opt_run_perl_configure()
             print_info perl Makefile.PL PREFIX="$prefix" $CROSSCOMPILE $@ ;
             perl Makefile.PL PREFIX="$prefix" $CROSSCOMPILE $@ )
         if [ $? != 0 ] ; then
-            print_error "Error encountered running *configure* stage of $progname"
+            print_error "Error encountered running *configure* stage of ${progname%.*}"
             exit 1
         else
             ( cd "${package}${version}" ;
@@ -438,7 +438,7 @@ opt_run_make()
             make $@ )
 
         if [ $? != 0 ] ; then
-            print_error "Error encountered running *make $target* stage of $progname"
+            print_error "Error encountered running *make $target* stage of ${progname%.*}"
             exit 1
         fi
     fi
@@ -467,7 +467,7 @@ opt_run_cmake() {
             make "$@" )
 
         if [ $? != 0 ] ; then
-            print_error "Error encountered running *cmake $target* stage of $progname"
+            print_error "Error encountered running *cmake $target* stage of ${progname%.*}"
             exit 1
         fi
     fi
@@ -492,7 +492,7 @@ opt_run_ninja()
             ninja "$@" )
 
         if [ $? != 0 ] ; then
-            print_error "Error encountered running *ninja* stage of $progname"
+            print_error "Error encountered running *ninja* stage of ${progname%.*}"
             exit 1
         fi
     fi
@@ -606,4 +606,3 @@ else
   makedist=0
   makeminimal=0
 fi
-

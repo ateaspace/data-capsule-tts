@@ -11,12 +11,13 @@ progname=$0
 source ../cascade-make/lib/cascade-lib.bash "$@"
 
 prefix=$ESPEAKEDIT_NG_HOME_INSTALLED
+x64_libs="$prefix/lib/x86_64-linux-gnu"
 
 export CFLAGS="$CFLAGS -I$prefix/include"
 export CPPFLAGS="$CPPFLAGS -I$prefix/include"
 export CXXFLAGS="$CXXFLAGS -I$prefix/include"
-export LDFLAGS="$LDFLAGS -L$prefix/lib"
-export LD_LIBRARY_PATH="$prefix/lib"
+export LDFLAGS="$LDFLAGS -L$prefix/lib -L$x64_libs"
+export LD_LIBRARY_PATH="$prefix/lib:$x64_libs"
 
 # $force_untar - set to/pass in '1' to always perform an extraction
 # $auto_untar - set to '0' to disable automatic untarring
@@ -26,7 +27,7 @@ build_subdir="_build"
 
 # $force_config - set to '1' to always configure the package
 # $auto_config - set to '0' to disable automatic configuration
-opt_run_meson_configure $force_config $auto_config $package $version $build_subdir $prefix -Dintrospection=false -Dwayland_backend=false -Dgdk-pixbuf:introspection=disabled
+opt_run_meson_configure $force_config $auto_config $package $version $build_subdir $prefix -Dintrospection=false -Dwayland_backend=false -Dtests=false
 
 # Set any of $compile, $install etc. to '0' to disable the corresponding make functions
 opt_run_ninja $compile $package $version $build_subdir

@@ -10,7 +10,7 @@ progname=$0
 
 source ../cascade-make/lib/cascade-lib.bash "$@"
 
-prefix=$ESPEAKEDIT_NG_HOME_INSTALLED/openssl
+prefix="$ESPEAKEDIT_NG_HOME_INSTALLED/openssl"
 
 export CFLAGS="$CFLAGS -I$prefix/include"
 export CPPFLAGS="$CPPFLAGS -I$prefix/include"

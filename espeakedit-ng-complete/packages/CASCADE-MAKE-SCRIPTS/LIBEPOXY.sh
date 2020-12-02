@@ -2,8 +2,8 @@
 
 # These should match up with the name of the archive
 # e.g. for 'lib-ESPEAKEDIT_NG-2.5.32'; package=lib-ESPEAKEDIT_NG, version=-2.5.32
-package=gdk-pixbuf
-version=-2.42.0
+package=libepoxy
+version=-1.5.4
 
 # Gets and stores the path to this script, relative from the working directory
 progname=$0
@@ -26,7 +26,7 @@ build_subdir="_build"
 
 # $force_config - set to '1' to always configure the package
 # $auto_config - set to '0' to disable automatic configuration
-opt_run_meson_configure $force_config $auto_config $package $version $build_subdir $prefix -Dintrospection=disabled -Dman=false
+opt_run_meson_configure $force_config $auto_config $package $version $build_subdir $prefix -Degl=no -Dtests=false
 
 # Set any of $compile, $install etc. to '0' to disable the corresponding make functions
 opt_run_ninja $compile $package $version $build_subdir

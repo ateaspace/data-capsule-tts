@@ -74,16 +74,19 @@ espeak ...
                 * [itstool-2.0.6](http://itstool.org/)
                     * [libxml2-2.9.7](http://www.xmlsoft.org/)
                         * [python-2.7.17](https://www.python.org)
-                * [xmlto-0.0.28](https://pagure.io/xmlto)
+                * (Not in use) [xmlto-0.0.28](https://pagure.io/xmlto)
         * [xkbcommon-1.0.3](https://xkbcommon.org)
         * [libxrender-0.9.10](https://gitlab.freedesktop.org/xorg/lib/libxrender)
         * [libxrandr-1.5.2](https://gitlab.freedesktop.org/xorg/lib/libxrandr)
             * [libxext-1.3.4](https://gitlab.freedesktop.org/xorg/lib/libxext)
         * [libxi-1.7.10](https://gitlab.freedesktop.org/xorg/lib/libxi)
             * [libxfixes-5.0.3](https://gitlab.freedesktop.org/xorg/lib/libxfixes)
-        * [atk-bridge (at-spi-atk)](https://gitlab.gnome.org/GNOME/at-spi2-atk)
+        * [at-spi2-atk-2.38.0](https://gitlab.gnome.org/GNOME/at-spi2-atk)
             * [dbus-1.12.20](https://www.freedesktop.org/wiki/Software/dbus/)
                 * [expat-2.2.10](https://libexpat.github.io)
+            * [at-spi2-core-2.38.0](https://gitlab.gnome.org/GNOME/at-spi2-core)
+                * [libXtst-1.2.3](https://gitlab.freedesktop.org/xorg/lib/libxtst)
+        * [libepoxy-1.5.4](https://github.com/anholt/libepoxy)
         * [libx11-1.7.0](https://gitlab.freedesktop.org/xorg/lib/libx11)
             * [xorg-macros-1.19.2](https://gitlab.freedesktop.org/xorg/util/macros)
             * [libxtrans-1.4.0](https://gitlab.freedesktop.org/xorg/lib/libxtrans)
@@ -91,3 +94,8 @@ espeak ...
             * [libxcb-1.14](https://gitlab.freedesktop.org/xorg/lib/libxcb)
                 * [libxcbproto-1.14.1](https://gitlab.freedesktop.org/xorg/proto/xcbproto)
                 * [libxau-1.0.9](https://gitlab.freedesktop.org/xorg/lib/libxau)
+
+# Development Notes
+
+* openssl is installed under its own prefix, as it compiles without certificate definitions. You will most likely need to build with the same version of openssl that is installed on your system
+* xmlto is installed under its own prefix, owing to the fact that it causes build issues with various packages. The only package that requires xmlto as a hard dependency is shared-mime-info, which compiles fine
