@@ -2,8 +2,8 @@
 
 # These should match up with the name of the archive
 # e.g. for 'lib-example-2.5.32'; package=lib-example, version=-2.5.32
-package=speexdsp
-version=-1.2rc3
+package=speex
+version=-1.2.0
 
 # Gets and stores the path to this script, relative from the working directory
 progname=$0

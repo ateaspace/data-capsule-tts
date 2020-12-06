@@ -26,11 +26,7 @@ export LD_LIBRARY_PATH="$prefix/lib:$x64_libs"
 # $auto_untar - set to '0' to disable automatic untarring
 opt_run_untar $force_untar $auto_untar $package $version ".tar.xz"
 
-# ( cd "$package$version";
-#     ln -s "../$espeak_package$espeak_version/espeak-ng-data/espeak-data" )
-# print_info "Symlinked espeak-data"
-rm -rf "$package$version/espeak-data/"
-cp -r espeak-data "$package$version/espeak-data"
+cp -rn espeak-data "$package$version/"
 
 # $force_autogen - set to '1' to always perform auto-generation
 # $auto_autogen - set to '0' to disable automatic autogen
