@@ -94,6 +94,9 @@ espeak ...
             * [libxcb-1.14](https://gitlab.freedesktop.org/xorg/lib/libxcb)
                 * [libxcbproto-1.14.1](https://gitlab.freedesktop.org/xorg/proto/xcbproto)
                 * [libxau-1.0.9](https://gitlab.freedesktop.org/xorg/lib/libxau)
+* [libcanberra-0.30](http://0pointer.de/lennart/projects/libcanberra/)
+    * [libvorbis-1.3.7](https://xiph.org/downloads/)
+        * [libogg-1.3.4](https://xiph.org/downloads/)
 
 # Development Notes
 
