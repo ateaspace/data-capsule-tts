@@ -7,7 +7,7 @@ This is a ready-to-go implementation of the Cascade Make system, modified from i
 To use, simply copy this folder and rename, and run the init.bash script, with the name of your project
 
 ```bash
-./init.bash YOUR_NAME_HERE
+./init.bash PROJECT_NAME_HERE
 ```
 
 ### Manual Setup
