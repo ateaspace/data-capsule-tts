@@ -1,0 +1,1 @@
+Scrot is a dependancy for `pyautogui`, a python package I (ethan) was using to automate the marytts gui process for finding 20 words out of 5000 without the use of ctrl f or any form of sorting
