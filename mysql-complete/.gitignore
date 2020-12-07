@@ -1,2 +1,3 @@
+# Ignore the installed boost and bison folders
 /boost
 /bison-3.7
