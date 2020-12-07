@@ -12,3 +12,11 @@
 * '2B' codes are three letters, derived in some cases from the English name of the language. In this case, there *is* a difference
 * '3' codes are three letters, similar to '2T' codes but distinct for each variety of ISO macrolanguage. Consider '3' codes to be an improved form of the '2x'  codes.
 * '5' codes are three letters and represent the language family.
+
+- Classed as a polynesions language, specifically an Esatern Polynesion language belonging to the Tahitic subgroup.
+- An Open Syllable Language
+
+### Orthography (written language)
+
+- Modern alphabet has 15 letters, two of which are digraphs: A E H I K M N O P R T U W NG and WH
+- The five vowels (A, E, I, O, U) have short and longer forms; long forms rea denoted by macrons marked above them: Ā, Ē, Ī, Ō and Ū
