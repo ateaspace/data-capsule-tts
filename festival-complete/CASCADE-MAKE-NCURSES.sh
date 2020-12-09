@@ -1,6 +1,4 @@
 package_version=ncurses-5.9
-cur_dir="$(pwd)"
-install_dir="$cur_dir/packages"
 
 if [ ! -d $install_dir ] 
 then
@@ -24,13 +22,13 @@ then
     echo "Applying patch: MKlib_gen.sh.patch"
 
     cd $install_dir/ncurses-5.9/ncurses/base \
-    && patch < $install_dir/ncurse MKlib_gen.sh.patch
+    && patch < $install_dir/$package_version MKlib_gen.sh.patch
 
 fi
 
 export CFLAGS="-fPIC"
 
-cd $package_version \
+cd  $install_dir/$package_version \
     && ./configure --prefix=$install_dir --without-cxx-binding --disable-shared \
     && make \
     && make install
