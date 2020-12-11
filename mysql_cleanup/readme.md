@@ -1,0 +1,1 @@
+The sole purpose of this code is to remove any non-maori words from the xml transcribed from wikipedia as there appears to be a lot. This entire process is encapsulated behind the run() method in word_cleaner.py and is dynamic no matter how far along in the process you were, I.e. it can start and stop anywhere and is aware

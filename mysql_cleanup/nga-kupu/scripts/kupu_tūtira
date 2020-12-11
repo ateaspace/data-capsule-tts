@@ -1,0 +1,54 @@
+#!/usr/bin/python3
+# Returns a list of all māori words and tells the user what percentage of words
+# are considered 'english' or 'māori'
+
+import context
+import re
+import sys
+import argparse
+
+from taumahi import kōmiri_kupu, nahanaha
+
+# Returns the plain text from the input file in one string
+
+
+def tangohia_kupu_tōkau(kōwhiri):
+    kōnae = open(kōwhiri.input, 'r')
+    kupu_tōkau = kōnae.read()
+    kōnae.close()
+    return kupu_tōkau
+
+
+def tuhi_puta_tuhinga(kōwhiri, kupu_hou):
+    # Writes the list of words to a new document if it is specified, each word
+    # and hyphenated word on a new line, else it just prints the list to the terminal
+    if kōwhiri.output:
+        kupu_tūtira_hou = open(kōwhiri.output, "w")
+        kupu_tūtira_hou.write("\n".join(kupu_hou))
+        kupu_tūtira_hou.close()
+    else:
+        print(kupu_hou)
+
+
+def matua():
+    # Set up the terminal arguments
+    whakatukai = argparse.ArgumentParser()
+    whakatukai.add_argument(
+        '--input', '-i', help="Input multilanguage corpus text file")
+    whakatukai.add_argument(
+        '--output', '-o', help="Output text file where words that are considered to be Māori are stored")
+    kōwhiri = whakatukai.parse_args()
+
+    # Gathers text from input files
+    kupu_tōkau = tangohia_kupu_tōkau(kōwhiri)
+
+    # Writes these words that are considered to be Māori in the text (the keys
+    # of the first object returned by the kōmiri_kupu function) to their output
+    # files or prints them to the console depending on user input, in Māori
+    # alphabetical order
+
+    tuhi_puta_tuhinga(kōwhiri, nahanaha(kōmiri_kupu(kupu_tōkau)[0].keys()))
+
+
+if __name__ == '__main__':
+    matua()
