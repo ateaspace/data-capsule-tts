@@ -13,7 +13,7 @@ if [ ! -d $package_version ] ; then
     echo "****"
 
     tar xvzf $package_version.tar.gz \
-	&& ./APPLY-PATCH.sh
+	&& ./APPLY-NCURSES-PATCH.sh
 fi
 
 export CFLAGS="-fPIC"

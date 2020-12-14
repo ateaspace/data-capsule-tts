@@ -8,7 +8,12 @@ if [ ! -f $package_version.tar.gz ] ; then
 fi
 
 if [ ! -d $package_version ] ; then
-    tar xvzf $package_version.tar.gz 
+    echo "****"
+    echo "* Untarring $package_version and applying patch"
+    echo "****"
+
+    tar xvzf $package_version.tar.gz \
+	&& ./APPLY-M4-PATCH.sh
 fi
 
 cd $package_version \
