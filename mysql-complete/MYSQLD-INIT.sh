@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# https://dev.mysql.com/doc/refman/5.7/en/data-directory-initialization.html
+
 
 if [ "x$MYSQL_COMPLETE_INSTALLED" = "x" ] ; then
     source ./SETUP.bash
