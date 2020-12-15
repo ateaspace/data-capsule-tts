@@ -33,9 +33,9 @@ emacs _MYSQL-SETTINGS.bash
   ./MYSQLD-INIT.sh
   ./MYSQLD-SAFE-RUN-SERVER.sh
 
-Force change the root password timeout/expired to False or oppisite of what it is, if you cant login.
+# Force change the root password timeout/expired to False or oppisite of what it is, if you cant login.
 
-Rerun with the RUN-SERVER boi
+# Rerun with the RUN-SERVER boi
 
 
 # 3. Connect to mysqld via the command-line

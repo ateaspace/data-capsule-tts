@@ -55,4 +55,11 @@ if [ $? != "0" ] ; then
     echo "* Error: failed to run 'make install'" >&2
     echo "****" >&2
     exit 1
+else
+    echo ""
+    echo "####"
+    echo "# To initialize the mysql database, now run:"
+    echo "#  ./MYSQLD-INIT.sh"
+    echo "####"
+    echo ""
 fi

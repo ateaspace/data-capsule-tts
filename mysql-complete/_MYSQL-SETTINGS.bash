@@ -6,6 +6,8 @@ MYSQL_PORT=6606
 
 MYSQL_SOCK="/tmp/mysql.sock"
 
+MYSQL_ROOT_PASSWORD="ateaspace"
+
 # Server specific
 
 MYSQL_DATA="$MYSQL_COMPLETE_INSTALLED/mysql/data"
