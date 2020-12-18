@@ -4,12 +4,12 @@ Some notes regarding the classification, orthgraphy and phonology of te reo Maor
 
 ### Language Codes
 
-**Family:** Austronesian \
+**Family:** Malayo-Polynesian \
 **ISO 639-1 Code:** mi \
 **ISO 639-2T:** mri \
 **ISO 639-2B** mao \
 **ISO 639-3:** mri \
-**ISO 639-5:** map
+**ISO 639-5:** poz
 
 #### Code Explanation
 

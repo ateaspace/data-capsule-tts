@@ -1,0 +1,1 @@
+- File -> Open... allows a single vowel file to be loaded into the program
