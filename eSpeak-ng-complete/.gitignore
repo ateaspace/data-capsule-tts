@@ -6,3 +6,4 @@ packages/*
 !packages/*.tar.*
 !packages/CASCADE-MAKE-SCRIPTS/
 !packages/CASCADE-MAKE.sh
+!packages/mi-espeak-ng-1.50
