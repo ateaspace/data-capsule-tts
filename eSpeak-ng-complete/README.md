@@ -41,3 +41,4 @@ espeak ...
         * [json-c-0.15-20200726](https://github.com/json-c/json-c)
             * [cmake-3.18.4](https://cmake.org/download/)
         * [gettext-0.21](https://www.gnu.org/software/gettext/)
+* [sonic-67ed70f](https://github.com/waywardgeek/sonic)

@@ -4,7 +4,7 @@
 // vowels
 
 .group a
-        a           a
+             a            a
 
 .group ā
              ā            a:
@@ -55,7 +55,7 @@
              r            R
 
 .group t
-        t           t
+             t            t
 
 .group w
              w            w
