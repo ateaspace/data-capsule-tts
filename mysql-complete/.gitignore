@@ -1,0 +1,8 @@
+# Ignore the installed boost and bison folders
+/boost
+/bison-3.7
+/linux
+/m4-1.4.18
+/mysql-server-v5.7
+/ncurses-5.9
+/openssl-1.1.1h
