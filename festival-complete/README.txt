@@ -34,7 +34,8 @@ tar xvzf festival-2.4-release.tar.gz
 
 
 wget "http://festvox.org/festvox-2.7/festvox-2.7.0-release.tar.gz"
-tar xvzf festival-2.4-release.tar.gz
+#tar xvzf festival-2.4-release.tar.gz
+tar xvzf festvox-2.7.0-release.tar.gz
 
 
 # 'festvox' has lines of code that incorrectly test if an ifstream "== 0" to determine
