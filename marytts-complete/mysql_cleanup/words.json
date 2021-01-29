@@ -1,0 +1,5314 @@
+{
+    "Aare": {
+        "id": 1,
+        "usages": 1
+    },
+    "Airani": {
+        "id": 2,
+        "usages": 1
+    },
+    "Aitutaki": {
+        "id": 3,
+        "usages": 1
+    },
+    "Ao": {
+        "id": 4,
+        "usages": 24
+    },
+    "Aouri": {
+        "id": 5,
+        "usages": 3
+    },
+    "Aotea": {
+        "id": 6,
+        "usages": 5
+    },
+    "Aotearoa": {
+        "id": 7,
+        "usages": 36
+    },
+    "Aoteroa": {
+        "id": 8,
+        "usages": 1
+    },
+    "Auna": {
+        "id": 9,
+        "usages": 1
+    },
+    "Aurere": {
+        "id": 10,
+        "usages": 1
+    },
+    "Autaia": {
+        "id": 11,
+        "usages": 1
+    },
+    "Ahakoa": {
+        "id": 12,
+        "usages": 2
+    },
+    "Ahitereiria": {
+        "id": 13,
+        "usages": 1
+    },
+    "Ahitireiria": {
+        "id": 14,
+        "usages": 1
+    },
+    "Ahuwhenua": {
+        "id": 15,
+        "usages": 1
+    },
+    "Akarana": {
+        "id": 16,
+        "usages": 1
+    },
+    "Akona": {
+        "id": 17,
+        "usages": 2
+    },
+    "Amerika": {
+        "id": 18,
+        "usages": 4
+    },
+    "An\u014d": {
+        "id": 19,
+        "usages": 1
+    },
+    "Apia": {
+        "id": 20,
+        "usages": 1
+    },
+    "Aranga": {
+        "id": 21,
+        "usages": 1
+    },
+    "Ar\u0101": {
+        "id": 22,
+        "usages": 1
+    },
+    "Ariki": {
+        "id": 23,
+        "usages": 6
+    },
+    "Aroha": {
+        "id": 24,
+        "usages": 8
+    },
+    "Atu": {
+        "id": 25,
+        "usages": 1
+    },
+    "Atua": {
+        "id": 26,
+        "usages": 8
+    },
+    "Awa": {
+        "id": 27,
+        "usages": 4
+    },
+    "Awarua": {
+        "id": 28,
+        "usages": 3
+    },
+    "aarahia": {
+        "id": 29,
+        "usages": 2
+    },
+    "ai": {
+        "id": 30,
+        "usages": 50
+    },
+    "aitua": {
+        "id": 31,
+        "usages": 1
+    },
+    "ao": {
+        "id": 32,
+        "usages": 6
+    },
+    "aohuri": {
+        "id": 33,
+        "usages": 1
+    },
+    "aua": {
+        "id": 34,
+        "usages": 9
+    },
+    "auau": {
+        "id": 35,
+        "usages": 1
+    },
+    "aue": {
+        "id": 36,
+        "usages": 1
+    },
+    "aui": {
+        "id": 37,
+        "usages": 1
+    },
+    "aukati": {
+        "id": 38,
+        "usages": 5
+    },
+    "aukatihia": {
+        "id": 39,
+        "usages": 1
+    },
+    "aunoa": {
+        "id": 40,
+        "usages": 1
+    },
+    "autaia": {
+        "id": 41,
+        "usages": 3
+    },
+    "aha": {
+        "id": 42,
+        "usages": 9
+    },
+    "ahau": {
+        "id": 43,
+        "usages": 3
+    },
+    "ahakoa": {
+        "id": 44,
+        "usages": 9
+    },
+    "ahi": {
+        "id": 45,
+        "usages": 3
+    },
+    "ahu": {
+        "id": 46,
+        "usages": 7
+    },
+    "ahua": {
+        "id": 47,
+        "usages": 4
+    },
+    "ahuatanga": {
+        "id": 48,
+        "usages": 1
+    },
+    "ake": {
+        "id": 49,
+        "usages": 23
+    },
+    "akongia": {
+        "id": 50,
+        "usages": 1
+    },
+    "ama": {
+        "id": 51,
+        "usages": 3
+    },
+    "amorangi": {
+        "id": 52,
+        "usages": 1
+    },
+    "anake": {
+        "id": 53,
+        "usages": 5
+    },
+    "anak\u0113": {
+        "id": 54,
+        "usages": 1
+    },
+    "ano": {
+        "id": 55,
+        "usages": 31
+    },
+    "an\u014d": {
+        "id": 56,
+        "usages": 51
+    },
+    "apaoraa": {
+        "id": 57,
+        "usages": 1
+    },
+    "ara": {
+        "id": 58,
+        "usages": 18
+    },
+    "aranga": {
+        "id": 59,
+        "usages": 1
+    },
+    "ar\u0101": {
+        "id": 60,
+        "usages": 18
+    },
+    "arii": {
+        "id": 61,
+        "usages": 1
+    },
+    "ariki": {
+        "id": 62,
+        "usages": 13
+    },
+    "aroaro": {
+        "id": 63,
+        "usages": 1
+    },
+    "aroha": {
+        "id": 64,
+        "usages": 6
+    },
+    "aronga": {
+        "id": 65,
+        "usages": 2
+    },
+    "atau": {
+        "id": 66,
+        "usages": 6
+    },
+    "atea": {
+        "id": 67,
+        "usages": 3
+    },
+    "atoato": {
+        "id": 68,
+        "usages": 1
+    },
+    "atu": {
+        "id": 69,
+        "usages": 55
+    },
+    "atua": {
+        "id": 70,
+        "usages": 12
+    },
+    "awa": {
+        "id": 71,
+        "usages": 3
+    },
+    "anga": {
+        "id": 72,
+        "usages": 1
+    },
+    "awhiowhio": {
+        "id": 73,
+        "usages": 1
+    },
+    "\u0100hia": {
+        "id": 74,
+        "usages": 4
+    },
+    "\u0100kuhata": {
+        "id": 75,
+        "usages": 3
+    },
+    "\u0100perira": {
+        "id": 76,
+        "usages": 3
+    },
+    "\u0100rai": {
+        "id": 77,
+        "usages": 1
+    },
+    "\u0100wherika": {
+        "id": 78,
+        "usages": 2
+    },
+    "\u0100whina": {
+        "id": 79,
+        "usages": 1
+    },
+    "\u0101e": {
+        "id": 80,
+        "usages": 1
+    },
+    "\u0101hau": {
+        "id": 81,
+        "usages": 1
+    },
+    "\u0101hea": {
+        "id": 82,
+        "usages": 1
+    },
+    "\u0101hua": {
+        "id": 83,
+        "usages": 7
+    },
+    "\u0101huatanga": {
+        "id": 84,
+        "usages": 11
+    },
+    "\u0101piti": {
+        "id": 85,
+        "usages": 1
+    },
+    "\u0101rai": {
+        "id": 86,
+        "usages": 1
+    },
+    "\u0101raia": {
+        "id": 87,
+        "usages": 1
+    },
+    "\u0101rahi": {
+        "id": 88,
+        "usages": 1
+    },
+    "\u0101tea": {
+        "id": 89,
+        "usages": 1
+    },
+    "\u0101tir\u012bkona": {
+        "id": 90,
+        "usages": 1
+    },
+    "\u0101whina": {
+        "id": 91,
+        "usages": 1
+    },
+    "Eino": {
+        "id": 92,
+        "usages": 1
+    },
+    "Eurawher\u0101hia": {
+        "id": 93,
+        "usages": 1
+    },
+    "Eur\u0101hia": {
+        "id": 94,
+        "usages": 1
+    },
+    "Ehara": {
+        "id": 95,
+        "usages": 2
+    },
+    "Enana": {
+        "id": 96,
+        "usages": 2
+    },
+    "Enata": {
+        "id": 97,
+        "usages": 1
+    },
+    "Enua": {
+        "id": 98,
+        "usages": 2
+    },
+    "Erihapeti": {
+        "id": 99,
+        "usages": 4
+    },
+    "Engari": {
+        "id": 100,
+        "usages": 16
+    },
+    "eaha": {
+        "id": 101,
+        "usages": 1
+    },
+    "eino": {
+        "id": 102,
+        "usages": 1
+    },
+    "ehara": {
+        "id": 103,
+        "usages": 3
+    },
+    "enei": {
+        "id": 104,
+        "usages": 1
+    },
+    "etehi": {
+        "id": 105,
+        "usages": 8
+    },
+    "engari": {
+        "id": 106,
+        "usages": 14
+    },
+    "\u0112tahi": {
+        "id": 107,
+        "usages": 1
+    },
+    "\u0113nei": {
+        "id": 108,
+        "usages": 11
+    },
+    "\u0113r\u0101": {
+        "id": 109,
+        "usages": 3
+    },
+    "\u0113tahi": {
+        "id": 110,
+        "usages": 17
+    },
+    "Ihu": {
+        "id": 111,
+        "usages": 7
+    },
+    "Ika": {
+        "id": 112,
+        "usages": 3
+    },
+    "In\u0101ianei": {
+        "id": 113,
+        "usages": 1
+    },
+    "Iti": {
+        "id": 114,
+        "usages": 1
+    },
+    "Iwi": {
+        "id": 115,
+        "usages": 4
+    },
+    "Ingarangi": {
+        "id": 116,
+        "usages": 4
+    },
+    "Ingarihi": {
+        "id": 117,
+        "usages": 3
+    },
+    "Ingoa": {
+        "id": 118,
+        "usages": 8
+    },
+    "iatea": {
+        "id": 119,
+        "usages": 1
+    },
+    "ihaa": {
+        "id": 120,
+        "usages": 1
+    },
+    "ihi": {
+        "id": 121,
+        "usages": 1
+    },
+    "iho": {
+        "id": 122,
+        "usages": 16
+    },
+    "ika": {
+        "id": 123,
+        "usages": 1
+    },
+    "ina": {
+        "id": 124,
+        "usages": 2
+    },
+    "inaianei": {
+        "id": 125,
+        "usages": 1
+    },
+    "inahea": {
+        "id": 126,
+        "usages": 1
+    },
+    "inu": {
+        "id": 127,
+        "usages": 2
+    },
+    "ipurangi": {
+        "id": 128,
+        "usages": 1
+    },
+    "iriiri": {
+        "id": 129,
+        "usages": 1
+    },
+    "iriiria": {
+        "id": 130,
+        "usages": 1
+    },
+    "iriiritanga": {
+        "id": 131,
+        "usages": 3
+    },
+    "iriiritia": {
+        "id": 132,
+        "usages": 1
+    },
+    "ite": {
+        "id": 133,
+        "usages": 2
+    },
+    "itea": {
+        "id": 134,
+        "usages": 1
+    },
+    "iterate": {
+        "id": 135,
+        "usages": 1
+    },
+    "iti": {
+        "id": 136,
+        "usages": 6
+    },
+    "itiiti": {
+        "id": 137,
+        "usages": 1
+    },
+    "iwa": {
+        "id": 138,
+        "usages": 1
+    },
+    "iwi": {
+        "id": 139,
+        "usages": 19
+    },
+    "inga": {
+        "id": 140,
+        "usages": 2
+    },
+    "ingoa": {
+        "id": 141,
+        "usages": 16
+    },
+    "Oopa": {
+        "id": 142,
+        "usages": 3
+    },
+    "Oketopa": {
+        "id": 143,
+        "usages": 2
+    },
+    "Opoa": {
+        "id": 144,
+        "usages": 8
+    },
+    "Otakou": {
+        "id": 145,
+        "usages": 4
+    },
+    "outou": {
+        "id": 146,
+        "usages": 1
+    },
+    "ona": {
+        "id": 147,
+        "usages": 6
+    },
+    "ono": {
+        "id": 148,
+        "usages": 1
+    },
+    "oranga": {
+        "id": 149,
+        "usages": 2
+    },
+    "orokohanganga": {
+        "id": 150,
+        "usages": 1
+    },
+    "otaha": {
+        "id": 151,
+        "usages": 1
+    },
+    "\u014dna": {
+        "id": 152,
+        "usages": 6
+    },
+    "\u014drau": {
+        "id": 153,
+        "usages": 5
+    },
+    "\u014dranga": {
+        "id": 154,
+        "usages": 1
+    },
+    "\u014drite": {
+        "id": 155,
+        "usages": 2
+    },
+    "Urewera": {
+        "id": 156,
+        "usages": 1
+    },
+    "Uropi": {
+        "id": 157,
+        "usages": 1
+    },
+    "uaua": {
+        "id": 158,
+        "usages": 2
+    },
+    "ue": {
+        "id": 159,
+        "usages": 8
+    },
+    "uiui": {
+        "id": 160,
+        "usages": 1
+    },
+    "ukiuki": {
+        "id": 161,
+        "usages": 1
+    },
+    "unu": {
+        "id": 162,
+        "usages": 1
+    },
+    "ura": {
+        "id": 163,
+        "usages": 1
+    },
+    "uri": {
+        "id": 164,
+        "usages": 7
+    },
+    "uru": {
+        "id": 165,
+        "usages": 3
+    },
+    "utu": {
+        "id": 166,
+        "usages": 2
+    },
+    "utukore": {
+        "id": 167,
+        "usages": 1
+    },
+    "utukoretanga": {
+        "id": 168,
+        "usages": 1
+    },
+    "\u016akareinga": {
+        "id": 169,
+        "usages": 1
+    },
+    "\u016aropi": {
+        "id": 170,
+        "usages": 12
+    },
+    "Haere": {
+        "id": 171,
+        "usages": 5
+    },
+    "Haina": {
+        "id": 172,
+        "usages": 1
+    },
+    "Hau": {
+        "id": 173,
+        "usages": 14
+    },
+    "Hau\u0101uru": {
+        "id": 174,
+        "usages": 1
+    },
+    "Haurongo": {
+        "id": 175,
+        "usages": 1
+    },
+    "Hakihea": {
+        "id": 176,
+        "usages": 3
+    },
+    "Hamoa": {
+        "id": 177,
+        "usages": 2
+    },
+    "Hapa": {
+        "id": 178,
+        "usages": 1
+    },
+    "Hara": {
+        "id": 179,
+        "usages": 2
+    },
+    "Haramai": {
+        "id": 180,
+        "usages": 1
+    },
+    "Haratua": {
+        "id": 181,
+        "usages": 23
+    },
+    "Hawai": {
+        "id": 182,
+        "usages": 1
+    },
+    "Hawaiki": {
+        "id": 183,
+        "usages": 2
+    },
+    "H\u0101hi": {
+        "id": 184,
+        "usages": 2
+    },
+    "H\u0101moa": {
+        "id": 185,
+        "usages": 20
+    },
+    "H\u0101nuere": {
+        "id": 186,
+        "usages": 2
+    },
+    "H\u0101para": {
+        "id": 187,
+        "usages": 1
+    },
+    "H\u0101pati": {
+        "id": 188,
+        "usages": 1
+    },
+    "Hei": {
+        "id": 189,
+        "usages": 8
+    },
+    "Heiko": {
+        "id": 190,
+        "usages": 4
+    },
+    "Heoi": {
+        "id": 191,
+        "usages": 18
+    },
+    "Heoti": {
+        "id": 192,
+        "usages": 1
+    },
+    "Heuheu": {
+        "id": 193,
+        "usages": 1
+    },
+    "Heke": {
+        "id": 194,
+        "usages": 4
+    },
+    "Hepetema": {
+        "id": 195,
+        "usages": 8
+    },
+    "Hereturikoka": {
+        "id": 196,
+        "usages": 1
+    },
+    "Hikairo": {
+        "id": 197,
+        "usages": 1
+    },
+    "Hironui": {
+        "id": 198,
+        "usages": 1
+    },
+    "Hitori": {
+        "id": 199,
+        "usages": 1
+    },
+    "H\u012broa": {
+        "id": 200,
+        "usages": 1
+    },
+    "H\u012btori": {
+        "id": 201,
+        "usages": 1
+    },
+    "Hoi": {
+        "id": 202,
+        "usages": 1
+    },
+    "Hou": {
+        "id": 203,
+        "usages": 1
+    },
+    "Hoki": {
+        "id": 204,
+        "usages": 4
+    },
+    "Hokinga": {
+        "id": 205,
+        "usages": 2
+    },
+    "Hone": {
+        "id": 206,
+        "usages": 4
+    },
+    "Hononga": {
+        "id": 207,
+        "usages": 1
+    },
+    "Hoto": {
+        "id": 208,
+        "usages": 4
+    },
+    "H\u014du": {
+        "id": 209,
+        "usages": 1
+    },
+    "H\u014dngongoi": {
+        "id": 210,
+        "usages": 7
+    },
+    "Huahine": {
+        "id": 211,
+        "usages": 1
+    },
+    "Hui": {
+        "id": 212,
+        "usages": 28
+    },
+    "Huiraatira": {
+        "id": 213,
+        "usages": 1
+    },
+    "Hune": {
+        "id": 214,
+        "usages": 3
+    },
+    "Hurae": {
+        "id": 215,
+        "usages": 4
+    },
+    "Huringa": {
+        "id": 216,
+        "usages": 1
+    },
+    "H\u016brae": {
+        "id": 217,
+        "usages": 8
+    },
+    "haere": {
+        "id": 218,
+        "usages": 10
+    },
+    "haeremai": {
+        "id": 219,
+        "usages": 1
+    },
+    "haerenga": {
+        "id": 220,
+        "usages": 3
+    },
+    "hainamana": {
+        "id": 221,
+        "usages": 1
+    },
+    "hainatanga": {
+        "id": 222,
+        "usages": 1
+    },
+    "hainatia": {
+        "id": 223,
+        "usages": 1
+    },
+    "hau": {
+        "id": 224,
+        "usages": 8
+    },
+    "hau\u0101uru": {
+        "id": 225,
+        "usages": 4
+    },
+    "hakarameta": {
+        "id": 226,
+        "usages": 3
+    },
+    "hamuti": {
+        "id": 227,
+        "usages": 1
+    },
+    "hapori": {
+        "id": 228,
+        "usages": 8
+    },
+    "hara": {
+        "id": 229,
+        "usages": 5
+    },
+    "haramai": {
+        "id": 230,
+        "usages": 4
+    },
+    "hanga": {
+        "id": 231,
+        "usages": 6
+    },
+    "h\u0101hi": {
+        "id": 232,
+        "usages": 9
+    },
+    "h\u0101karameta": {
+        "id": 233,
+        "usages": 1
+    },
+    "h\u0101pai": {
+        "id": 234,
+        "usages": 2
+    },
+    "h\u0101paitia": {
+        "id": 235,
+        "usages": 1
+    },
+    "h\u0101ngai": {
+        "id": 236,
+        "usages": 4
+    },
+    "hea": {
+        "id": 237,
+        "usages": 2
+    },
+    "hei": {
+        "id": 238,
+        "usages": 55
+    },
+    "heke": {
+        "id": 239,
+        "usages": 3
+    },
+    "herenga": {
+        "id": 240,
+        "usages": 1
+    },
+    "h\u0113": {
+        "id": 241,
+        "usages": 1
+    },
+    "hia": {
+        "id": 242,
+        "usages": 1
+    },
+    "hiahia": {
+        "id": 243,
+        "usages": 1
+    },
+    "hiahiatia": {
+        "id": 244,
+        "usages": 2
+    },
+    "hiki": {
+        "id": 245,
+        "usages": 2
+    },
+    "hikihiki": {
+        "id": 246,
+        "usages": 1
+    },
+    "hipa": {
+        "id": 247,
+        "usages": 1
+    },
+    "hitori": {
+        "id": 248,
+        "usages": 1
+    },
+    "hiwa": {
+        "id": 249,
+        "usages": 1
+    },
+    "hinga": {
+        "id": 250,
+        "usages": 1
+    },
+    "hinganga": {
+        "id": 251,
+        "usages": 1
+    },
+    "hoa": {
+        "id": 252,
+        "usages": 9
+    },
+    "hoatu": {
+        "id": 253,
+        "usages": 1
+    },
+    "hou": {
+        "id": 254,
+        "usages": 6
+    },
+    "hourua": {
+        "id": 255,
+        "usages": 2
+    },
+    "hohoro": {
+        "id": 256,
+        "usages": 1
+    },
+    "hoki": {
+        "id": 257,
+        "usages": 35
+    },
+    "hokia": {
+        "id": 258,
+        "usages": 1
+    },
+    "hokohoko": {
+        "id": 259,
+        "usages": 1
+    },
+    "homa": {
+        "id": 260,
+        "usages": 1
+    },
+    "homai": {
+        "id": 261,
+        "usages": 1
+    },
+    "hononga": {
+        "id": 262,
+        "usages": 3
+    },
+    "horangia": {
+        "id": 263,
+        "usages": 1
+    },
+    "horoi": {
+        "id": 264,
+        "usages": 1
+    },
+    "horoia": {
+        "id": 265,
+        "usages": 2
+    },
+    "hoto": {
+        "id": 266,
+        "usages": 1
+    },
+    "huarahi": {
+        "id": 267,
+        "usages": 3
+    },
+    "hui": {
+        "id": 268,
+        "usages": 5
+    },
+    "huihuinga": {
+        "id": 269,
+        "usages": 1
+    },
+    "huri": {
+        "id": 270,
+        "usages": 4
+    },
+    "hurihia": {
+        "id": 271,
+        "usages": 1
+    },
+    "huringa": {
+        "id": 272,
+        "usages": 1
+    },
+    "huru": {
+        "id": 273,
+        "usages": 1
+    },
+    "hunga": {
+        "id": 274,
+        "usages": 7
+    },
+    "h\u016b": {
+        "id": 275,
+        "usages": 1
+    },
+    "h\u016bnga": {
+        "id": 276,
+        "usages": 1
+    },
+    "KAPE": {
+        "id": 277,
+        "usages": 1
+    },
+    "Kaahore": {
+        "id": 278,
+        "usages": 1
+    },
+    "Kai\u0101whina": {
+        "id": 279,
+        "usages": 1
+    },
+    "Kaiiriiri": {
+        "id": 280,
+        "usages": 1
+    },
+    "Kaihanga": {
+        "id": 281,
+        "usages": 1
+    },
+    "Kaih\u014dpara": {
+        "id": 282,
+        "usages": 1
+    },
+    "Kainuku": {
+        "id": 283,
+        "usages": 1
+    },
+    "Kaip\u0101ngarau": {
+        "id": 284,
+        "usages": 1
+    },
+    "Kaitito": {
+        "id": 285,
+        "usages": 1
+    },
+    "Kaituhi": {
+        "id": 286,
+        "usages": 1
+    },
+    "Kaiwhiri": {
+        "id": 287,
+        "usages": 1
+    },
+    "Kaunihera": {
+        "id": 288,
+        "usages": 2
+    },
+    "Kaupapa": {
+        "id": 289,
+        "usages": 4
+    },
+    "Kauri": {
+        "id": 290,
+        "usages": 4
+    },
+    "Kahui": {
+        "id": 291,
+        "usages": 6
+    },
+    "Kahuroa": {
+        "id": 292,
+        "usages": 88
+    },
+    "Kanawa": {
+        "id": 293,
+        "usages": 1
+    },
+    "Karaiti": {
+        "id": 294,
+        "usages": 4
+    },
+    "Karaitiana": {
+        "id": 295,
+        "usages": 1
+    },
+    "Karatonia": {
+        "id": 296,
+        "usages": 1
+    },
+    "Karetao": {
+        "id": 297,
+        "usages": 2
+    },
+    "Katahi": {
+        "id": 298,
+        "usages": 2
+    },
+    "Kawana": {
+        "id": 299,
+        "usages": 1
+    },
+    "Kawenata": {
+        "id": 300,
+        "usages": 2
+    },
+    "K\u0101inga": {
+        "id": 301,
+        "usages": 10
+    },
+    "K\u0101ore": {
+        "id": 302,
+        "usages": 2
+    },
+    "K\u0101hore": {
+        "id": 303,
+        "usages": 2
+    },
+    "K\u0101hui": {
+        "id": 304,
+        "usages": 2
+    },
+    "K\u0101nara": {
+        "id": 305,
+        "usages": 1
+    },
+    "K\u0101pene": {
+        "id": 306,
+        "usages": 1
+    },
+    "K\u0101tahi": {
+        "id": 307,
+        "usages": 1
+    },
+    "K\u0101tote": {
+        "id": 308,
+        "usages": 2
+    },
+    "K\u0101wana": {
+        "id": 309,
+        "usages": 2
+    },
+    "Kei": {
+        "id": 310,
+        "usages": 9
+    },
+    "Kihai": {
+        "id": 311,
+        "usages": 1
+    },
+    "Kiri": {
+        "id": 312,
+        "usages": 1
+    },
+    "Kirikiriroa": {
+        "id": 313,
+        "usages": 1
+    },
+    "Kiwa": {
+        "id": 314,
+        "usages": 14
+    },
+    "Kiwi": {
+        "id": 315,
+        "usages": 1
+    },
+    "K\u012bwaha": {
+        "id": 316,
+        "usages": 1
+    },
+    "K\u012bngitanga": {
+        "id": 317,
+        "usages": 1
+    },
+    "Koe": {
+        "id": 318,
+        "usages": 1
+    },
+    "Koia": {
+        "id": 319,
+        "usages": 4
+    },
+    "Koiar\u0101": {
+        "id": 320,
+        "usages": 1
+    },
+    "Koorero": {
+        "id": 321,
+        "usages": 1
+    },
+    "Koua": {
+        "id": 322,
+        "usages": 1
+    },
+    "Kohi": {
+        "id": 323,
+        "usages": 20
+    },
+    "Kohimarama": {
+        "id": 324,
+        "usages": 4
+    },
+    "Kohuku": {
+        "id": 325,
+        "usages": 1
+    },
+    "Kopu": {
+        "id": 326,
+        "usages": 1
+    },
+    "Korao": {
+        "id": 327,
+        "usages": 1
+    },
+    "Korero": {
+        "id": 328,
+        "usages": 7
+    },
+    "Koroneho": {
+        "id": 329,
+        "usages": 1
+    },
+    "Kotahitanga": {
+        "id": 330,
+        "usages": 3
+    },
+    "Kowhai": {
+        "id": 331,
+        "usages": 4
+    },
+    "K\u014dhanga": {
+        "id": 332,
+        "usages": 1
+    },
+    "K\u014dmihana": {
+        "id": 333,
+        "usages": 1
+    },
+    "K\u014drero": {
+        "id": 334,
+        "usages": 13
+    },
+    "K\u014drerorero": {
+        "id": 335,
+        "usages": 3
+    },
+    "K\u014drerorerotia": {
+        "id": 336,
+        "usages": 3
+    },
+    "Kua": {
+        "id": 337,
+        "usages": 30
+    },
+    "Kuki": {
+        "id": 338,
+        "usages": 3
+    },
+    "kaiako": {
+        "id": 339,
+        "usages": 1
+    },
+    "kaiarahi": {
+        "id": 340,
+        "usages": 2
+    },
+    "kai\u0101whina": {
+        "id": 341,
+        "usages": 1
+    },
+    "kaihanga": {
+        "id": 342,
+        "usages": 1
+    },
+    "kaik\u014drero": {
+        "id": 343,
+        "usages": 6
+    },
+    "kaimahi": {
+        "id": 344,
+        "usages": 21
+    },
+    "kaim\u0101tai": {
+        "id": 345,
+        "usages": 1
+    },
+    "kainoho": {
+        "id": 346,
+        "usages": 1
+    },
+    "kaip\u0101nui": {
+        "id": 347,
+        "usages": 1
+    },
+    "kaipuke": {
+        "id": 348,
+        "usages": 3
+    },
+    "kaip\u016btaiao": {
+        "id": 349,
+        "usages": 1
+    },
+    "kairapu": {
+        "id": 350,
+        "usages": 1
+    },
+    "kaitiaki": {
+        "id": 351,
+        "usages": 1
+    },
+    "kait\u014drangap\u016b": {
+        "id": 352,
+        "usages": 2
+    },
+    "kaituhi": {
+        "id": 353,
+        "usages": 2
+    },
+    "kaituku": {
+        "id": 354,
+        "usages": 1
+    },
+    "kaiwhakahaere": {
+        "id": 355,
+        "usages": 19
+    },
+    "kaiwhakamataku": {
+        "id": 356,
+        "usages": 1
+    },
+    "kaiwhakam\u0101ori": {
+        "id": 357,
+        "usages": 1
+    },
+    "kaiwhiwhi": {
+        "id": 358,
+        "usages": 1
+    },
+    "kau": {
+        "id": 359,
+        "usages": 3
+    },
+    "kaua": {
+        "id": 360,
+        "usages": 2
+    },
+    "kaunihere": {
+        "id": 361,
+        "usages": 2
+    },
+    "kaupapa": {
+        "id": 362,
+        "usages": 29
+    },
+    "kauru": {
+        "id": 363,
+        "usages": 1
+    },
+    "kaha": {
+        "id": 364,
+        "usages": 7
+    },
+    "kahui": {
+        "id": 365,
+        "usages": 15
+    },
+    "kano": {
+        "id": 366,
+        "usages": 2
+    },
+    "kape": {
+        "id": 367,
+        "usages": 2
+    },
+    "karaipiture": {
+        "id": 368,
+        "usages": 1
+    },
+    "karakia": {
+        "id": 369,
+        "usages": 4
+    },
+    "kararehe": {
+        "id": 370,
+        "usages": 1
+    },
+    "karanga": {
+        "id": 371,
+        "usages": 3
+    },
+    "karangahia": {
+        "id": 372,
+        "usages": 2
+    },
+    "karawhiu": {
+        "id": 373,
+        "usages": 1
+    },
+    "kare": {
+        "id": 374,
+        "usages": 1
+    },
+    "karetao": {
+        "id": 375,
+        "usages": 37
+    },
+    "karihi": {
+        "id": 376,
+        "usages": 3
+    },
+    "katahi": {
+        "id": 377,
+        "usages": 2
+    },
+    "katoa": {
+        "id": 378,
+        "usages": 19
+    },
+    "katoatia": {
+        "id": 379,
+        "usages": 1
+    },
+    "katohia": {
+        "id": 380,
+        "usages": 1
+    },
+    "kawa": {
+        "id": 381,
+        "usages": 2
+    },
+    "kawana": {
+        "id": 382,
+        "usages": 1
+    },
+    "kawe": {
+        "id": 383,
+        "usages": 2
+    },
+    "kawekawe": {
+        "id": 384,
+        "usages": 1
+    },
+    "kawenata": {
+        "id": 385,
+        "usages": 1
+    },
+    "kanga": {
+        "id": 386,
+        "usages": 1
+    },
+    "k\u0101inga": {
+        "id": 387,
+        "usages": 5
+    },
+    "k\u0101ore": {
+        "id": 388,
+        "usages": 5
+    },
+    "k\u0101hore": {
+        "id": 389,
+        "usages": 4
+    },
+    "k\u0101hui": {
+        "id": 390,
+        "usages": 1
+    },
+    "k\u0101re": {
+        "id": 391,
+        "usages": 1
+    },
+    "k\u0101wanatanga": {
+        "id": 392,
+        "usages": 2
+    },
+    "kei": {
+        "id": 393,
+        "usages": 20
+    },
+    "kereme": {
+        "id": 394,
+        "usages": 1
+    },
+    "kerepi": {
+        "id": 395,
+        "usages": 1
+    },
+    "ker\u0113me": {
+        "id": 396,
+        "usages": 3
+    },
+    "ker\u0113metia": {
+        "id": 397,
+        "usages": 1
+    },
+    "k\u0113": {
+        "id": 398,
+        "usages": 18
+    },
+    "k\u0113tia": {
+        "id": 399,
+        "usages": 2
+    },
+    "kihai": {
+        "id": 400,
+        "usages": 1
+    },
+    "kikokiko": {
+        "id": 401,
+        "usages": 1
+    },
+    "kimi": {
+        "id": 402,
+        "usages": 1
+    },
+    "kino": {
+        "id": 403,
+        "usages": 2
+    },
+    "kirihimete": {
+        "id": 404,
+        "usages": 1
+    },
+    "kiritai": {
+        "id": 405,
+        "usages": 1
+    },
+    "kiromita": {
+        "id": 406,
+        "usages": 1
+    },
+    "kitea": {
+        "id": 407,
+        "usages": 5
+    },
+    "kitenga": {
+        "id": 408,
+        "usages": 1
+    },
+    "kiwa": {
+        "id": 409,
+        "usages": 1
+    },
+    "kingi": {
+        "id": 410,
+        "usages": 1
+    },
+    "k\u012b": {
+        "id": 411,
+        "usages": 6
+    },
+    "k\u012ba": {
+        "id": 412,
+        "usages": 2
+    },
+    "k\u012bwaha": {
+        "id": 413,
+        "usages": 9
+    },
+    "koa": {
+        "id": 414,
+        "usages": 1
+    },
+    "koe": {
+        "id": 415,
+        "usages": 11
+    },
+    "koi": {
+        "id": 416,
+        "usages": 1
+    },
+    "koia": {
+        "id": 417,
+        "usages": 4
+    },
+    "koina": {
+        "id": 418,
+        "usages": 1
+    },
+    "koutou": {
+        "id": 419,
+        "usages": 8
+    },
+    "kohatu": {
+        "id": 420,
+        "usages": 4
+    },
+    "kohanga": {
+        "id": 421,
+        "usages": 2
+    },
+    "kohetehete": {
+        "id": 422,
+        "usages": 1
+    },
+    "kohikohi": {
+        "id": 423,
+        "usages": 1
+    },
+    "konei": {
+        "id": 424,
+        "usages": 7
+    },
+    "kore": {
+        "id": 425,
+        "usages": 16
+    },
+    "korero": {
+        "id": 426,
+        "usages": 6
+    },
+    "korerohia": {
+        "id": 427,
+        "usages": 1
+    },
+    "korengia": {
+        "id": 428,
+        "usages": 1
+    },
+    "kotahi": {
+        "id": 429,
+        "usages": 3
+    },
+    "k\u014duka": {
+        "id": 430,
+        "usages": 2
+    },
+    "k\u014dk\u0101": {
+        "id": 431,
+        "usages": 8
+    },
+    "k\u014dk\u014drangi": {
+        "id": 432,
+        "usages": 1
+    },
+    "k\u014dmitimiti": {
+        "id": 433,
+        "usages": 1
+    },
+    "k\u014dp\u016btahi": {
+        "id": 434,
+        "usages": 1
+    },
+    "k\u014drero": {
+        "id": 435,
+        "usages": 42
+    },
+    "k\u014drerohia": {
+        "id": 436,
+        "usages": 1
+    },
+    "k\u014drerom\u014d": {
+        "id": 437,
+        "usages": 1
+    },
+    "k\u014drerotia": {
+        "id": 438,
+        "usages": 5
+    },
+    "k\u014dti": {
+        "id": 439,
+        "usages": 4
+    },
+    "kua": {
+        "id": 440,
+        "usages": 35
+    },
+    "kukume": {
+        "id": 441,
+        "usages": 1
+    },
+    "kunanu": {
+        "id": 442,
+        "usages": 1
+    },
+    "kupu": {
+        "id": 443,
+        "usages": 15
+    },
+    "kura": {
+        "id": 444,
+        "usages": 7
+    },
+    "Maehe": {
+        "id": 445,
+        "usages": 4
+    },
+    "Mai": {
+        "id": 446,
+        "usages": 3
+    },
+    "Maiao": {
+        "id": 447,
+        "usages": 1
+    },
+    "Maori": {
+        "id": 448,
+        "usages": 88
+    },
+    "Ma\u014dri": {
+        "id": 449,
+        "usages": 1
+    },
+    "Maupiti": {
+        "id": 450,
+        "usages": 1
+    },
+    "Mauri": {
+        "id": 451,
+        "usages": 3
+    },
+    "Maunga": {
+        "id": 452,
+        "usages": 3
+    },
+    "Mahuru": {
+        "id": 453,
+        "usages": 18
+    },
+    "Mahuta": {
+        "id": 454,
+        "usages": 1
+    },
+    "Makaurau": {
+        "id": 455,
+        "usages": 1
+    },
+    "Makatea": {
+        "id": 456,
+        "usages": 1
+    },
+    "Mamaku": {
+        "id": 457,
+        "usages": 4
+    },
+    "Maniapoto": {
+        "id": 458,
+        "usages": 3
+    },
+    "Manihera": {
+        "id": 459,
+        "usages": 2
+    },
+    "Manihiki": {
+        "id": 460,
+        "usages": 1
+    },
+    "Manono": {
+        "id": 461,
+        "usages": 2
+    },
+    "Manu": {
+        "id": 462,
+        "usages": 1
+    },
+    "Marae": {
+        "id": 463,
+        "usages": 10
+    },
+    "Maramataka": {
+        "id": 464,
+        "usages": 4
+    },
+    "Marotiri": {
+        "id": 465,
+        "usages": 1
+    },
+    "Mata": {
+        "id": 466,
+        "usages": 1
+    },
+    "Matapihi": {
+        "id": 467,
+        "usages": 2
+    },
+    "Matatiki": {
+        "id": 468,
+        "usages": 1
+    },
+    "Mangak\u0101hia": {
+        "id": 469,
+        "usages": 1
+    },
+    "Mangu": {
+        "id": 470,
+        "usages": 1
+    },
+    "M\u0101": {
+        "id": 471,
+        "usages": 8
+    },
+    "M\u0101ori": {
+        "id": 472,
+        "usages": 113
+    },
+    "M\u0101oriI": {
+        "id": 473,
+        "usages": 1
+    },
+    "M\u0101ui": {
+        "id": 474,
+        "usages": 4
+    },
+    "M\u0101tai": {
+        "id": 475,
+        "usages": 3
+    },
+    "M\u0101tao": {
+        "id": 476,
+        "usages": 1
+    },
+    "M\u0101tau": {
+        "id": 477,
+        "usages": 1
+    },
+    "M\u0101tauranga": {
+        "id": 478,
+        "usages": 3
+    },
+    "M\u0101t\u0101punenga": {
+        "id": 479,
+        "usages": 1
+    },
+    "Mea": {
+        "id": 480,
+        "usages": 4
+    },
+    "Mei": {
+        "id": 481,
+        "usages": 9
+    },
+    "Mehemea": {
+        "id": 482,
+        "usages": 1
+    },
+    "Meri": {
+        "id": 483,
+        "usages": 1
+    },
+    "Miharo": {
+        "id": 484,
+        "usages": 1
+    },
+    "Mihinare": {
+        "id": 485,
+        "usages": 1
+    },
+    "Miro": {
+        "id": 486,
+        "usages": 4
+    },
+    "Moa": {
+        "id": 487,
+        "usages": 4
+    },
+    "Moana": {
+        "id": 488,
+        "usages": 20
+    },
+    "Moanaui": {
+        "id": 489,
+        "usages": 1
+    },
+    "Moananui": {
+        "id": 490,
+        "usages": 9
+    },
+    "Moorea": {
+        "id": 491,
+        "usages": 2
+    },
+    "Moutere": {
+        "id": 492,
+        "usages": 3
+    },
+    "Mohio": {
+        "id": 493,
+        "usages": 1
+    },
+    "Moni": {
+        "id": 494,
+        "usages": 1
+    },
+    "Motu": {
+        "id": 495,
+        "usages": 1
+    },
+    "Muka": {
+        "id": 496,
+        "usages": 1
+    },
+    "Muri": {
+        "id": 497,
+        "usages": 1
+    },
+    "Mururoa": {
+        "id": 498,
+        "usages": 2
+    },
+    "maere": {
+        "id": 499,
+        "usages": 1
+    },
+    "maero": {
+        "id": 500,
+        "usages": 6
+    },
+    "mai": {
+        "id": 501,
+        "usages": 86
+    },
+    "maohi": {
+        "id": 502,
+        "usages": 3
+    },
+    "maori": {
+        "id": 503,
+        "usages": 12
+    },
+    "mau": {
+        "id": 504,
+        "usages": 6
+    },
+    "mauheretia": {
+        "id": 505,
+        "usages": 2
+    },
+    "mauri": {
+        "id": 506,
+        "usages": 3
+    },
+    "mauria": {
+        "id": 507,
+        "usages": 1
+    },
+    "maunga": {
+        "id": 508,
+        "usages": 6
+    },
+    "maha": {
+        "id": 509,
+        "usages": 2
+    },
+    "mahi": {
+        "id": 510,
+        "usages": 28
+    },
+    "makau": {
+        "id": 511,
+        "usages": 1
+    },
+    "maku": {
+        "id": 512,
+        "usages": 1
+    },
+    "mamao": {
+        "id": 513,
+        "usages": 1
+    },
+    "mana": {
+        "id": 514,
+        "usages": 13
+    },
+    "manaakitia": {
+        "id": 515,
+        "usages": 1
+    },
+    "manawa": {
+        "id": 516,
+        "usages": 1
+    },
+    "manene": {
+        "id": 517,
+        "usages": 1
+    },
+    "mano": {
+        "id": 518,
+        "usages": 2
+    },
+    "manu": {
+        "id": 519,
+        "usages": 5
+    },
+    "manuao": {
+        "id": 520,
+        "usages": 1
+    },
+    "manuhiri": {
+        "id": 521,
+        "usages": 1
+    },
+    "marae": {
+        "id": 522,
+        "usages": 18
+    },
+    "marama": {
+        "id": 523,
+        "usages": 6
+    },
+    "maru": {
+        "id": 524,
+        "usages": 2
+    },
+    "mata": {
+        "id": 525,
+        "usages": 2
+    },
+    "mataati": {
+        "id": 526,
+        "usages": 1
+    },
+    "matau": {
+        "id": 527,
+        "usages": 1
+    },
+    "mataku": {
+        "id": 528,
+        "usages": 1
+    },
+    "matatau": {
+        "id": 529,
+        "usages": 2
+    },
+    "matataki": {
+        "id": 530,
+        "usages": 1
+    },
+    "matatoa": {
+        "id": 531,
+        "usages": 1
+    },
+    "matawhenua": {
+        "id": 532,
+        "usages": 3
+    },
+    "matenga": {
+        "id": 533,
+        "usages": 2
+    },
+    "matou": {
+        "id": 534,
+        "usages": 1
+    },
+    "matua": {
+        "id": 535,
+        "usages": 6
+    },
+    "mangai": {
+        "id": 536,
+        "usages": 1
+    },
+    "m\u0101": {
+        "id": 537,
+        "usages": 11
+    },
+    "m\u0101ori": {
+        "id": 538,
+        "usages": 1
+    },
+    "m\u0101u": {
+        "id": 539,
+        "usages": 2
+    },
+    "m\u0101harahara": {
+        "id": 540,
+        "usages": 2
+    },
+    "m\u0101hunga": {
+        "id": 541,
+        "usages": 1
+    },
+    "m\u0101na": {
+        "id": 542,
+        "usages": 1
+    },
+    "m\u0101rama": {
+        "id": 543,
+        "usages": 1
+    },
+    "m\u0101ramatanga": {
+        "id": 544,
+        "usages": 1
+    },
+    "m\u0101tau": {
+        "id": 545,
+        "usages": 1
+    },
+    "m\u0101t\u0101punenga": {
+        "id": 546,
+        "usages": 2
+    },
+    "m\u0101t\u0101whenua": {
+        "id": 547,
+        "usages": 2
+    },
+    "m\u0101tou": {
+        "id": 548,
+        "usages": 3
+    },
+    "m\u0101tua": {
+        "id": 549,
+        "usages": 2
+    },
+    "mea": {
+        "id": 550,
+        "usages": 29
+    },
+    "mema": {
+        "id": 551,
+        "usages": 4
+    },
+    "mena": {
+        "id": 552,
+        "usages": 2
+    },
+    "m\u0113na": {
+        "id": 553,
+        "usages": 1
+    },
+    "m\u0113n\u0101": {
+        "id": 554,
+        "usages": 3
+    },
+    "miharo": {
+        "id": 555,
+        "usages": 2
+    },
+    "mihi": {
+        "id": 556,
+        "usages": 2
+    },
+    "mihinare": {
+        "id": 557,
+        "usages": 3
+    },
+    "minenga": {
+        "id": 558,
+        "usages": 2
+    },
+    "miriona": {
+        "id": 559,
+        "usages": 2
+    },
+    "mita": {
+        "id": 560,
+        "usages": 2
+    },
+    "miWiki": {
+        "id": 561,
+        "usages": 3
+    },
+    "m\u012bharo": {
+        "id": 562,
+        "usages": 2
+    },
+    "moana": {
+        "id": 563,
+        "usages": 6
+    },
+    "mou": {
+        "id": 564,
+        "usages": 1
+    },
+    "moumou": {
+        "id": 565,
+        "usages": 1
+    },
+    "moutere": {
+        "id": 566,
+        "usages": 26
+    },
+    "mohio": {
+        "id": 567,
+        "usages": 3
+    },
+    "mohiotia": {
+        "id": 568,
+        "usages": 1
+    },
+    "mohoao": {
+        "id": 569,
+        "usages": 1
+    },
+    "mokemoke": {
+        "id": 570,
+        "usages": 1
+    },
+    "moko": {
+        "id": 571,
+        "usages": 1
+    },
+    "momo": {
+        "id": 572,
+        "usages": 5
+    },
+    "motu": {
+        "id": 573,
+        "usages": 37
+    },
+    "motuhake": {
+        "id": 574,
+        "usages": 1
+    },
+    "m\u014d": {
+        "id": 575,
+        "usages": 42
+    },
+    "m\u014dhio": {
+        "id": 576,
+        "usages": 5
+    },
+    "m\u014dhiotia": {
+        "id": 577,
+        "usages": 1
+    },
+    "m\u014dna": {
+        "id": 578,
+        "usages": 3
+    },
+    "m\u014drearea": {
+        "id": 579,
+        "usages": 1
+    },
+    "mua": {
+        "id": 580,
+        "usages": 10
+    },
+    "muku": {
+        "id": 581,
+        "usages": 1
+    },
+    "muri": {
+        "id": 582,
+        "usages": 4
+    },
+    "muru": {
+        "id": 583,
+        "usages": 1
+    },
+    "murua": {
+        "id": 584,
+        "usages": 1
+    },
+    "murunga": {
+        "id": 585,
+        "usages": 1
+    },
+    "mutu": {
+        "id": 586,
+        "usages": 3
+    },
+    "mutunga": {
+        "id": 587,
+        "usages": 3
+    },
+    "mutungakore": {
+        "id": 588,
+        "usages": 2
+    },
+    "Nau": {
+        "id": 589,
+        "usages": 2
+    },
+    "Naku": {
+        "id": 590,
+        "usages": 1
+    },
+    "Namua": {
+        "id": 591,
+        "usages": 1
+    },
+    "Natira": {
+        "id": 592,
+        "usages": 1
+    },
+    "Nawai": {
+        "id": 593,
+        "usages": 1
+    },
+    "N\u0100NA": {
+        "id": 594,
+        "usages": 1
+    },
+    "N\u0101": {
+        "id": 595,
+        "usages": 9
+    },
+    "N\u0101na": {
+        "id": 596,
+        "usages": 1
+    },
+    "Neinei": {
+        "id": 597,
+        "usages": 4
+    },
+    "Nekehia": {
+        "id": 598,
+        "usages": 1
+    },
+    "Niu": {
+        "id": 599,
+        "usages": 3
+    },
+    "Noema": {
+        "id": 600,
+        "usages": 9
+    },
+    "N\u014d": {
+        "id": 601,
+        "usages": 10
+    },
+    "N\u014dpoke": {
+        "id": 602,
+        "usages": 1
+    },
+    "Nui": {
+        "id": 603,
+        "usages": 3
+    },
+    "Nuku": {
+        "id": 604,
+        "usages": 2
+    },
+    "N\u016b": {
+        "id": 605,
+        "usages": 1
+    },
+    "naianei": {
+        "id": 606,
+        "usages": 1
+    },
+    "nautanga": {
+        "id": 607,
+        "usages": 2
+    },
+    "nana": {
+        "id": 608,
+        "usages": 3
+    },
+    "nanakia": {
+        "id": 609,
+        "usages": 1
+    },
+    "nawai": {
+        "id": 610,
+        "usages": 3
+    },
+    "n\u0101": {
+        "id": 611,
+        "usages": 25
+    },
+    "n\u0101ianei": {
+        "id": 612,
+        "usages": 4
+    },
+    "n\u0101ku": {
+        "id": 613,
+        "usages": 1
+    },
+    "n\u0101na": {
+        "id": 614,
+        "usages": 5
+    },
+    "nei": {
+        "id": 615,
+        "usages": 67
+    },
+    "nehe": {
+        "id": 616,
+        "usages": 1
+    },
+    "nehera": {
+        "id": 617,
+        "usages": 1
+    },
+    "nehua": {
+        "id": 618,
+        "usages": 1
+    },
+    "neke": {
+        "id": 619,
+        "usages": 1
+    },
+    "nekehia": {
+        "id": 620,
+        "usages": 2
+    },
+    "niureta": {
+        "id": 621,
+        "usages": 1
+    },
+    "noa": {
+        "id": 622,
+        "usages": 23
+    },
+    "noho": {
+        "id": 623,
+        "usages": 21
+    },
+    "nohoanga": {
+        "id": 624,
+        "usages": 1
+    },
+    "notemea": {
+        "id": 625,
+        "usages": 1
+    },
+    "n\u014d": {
+        "id": 626,
+        "usages": 15
+    },
+    "nui": {
+        "id": 627,
+        "usages": 42
+    },
+    "nuinui": {
+        "id": 628,
+        "usages": 1
+    },
+    "nuinga": {
+        "id": 629,
+        "usages": 3
+    },
+    "nuku": {
+        "id": 630,
+        "usages": 9
+    },
+    "nunui": {
+        "id": 631,
+        "usages": 4
+    },
+    "Paea": {
+        "id": 632,
+        "usages": 1
+    },
+    "Paenga": {
+        "id": 633,
+        "usages": 28
+    },
+    "Pai": {
+        "id": 634,
+        "usages": 2
+    },
+    "Paipera": {
+        "id": 635,
+        "usages": 3
+    },
+    "Paoa": {
+        "id": 636,
+        "usages": 5
+    },
+    "Paora": {
+        "id": 637,
+        "usages": 1
+    },
+    "Pakanga": {
+        "id": 638,
+        "usages": 3
+    },
+    "Pakeha": {
+        "id": 639,
+        "usages": 10
+    },
+    "Panui": {
+        "id": 640,
+        "usages": 2
+    },
+    "Papaete": {
+        "id": 641,
+        "usages": 1
+    },
+    "Papat\u016b\u0101nuku": {
+        "id": 642,
+        "usages": 3
+    },
+    "Parau": {
+        "id": 643,
+        "usages": 1
+    },
+    "Paremata": {
+        "id": 644,
+        "usages": 4
+    },
+    "Paruru": {
+        "id": 645,
+        "usages": 1
+    },
+    "P\u0101keh\u0101": {
+        "id": 646,
+        "usages": 13
+    },
+    "P\u0101k\u0113h\u0101": {
+        "id": 647,
+        "usages": 1
+    },
+    "P\u0101nui": {
+        "id": 648,
+        "usages": 2
+    },
+    "P\u0101remata": {
+        "id": 649,
+        "usages": 1
+    },
+    "P\u0101tauranga": {
+        "id": 650,
+        "usages": 3
+    },
+    "Peihinga": {
+        "id": 651,
+        "usages": 1
+    },
+    "Pepuere": {
+        "id": 652,
+        "usages": 4
+    },
+    "P\u0113r\u0101": {
+        "id": 653,
+        "usages": 1
+    },
+    "Piki": {
+        "id": 654,
+        "usages": 1
+    },
+    "Pipiri": {
+        "id": 655,
+        "usages": 20
+    },
+    "Pirihitane": {
+        "id": 656,
+        "usages": 1
+    },
+    "Poi": {
+        "id": 657,
+        "usages": 1
+    },
+    "Poiriri": {
+        "id": 658,
+        "usages": 1
+    },
+    "Poututerangi": {
+        "id": 659,
+        "usages": 1
+    },
+    "Pout\u016b": {
+        "id": 660,
+        "usages": 18
+    },
+    "Pomare": {
+        "id": 661,
+        "usages": 1
+    },
+    "Poneke": {
+        "id": 662,
+        "usages": 1
+    },
+    "Porapora": {
+        "id": 663,
+        "usages": 2
+    },
+    "Porin\u012bhia": {
+        "id": 664,
+        "usages": 8
+    },
+    "Poronihia": {
+        "id": 665,
+        "usages": 4
+    },
+    "P\u014dneke": {
+        "id": 666,
+        "usages": 2
+    },
+    "Pukapuka": {
+        "id": 667,
+        "usages": 4
+    },
+    "Pupuri": {
+        "id": 668,
+        "usages": 1
+    },
+    "Puranga": {
+        "id": 669,
+        "usages": 1
+    },
+    "Puri": {
+        "id": 670,
+        "usages": 1
+    },
+    "P\u016branga": {
+        "id": 671,
+        "usages": 4
+    },
+    "P\u016btaiao": {
+        "id": 672,
+        "usages": 2
+    },
+    "paa": {
+        "id": 673,
+        "usages": 1
+    },
+    "pae": {
+        "id": 674,
+        "usages": 2
+    },
+    "paekiri": {
+        "id": 675,
+        "usages": 2
+    },
+    "paepae": {
+        "id": 676,
+        "usages": 3
+    },
+    "paerangi": {
+        "id": 677,
+        "usages": 1
+    },
+    "paetukutuku": {
+        "id": 678,
+        "usages": 2
+    },
+    "pai": {
+        "id": 679,
+        "usages": 21
+    },
+    "paopao": {
+        "id": 680,
+        "usages": 1
+    },
+    "paha": {
+        "id": 681,
+        "usages": 1
+    },
+    "pahu": {
+        "id": 682,
+        "usages": 5
+    },
+    "pahure": {
+        "id": 683,
+        "usages": 1
+    },
+    "pakaru": {
+        "id": 684,
+        "usages": 1
+    },
+    "pakanga": {
+        "id": 685,
+        "usages": 1
+    },
+    "pakeha": {
+        "id": 686,
+        "usages": 3
+    },
+    "pakeke": {
+        "id": 687,
+        "usages": 3
+    },
+    "paku": {
+        "id": 688,
+        "usages": 3
+    },
+    "pana": {
+        "id": 689,
+        "usages": 2
+    },
+    "panaia": {
+        "id": 690,
+        "usages": 1
+    },
+    "panui": {
+        "id": 691,
+        "usages": 6
+    },
+    "papai": {
+        "id": 692,
+        "usages": 4
+    },
+    "papakainga": {
+        "id": 693,
+        "usages": 2
+    },
+    "papakohatu": {
+        "id": 694,
+        "usages": 3
+    },
+    "papakupu": {
+        "id": 695,
+        "usages": 2
+    },
+    "par\u0101oa": {
+        "id": 696,
+        "usages": 1
+    },
+    "pare": {
+        "id": 697,
+        "usages": 1
+    },
+    "paremata": {
+        "id": 698,
+        "usages": 7
+    },
+    "patua": {
+        "id": 699,
+        "usages": 3
+    },
+    "p\u0101": {
+        "id": 700,
+        "usages": 3
+    },
+    "p\u0101nui": {
+        "id": 701,
+        "usages": 2
+    },
+    "p\u0101tai": {
+        "id": 702,
+        "usages": 2
+    },
+    "p\u0101tata": {
+        "id": 703,
+        "usages": 1
+    },
+    "p\u0101nga": {
+        "id": 704,
+        "usages": 1
+    },
+    "p\u0101ngarau": {
+        "id": 705,
+        "usages": 2
+    },
+    "p\u0101whiri": {
+        "id": 706,
+        "usages": 2
+    },
+    "peenei": {
+        "id": 707,
+        "usages": 1
+    },
+    "peia": {
+        "id": 708,
+        "usages": 1
+    },
+    "peu": {
+        "id": 709,
+        "usages": 1
+    },
+    "pehu": {
+        "id": 710,
+        "usages": 1
+    },
+    "peka": {
+        "id": 711,
+        "usages": 1
+    },
+    "penei": {
+        "id": 712,
+        "usages": 7
+    },
+    "pepeha": {
+        "id": 713,
+        "usages": 3
+    },
+    "pera": {
+        "id": 714,
+        "usages": 2
+    },
+    "perira": {
+        "id": 715,
+        "usages": 2
+    },
+    "pero": {
+        "id": 716,
+        "usages": 1
+    },
+    "petekoha": {
+        "id": 717,
+        "usages": 1
+    },
+    "petihana": {
+        "id": 718,
+        "usages": 1
+    },
+    "p\u0113n\u0101": {
+        "id": 719,
+        "usages": 2
+    },
+    "p\u0113nei": {
+        "id": 720,
+        "usages": 5
+    },
+    "p\u0113r\u0101": {
+        "id": 721,
+        "usages": 5
+    },
+    "piki": {
+        "id": 722,
+        "usages": 1
+    },
+    "piri": {
+        "id": 723,
+        "usages": 2
+    },
+    "pirihimana": {
+        "id": 724,
+        "usages": 1
+    },
+    "pirihitane": {
+        "id": 725,
+        "usages": 1
+    },
+    "piringa": {
+        "id": 726,
+        "usages": 2
+    },
+    "pito": {
+        "id": 727,
+        "usages": 2
+    },
+    "poi": {
+        "id": 728,
+        "usages": 3
+    },
+    "poua": {
+        "id": 729,
+        "usages": 1
+    },
+    "pouaka": {
+        "id": 730,
+        "usages": 1
+    },
+    "pounamu": {
+        "id": 731,
+        "usages": 4
+    },
+    "pona": {
+        "id": 732,
+        "usages": 1
+    },
+    "pono": {
+        "id": 733,
+        "usages": 2
+    },
+    "pononga": {
+        "id": 734,
+        "usages": 1
+    },
+    "porangi": {
+        "id": 735,
+        "usages": 1
+    },
+    "poti": {
+        "id": 736,
+        "usages": 3
+    },
+    "potihia": {
+        "id": 737,
+        "usages": 1
+    },
+    "potitanga": {
+        "id": 738,
+        "usages": 15
+    },
+    "pukapuka": {
+        "id": 739,
+        "usages": 9
+    },
+    "puke": {
+        "id": 740,
+        "usages": 1
+    },
+    "puna": {
+        "id": 741,
+        "usages": 2
+    },
+    "puri": {
+        "id": 742,
+        "usages": 3
+    },
+    "puta": {
+        "id": 743,
+        "usages": 18
+    },
+    "putahi": {
+        "id": 744,
+        "usages": 1
+    },
+    "putanga": {
+        "id": 745,
+        "usages": 1
+    },
+    "putu": {
+        "id": 746,
+        "usages": 2
+    },
+    "p\u016b": {
+        "id": 747,
+        "usages": 6
+    },
+    "p\u016b\u0101wai": {
+        "id": 748,
+        "usages": 1
+    },
+    "p\u016bmau": {
+        "id": 749,
+        "usages": 1
+    },
+    "p\u016bnaha": {
+        "id": 750,
+        "usages": 1
+    },
+    "p\u016branga": {
+        "id": 751,
+        "usages": 1
+    },
+    "p\u016btaiao": {
+        "id": 752,
+        "usages": 1
+    },
+    "p\u016btere": {
+        "id": 753,
+        "usages": 1
+    },
+    "Raiatea": {
+        "id": 754,
+        "usages": 7
+    },
+    "Rau": {
+        "id": 755,
+        "usages": 4
+    },
+    "Rautau": {
+        "id": 756,
+        "usages": 1
+    },
+    "Rahi": {
+        "id": 757,
+        "usages": 1
+    },
+    "Rakahanga": {
+        "id": 758,
+        "usages": 1
+    },
+    "Rakiura": {
+        "id": 759,
+        "usages": 1
+    },
+    "Ranatiki": {
+        "id": 760,
+        "usages": 1
+    },
+    "Rapa": {
+        "id": 761,
+        "usages": 3
+    },
+    "Rarotonga": {
+        "id": 762,
+        "usages": 8
+    },
+    "Raru": {
+        "id": 763,
+        "usages": 1
+    },
+    "Rangahau": {
+        "id": 764,
+        "usages": 1
+    },
+    "Rangatira": {
+        "id": 765,
+        "usages": 4
+    },
+    "Rangatiratanga": {
+        "id": 766,
+        "usages": 4
+    },
+    "Rangi": {
+        "id": 767,
+        "usages": 1
+    },
+    "Rangi\u0101tea": {
+        "id": 768,
+        "usages": 1
+    },
+    "Rangihiroa": {
+        "id": 769,
+        "usages": 1
+    },
+    "Ranginui": {
+        "id": 770,
+        "usages": 1
+    },
+    "Rangiroa": {
+        "id": 771,
+        "usages": 1
+    },
+    "R\u0101": {
+        "id": 772,
+        "usages": 5
+    },
+    "R\u0101horoi": {
+        "id": 773,
+        "usages": 1
+    },
+    "R\u0101rangi": {
+        "id": 774,
+        "usages": 3
+    },
+    "R\u0101t\u016b": {
+        "id": 775,
+        "usages": 1
+    },
+    "Reo": {
+        "id": 776,
+        "usages": 27
+    },
+    "Rehua": {
+        "id": 777,
+        "usages": 1
+    },
+    "Rimatara": {
+        "id": 778,
+        "usages": 1
+    },
+    "Rino": {
+        "id": 779,
+        "usages": 1
+    },
+    "Rotorua": {
+        "id": 780,
+        "usages": 4
+    },
+    "Rotuma": {
+        "id": 781,
+        "usages": 2
+    },
+    "Rongorongo": {
+        "id": 782,
+        "usages": 1
+    },
+    "R\u014dp\u016b": {
+        "id": 783,
+        "usages": 4
+    },
+    "R\u014dwhenua": {
+        "id": 784,
+        "usages": 1
+    },
+    "Ruhia": {
+        "id": 785,
+        "usages": 1
+    },
+    "Runa": {
+        "id": 786,
+        "usages": 1
+    },
+    "Rurutu": {
+        "id": 787,
+        "usages": 1
+    },
+    "Runga": {
+        "id": 788,
+        "usages": 4
+    },
+    "R\u016bhia": {
+        "id": 789,
+        "usages": 1
+    },
+    "rau": {
+        "id": 790,
+        "usages": 4
+    },
+    "raua": {
+        "id": 791,
+        "usages": 2
+    },
+    "rauriki": {
+        "id": 792,
+        "usages": 2
+    },
+    "rautai": {
+        "id": 793,
+        "usages": 1
+    },
+    "rautau": {
+        "id": 794,
+        "usages": 8
+    },
+    "rahi": {
+        "id": 795,
+        "usages": 8
+    },
+    "rahinga": {
+        "id": 796,
+        "usages": 2
+    },
+    "rakau": {
+        "id": 797,
+        "usages": 2
+    },
+    "raki": {
+        "id": 798,
+        "usages": 6
+    },
+    "raro": {
+        "id": 799,
+        "usages": 10
+    },
+    "raruraru": {
+        "id": 800,
+        "usages": 2
+    },
+    "ratou": {
+        "id": 801,
+        "usages": 26
+    },
+    "rawa": {
+        "id": 802,
+        "usages": 15
+    },
+    "rawatia": {
+        "id": 803,
+        "usages": 1
+    },
+    "ranga": {
+        "id": 804,
+        "usages": 1
+    },
+    "rangahau": {
+        "id": 805,
+        "usages": 5
+    },
+    "rangatira": {
+        "id": 806,
+        "usages": 8
+    },
+    "rangi": {
+        "id": 807,
+        "usages": 25
+    },
+    "rangitoto": {
+        "id": 808,
+        "usages": 1
+    },
+    "rangona": {
+        "id": 809,
+        "usages": 3
+    },
+    "rawhiti": {
+        "id": 810,
+        "usages": 1
+    },
+    "r\u0101": {
+        "id": 811,
+        "usages": 24
+    },
+    "r\u0101kau": {
+        "id": 812,
+        "usages": 1
+    },
+    "r\u0101nei": {
+        "id": 813,
+        "usages": 35
+    },
+    "r\u0101rangatia": {
+        "id": 814,
+        "usages": 1
+    },
+    "r\u0101rangi": {
+        "id": 815,
+        "usages": 8
+    },
+    "r\u0101tou": {
+        "id": 816,
+        "usages": 10
+    },
+    "r\u0101whiti": {
+        "id": 817,
+        "usages": 5
+    },
+    "reiuru": {
+        "id": 818,
+        "usages": 2
+    },
+    "reira": {
+        "id": 819,
+        "usages": 12
+    },
+    "reo": {
+        "id": 820,
+        "usages": 127
+    },
+    "reorua": {
+        "id": 821,
+        "usages": 1
+    },
+    "rere": {
+        "id": 822,
+        "usages": 4
+    },
+    "rerek\u0113": {
+        "id": 823,
+        "usages": 3
+    },
+    "rerek\u0113tanga": {
+        "id": 824,
+        "usages": 2
+    },
+    "rererangi": {
+        "id": 825,
+        "usages": 1
+    },
+    "rerenga": {
+        "id": 826,
+        "usages": 4
+    },
+    "r\u0113wena": {
+        "id": 827,
+        "usages": 1
+    },
+    "rima": {
+        "id": 828,
+        "usages": 1
+    },
+    "ripanga": {
+        "id": 829,
+        "usages": 2
+    },
+    "riri": {
+        "id": 830,
+        "usages": 4
+    },
+    "riro": {
+        "id": 831,
+        "usages": 9
+    },
+    "ritenga": {
+        "id": 832,
+        "usages": 2
+    },
+    "r\u012bpeka": {
+        "id": 833,
+        "usages": 1
+    },
+    "r\u012briki": {
+        "id": 834,
+        "usages": 1
+    },
+    "roa": {
+        "id": 835,
+        "usages": 5
+    },
+    "roanga": {
+        "id": 836,
+        "usages": 2
+    },
+    "roopu": {
+        "id": 837,
+        "usages": 5
+    },
+    "rohe": {
+        "id": 838,
+        "usages": 1
+    },
+    "rorohiko": {
+        "id": 839,
+        "usages": 1
+    },
+    "roto": {
+        "id": 840,
+        "usages": 16
+    },
+    "rongo": {
+        "id": 841,
+        "usages": 2
+    },
+    "rongohia": {
+        "id": 842,
+        "usages": 1
+    },
+    "rongonui": {
+        "id": 843,
+        "usages": 1
+    },
+    "r\u014dp\u016b": {
+        "id": 844,
+        "usages": 1
+    },
+    "rua": {
+        "id": 845,
+        "usages": 12
+    },
+    "ruarua": {
+        "id": 846,
+        "usages": 1
+    },
+    "ruatoru": {
+        "id": 847,
+        "usages": 1
+    },
+    "rumaki": {
+        "id": 848,
+        "usages": 1
+    },
+    "runga": {
+        "id": 849,
+        "usages": 20
+    },
+    "r\u016bmaki": {
+        "id": 850,
+        "usages": 1
+    },
+    "Tainui": {
+        "id": 851,
+        "usages": 4
+    },
+    "Taiwana": {
+        "id": 852,
+        "usages": 1
+    },
+    "Taone": {
+        "id": 853,
+        "usages": 1
+    },
+    "Taonga": {
+        "id": 854,
+        "usages": 4
+    },
+    "Taura": {
+        "id": 855,
+        "usages": 9
+    },
+    "Tauranga": {
+        "id": 856,
+        "usages": 4
+    },
+    "Tautohe": {
+        "id": 857,
+        "usages": 1
+    },
+    "Taha": {
+        "id": 858,
+        "usages": 1
+    },
+    "Tahiti": {
+        "id": 859,
+        "usages": 23
+    },
+    "Tahitinui": {
+        "id": 860,
+        "usages": 1
+    },
+    "Tahu": {
+        "id": 861,
+        "usages": 1
+    },
+    "Tahuata": {
+        "id": 862,
+        "usages": 1
+    },
+    "Taki": {
+        "id": 863,
+        "usages": 3
+    },
+    "Takiw\u0101": {
+        "id": 864,
+        "usages": 1
+    },
+    "Tamatoa": {
+        "id": 865,
+        "usages": 3
+    },
+    "Tapu": {
+        "id": 866,
+        "usages": 6
+    },
+    "Tapuae": {
+        "id": 867,
+        "usages": 1
+    },
+    "Taputaopuatea": {
+        "id": 868,
+        "usages": 1
+    },
+    "Taputapu": {
+        "id": 869,
+        "usages": 3
+    },
+    "Taputapuatea": {
+        "id": 870,
+        "usages": 26
+    },
+    "Taraipiunara": {
+        "id": 871,
+        "usages": 1
+    },
+    "Tari": {
+        "id": 872,
+        "usages": 1
+    },
+    "Tangaaroa": {
+        "id": 873,
+        "usages": 1
+    },
+    "Tangata": {
+        "id": 874,
+        "usages": 2
+    },
+    "Tangihanga": {
+        "id": 875,
+        "usages": 1
+    },
+    "Tawhito": {
+        "id": 876,
+        "usages": 1
+    },
+    "T\u0101one": {
+        "id": 877,
+        "usages": 3
+    },
+    "T\u0101huhu": {
+        "id": 878,
+        "usages": 1
+    },
+    "T\u0101maki": {
+        "id": 879,
+        "usages": 2
+    },
+    "T\u0101mati": {
+        "id": 880,
+        "usages": 1
+    },
+    "T\u0101mihana": {
+        "id": 881,
+        "usages": 1
+    },
+    "T\u0101whana": {
+        "id": 882,
+        "usages": 2
+    },
+    "Te": {
+        "id": 883,
+        "usages": 81
+    },
+    "Teuira": {
+        "id": 884,
+        "usages": 2
+    },
+    "Tekau": {
+        "id": 885,
+        "usages": 4
+    },
+    "Temaru": {
+        "id": 886,
+        "usages": 3
+    },
+    "Tena": {
+        "id": 887,
+        "usages": 3
+    },
+    "Tenei": {
+        "id": 888,
+        "usages": 1
+    },
+    "Tereroa": {
+        "id": 889,
+        "usages": 1
+    },
+    "Teriaroa": {
+        "id": 890,
+        "usages": 1
+    },
+    "Tetuaapua": {
+        "id": 891,
+        "usages": 2
+    },
+    "T\u0113n\u0101": {
+        "id": 892,
+        "usages": 7
+    },
+    "T\u0113r\u0101": {
+        "id": 893,
+        "usages": 2
+    },
+    "Tiakina": {
+        "id": 894,
+        "usages": 3
+    },
+    "Tiamana": {
+        "id": 895,
+        "usages": 1
+    },
+    "Tika": {
+        "id": 896,
+        "usages": 1
+    },
+    "Tikanga": {
+        "id": 897,
+        "usages": 11
+    },
+    "Timi": {
+        "id": 898,
+        "usages": 1
+    },
+    "Tino": {
+        "id": 899,
+        "usages": 1
+    },
+    "Tireni": {
+        "id": 900,
+        "usages": 1
+    },
+    "Tiri": {
+        "id": 901,
+        "usages": 1
+    },
+    "Tiriti": {
+        "id": 902,
+        "usages": 4
+    },
+    "Tirohia": {
+        "id": 903,
+        "usages": 4
+    },
+    "Tiwha": {
+        "id": 904,
+        "usages": 1
+    },
+    "Tiwho": {
+        "id": 905,
+        "usages": 2
+    },
+    "T\u012b": {
+        "id": 906,
+        "usages": 2
+    },
+    "T\u012bmata": {
+        "id": 907,
+        "usages": 1
+    },
+    "T\u012brani": {
+        "id": 908,
+        "usages": 1
+    },
+    "T\u012breni": {
+        "id": 909,
+        "usages": 1
+    },
+    "Toi": {
+        "id": 910,
+        "usages": 1
+    },
+    "Toia": {
+        "id": 911,
+        "usages": 1
+    },
+    "Tohu": {
+        "id": 912,
+        "usages": 1
+    },
+    "Tohutoro": {
+        "id": 913,
+        "usages": 2
+    },
+    "Tohunga": {
+        "id": 914,
+        "usages": 2
+    },
+    "Tokipona": {
+        "id": 915,
+        "usages": 1
+    },
+    "Tomokanga": {
+        "id": 916,
+        "usages": 2
+    },
+    "Torangap\u016b": {
+        "id": 917,
+        "usages": 1
+    },
+    "Totara": {
+        "id": 918,
+        "usages": 4
+    },
+    "Tonga": {
+        "id": 919,
+        "usages": 3
+    },
+    "T\u014d": {
+        "id": 920,
+        "usages": 1
+    },
+    "T\u014drangap\u016b": {
+        "id": 921,
+        "usages": 1
+    },
+    "Tuamotu": {
+        "id": 922,
+        "usages": 8
+    },
+    "Tuaruatanga": {
+        "id": 923,
+        "usages": 1
+    },
+    "Tuatahi": {
+        "id": 924,
+        "usages": 1
+    },
+    "Tuhaere": {
+        "id": 925,
+        "usages": 1
+    },
+    "Tuheitia": {
+        "id": 926,
+        "usages": 1
+    },
+    "Tuhia": {
+        "id": 927,
+        "usages": 2
+    },
+    "Tumu": {
+        "id": 928,
+        "usages": 5
+    },
+    "Tumuaki": {
+        "id": 929,
+        "usages": 2
+    },
+    "Tupaea": {
+        "id": 930,
+        "usages": 2
+    },
+    "Tupuna": {
+        "id": 931,
+        "usages": 2
+    },
+    "Ture": {
+        "id": 932,
+        "usages": 1
+    },
+    "Tuwharetoa": {
+        "id": 933,
+        "usages": 2
+    },
+    "tae": {
+        "id": 934,
+        "usages": 15
+    },
+    "taea": {
+        "id": 935,
+        "usages": 10
+    },
+    "taenga": {
+        "id": 936,
+        "usages": 3
+    },
+    "taiuru": {
+        "id": 937,
+        "usages": 1
+    },
+    "taikaha": {
+        "id": 938,
+        "usages": 1
+    },
+    "taikanga": {
+        "id": 939,
+        "usages": 1
+    },
+    "taima": {
+        "id": 940,
+        "usages": 1
+    },
+    "taina": {
+        "id": 941,
+        "usages": 1
+    },
+    "tairawhiti": {
+        "id": 942,
+        "usages": 1
+    },
+    "taitara": {
+        "id": 943,
+        "usages": 1
+    },
+    "taiwhenua": {
+        "id": 944,
+        "usages": 7
+    },
+    "taone": {
+        "id": 945,
+        "usages": 2
+    },
+    "taonga": {
+        "id": 946,
+        "usages": 1
+    },
+    "taua": {
+        "id": 947,
+        "usages": 17
+    },
+    "tauira": {
+        "id": 948,
+        "usages": 6
+    },
+    "taumata": {
+        "id": 949,
+        "usages": 2
+    },
+    "taupori": {
+        "id": 950,
+        "usages": 2
+    },
+    "tautau\u0101": {
+        "id": 951,
+        "usages": 1
+    },
+    "tautapa": {
+        "id": 952,
+        "usages": 1
+    },
+    "tautohe": {
+        "id": 953,
+        "usages": 3
+    },
+    "tautoko": {
+        "id": 954,
+        "usages": 7
+    },
+    "tautokohia": {
+        "id": 955,
+        "usages": 2
+    },
+    "tauwehe": {
+        "id": 956,
+        "usages": 1
+    },
+    "taha": {
+        "id": 957,
+        "usages": 3
+    },
+    "tahatai": {
+        "id": 958,
+        "usages": 2
+    },
+    "tahi": {
+        "id": 959,
+        "usages": 3
+    },
+    "tahito": {
+        "id": 960,
+        "usages": 3
+    },
+    "tahu": {
+        "id": 961,
+        "usages": 2
+    },
+    "tahua": {
+        "id": 962,
+        "usages": 2
+    },
+    "tahuri": {
+        "id": 963,
+        "usages": 2
+    },
+    "taka": {
+        "id": 964,
+        "usages": 2
+    },
+    "takariri": {
+        "id": 965,
+        "usages": 1
+    },
+    "takanga": {
+        "id": 966,
+        "usages": 1
+    },
+    "takiwa": {
+        "id": 967,
+        "usages": 3
+    },
+    "takiw\u0101": {
+        "id": 968,
+        "usages": 5
+    },
+    "takoto": {
+        "id": 969,
+        "usages": 1
+    },
+    "takotoria": {
+        "id": 970,
+        "usages": 1
+    },
+    "tamau": {
+        "id": 971,
+        "usages": 1
+    },
+    "tamaua": {
+        "id": 972,
+        "usages": 1
+    },
+    "tamanu": {
+        "id": 973,
+        "usages": 2
+    },
+    "tamariki": {
+        "id": 974,
+        "usages": 2
+    },
+    "tana": {
+        "id": 975,
+        "usages": 5
+    },
+    "tapa": {
+        "id": 976,
+        "usages": 2
+    },
+    "tapaina": {
+        "id": 977,
+        "usages": 2
+    },
+    "tapako": {
+        "id": 978,
+        "usages": 1
+    },
+    "tapiana": {
+        "id": 979,
+        "usages": 1
+    },
+    "tapina": {
+        "id": 980,
+        "usages": 2
+    },
+    "tapu": {
+        "id": 981,
+        "usages": 23
+    },
+    "tapua": {
+        "id": 982,
+        "usages": 1
+    },
+    "tapuranga": {
+        "id": 983,
+        "usages": 1
+    },
+    "taro": {
+        "id": 984,
+        "usages": 1
+    },
+    "tatau": {
+        "id": 985,
+        "usages": 1
+    },
+    "tatauranga": {
+        "id": 986,
+        "usages": 1
+    },
+    "tatou": {
+        "id": 987,
+        "usages": 4
+    },
+    "tat\u016bngia": {
+        "id": 988,
+        "usages": 1
+    },
+    "tawahi": {
+        "id": 989,
+        "usages": 1
+    },
+    "tangata": {
+        "id": 990,
+        "usages": 58
+    },
+    "tangi": {
+        "id": 991,
+        "usages": 5
+    },
+    "tanguru": {
+        "id": 992,
+        "usages": 25
+    },
+    "tawhiti": {
+        "id": 993,
+        "usages": 3
+    },
+    "tawhito": {
+        "id": 994,
+        "usages": 3
+    },
+    "t\u0101": {
+        "id": 995,
+        "usages": 5
+    },
+    "t\u0101ia": {
+        "id": 996,
+        "usages": 3
+    },
+    "t\u0101one": {
+        "id": 997,
+        "usages": 7
+    },
+    "t\u0101karo": {
+        "id": 998,
+        "usages": 1
+    },
+    "t\u0101na": {
+        "id": 999,
+        "usages": 2
+    },
+    "t\u0101tea": {
+        "id": 1000,
+        "usages": 20
+    },
+    "t\u0101tou": {
+        "id": 1001,
+        "usages": 9
+    },
+    "t\u0101w\u0101hi": {
+        "id": 1002,
+        "usages": 1
+    },
+    "t\u0101ngata": {
+        "id": 1003,
+        "usages": 8
+    },
+    "te": {
+        "id": 1004,
+        "usages": 864
+    },
+    "tei": {
+        "id": 1005,
+        "usages": 1
+    },
+    "teia": {
+        "id": 1006,
+        "usages": 1
+    },
+    "teie": {
+        "id": 1007,
+        "usages": 6
+    },
+    "teitei": {
+        "id": 1008,
+        "usages": 3
+    },
+    "tekau": {
+        "id": 1009,
+        "usages": 4
+    },
+    "tenei": {
+        "id": 1010,
+        "usages": 12
+    },
+    "tere": {
+        "id": 1011,
+        "usages": 3
+    },
+    "tetehi": {
+        "id": 1012,
+        "usages": 17
+    },
+    "t\u0113n\u0101": {
+        "id": 1013,
+        "usages": 4
+    },
+    "t\u0113nei": {
+        "id": 1014,
+        "usages": 53
+    },
+    "t\u0113r\u0101": {
+        "id": 1015,
+        "usages": 8
+    },
+    "t\u0113tahi": {
+        "id": 1016,
+        "usages": 39
+    },
+    "t\u0113tehi": {
+        "id": 1017,
+        "usages": 1
+    },
+    "tiakina": {
+        "id": 1018,
+        "usages": 1
+    },
+    "tihi": {
+        "id": 1019,
+        "usages": 1
+    },
+    "tika": {
+        "id": 1020,
+        "usages": 3
+    },
+    "tikanga": {
+        "id": 1021,
+        "usages": 14
+    },
+    "tikangatia": {
+        "id": 1022,
+        "usages": 1
+    },
+    "tikinare": {
+        "id": 1023,
+        "usages": 1
+    },
+    "timata": {
+        "id": 1024,
+        "usages": 3
+    },
+    "timatanga": {
+        "id": 1025,
+        "usages": 1
+    },
+    "timu": {
+        "id": 1026,
+        "usages": 1
+    },
+    "tinana": {
+        "id": 1027,
+        "usages": 1
+    },
+    "tino": {
+        "id": 1028,
+        "usages": 10
+    },
+    "tipua": {
+        "id": 1029,
+        "usages": 3
+    },
+    "tira": {
+        "id": 1030,
+        "usages": 1
+    },
+    "tirohanga": {
+        "id": 1031,
+        "usages": 1
+    },
+    "titia": {
+        "id": 1032,
+        "usages": 1
+    },
+    "titiro": {
+        "id": 1033,
+        "usages": 2
+    },
+    "tiwho": {
+        "id": 1034,
+        "usages": 4
+    },
+    "t\u012bmata": {
+        "id": 1035,
+        "usages": 4
+    },
+    "t\u012bmatanga": {
+        "id": 1036,
+        "usages": 1
+    },
+    "toa": {
+        "id": 1037,
+        "usages": 1
+    },
+    "toha": {
+        "id": 1038,
+        "usages": 1
+    },
+    "tohatoha": {
+        "id": 1039,
+        "usages": 1
+    },
+    "tohu": {
+        "id": 1040,
+        "usages": 47
+    },
+    "tohua": {
+        "id": 1041,
+        "usages": 1
+    },
+    "tohut\u014d": {
+        "id": 1042,
+        "usages": 4
+    },
+    "tohunga": {
+        "id": 1043,
+        "usages": 10
+    },
+    "tokerau": {
+        "id": 1044,
+        "usages": 1
+    },
+    "toki": {
+        "id": 1045,
+        "usages": 1
+    },
+    "tokipona": {
+        "id": 1046,
+        "usages": 1
+    },
+    "tokomaha": {
+        "id": 1047,
+        "usages": 3
+    },
+    "tokorua": {
+        "id": 1048,
+        "usages": 1
+    },
+    "tokotoko": {
+        "id": 1049,
+        "usages": 1
+    },
+    "tokotoru": {
+        "id": 1050,
+        "usages": 1
+    },
+    "tomo": {
+        "id": 1051,
+        "usages": 1
+    },
+    "tona": {
+        "id": 1052,
+        "usages": 14
+    },
+    "tono": {
+        "id": 1053,
+        "usages": 8
+    },
+    "tonu": {
+        "id": 1054,
+        "usages": 31
+    },
+    "tonutanga": {
+        "id": 1055,
+        "usages": 1
+    },
+    "tonutia": {
+        "id": 1056,
+        "usages": 2
+    },
+    "topito": {
+        "id": 1057,
+        "usages": 1
+    },
+    "torangapu": {
+        "id": 1058,
+        "usages": 1
+    },
+    "torangap\u016btia": {
+        "id": 1059,
+        "usages": 1
+    },
+    "toro": {
+        "id": 1060,
+        "usages": 1
+    },
+    "toru": {
+        "id": 1061,
+        "usages": 4
+    },
+    "toto": {
+        "id": 1062,
+        "usages": 1
+    },
+    "tonga": {
+        "id": 1063,
+        "usages": 4
+    },
+    "t\u014d": {
+        "id": 1064,
+        "usages": 16
+    },
+    "t\u014dku": {
+        "id": 1065,
+        "usages": 1
+    },
+    "t\u014dna": {
+        "id": 1066,
+        "usages": 11
+    },
+    "t\u014drangap\u016b": {
+        "id": 1067,
+        "usages": 4
+    },
+    "tua": {
+        "id": 1068,
+        "usages": 1
+    },
+    "tuahu": {
+        "id": 1069,
+        "usages": 3
+    },
+    "tuari": {
+        "id": 1070,
+        "usages": 1
+    },
+    "tuarua": {
+        "id": 1071,
+        "usages": 2
+    },
+    "tuatahi": {
+        "id": 1072,
+        "usages": 8
+    },
+    "tuatahitia": {
+        "id": 1073,
+        "usages": 1
+    },
+    "tuatoru": {
+        "id": 1074,
+        "usages": 1
+    },
+    "tuawh\u0101": {
+        "id": 1075,
+        "usages": 1
+    },
+    "tuawhitu": {
+        "id": 1076,
+        "usages": 1
+    },
+    "tuhi": {
+        "id": 1077,
+        "usages": 2
+    },
+    "tuhia": {
+        "id": 1078,
+        "usages": 4
+    },
+    "tuhip\u0101nui": {
+        "id": 1079,
+        "usages": 6
+    },
+    "tuhituhi": {
+        "id": 1080,
+        "usages": 5
+    },
+    "tukino": {
+        "id": 1081,
+        "usages": 1
+    },
+    "tukinotia": {
+        "id": 1082,
+        "usages": 1
+    },
+    "tuku": {
+        "id": 1083,
+        "usages": 4
+    },
+    "tukuna": {
+        "id": 1084,
+        "usages": 2
+    },
+    "tumanako": {
+        "id": 1085,
+        "usages": 1
+    },
+    "tumu": {
+        "id": 1086,
+        "usages": 1
+    },
+    "tumuaki": {
+        "id": 1087,
+        "usages": 1
+    },
+    "tumu\u0101k\u012b": {
+        "id": 1088,
+        "usages": 1
+    },
+    "tupou": {
+        "id": 1089,
+        "usages": 1
+    },
+    "tupono": {
+        "id": 1090,
+        "usages": 1
+    },
+    "tupu": {
+        "id": 1091,
+        "usages": 1
+    },
+    "tupuna": {
+        "id": 1092,
+        "usages": 1
+    },
+    "turanga": {
+        "id": 1093,
+        "usages": 1
+    },
+    "ture": {
+        "id": 1094,
+        "usages": 8
+    },
+    "turi": {
+        "id": 1095,
+        "usages": 8
+    },
+    "tutahi": {
+        "id": 1096,
+        "usages": 1
+    },
+    "tutuki": {
+        "id": 1097,
+        "usages": 2
+    },
+    "t\u016b": {
+        "id": 1098,
+        "usages": 9
+    },
+    "t\u016b\u0101hua": {
+        "id": 1099,
+        "usages": 1
+    },
+    "t\u016bh\u0101h\u0101": {
+        "id": 1100,
+        "usages": 1
+    },
+    "t\u016bmautanga": {
+        "id": 1101,
+        "usages": 1
+    },
+    "t\u016bmanako": {
+        "id": 1102,
+        "usages": 1
+    },
+    "t\u016bmomo": {
+        "id": 1103,
+        "usages": 1
+    },
+    "t\u016bpato": {
+        "id": 1104,
+        "usages": 1
+    },
+    "t\u016bpuna": {
+        "id": 1105,
+        "usages": 4
+    },
+    "t\u016branga": {
+        "id": 1106,
+        "usages": 7
+    },
+    "t\u016bturu": {
+        "id": 1107,
+        "usages": 5
+    },
+    "t\u016bnga": {
+        "id": 1108,
+        "usages": 1
+    },
+    "Wai": {
+        "id": 1109,
+        "usages": 3
+    },
+    "Waikato": {
+        "id": 1110,
+        "usages": 5
+    },
+    "Waimemehatanga": {
+        "id": 1111,
+        "usages": 1
+    },
+    "Wairua": {
+        "id": 1112,
+        "usages": 1
+    },
+    "Waitangi": {
+        "id": 1113,
+        "usages": 4
+    },
+    "Waitohu": {
+        "id": 1114,
+        "usages": 4
+    },
+    "Wahi": {
+        "id": 1115,
+        "usages": 4
+    },
+    "Waka": {
+        "id": 1116,
+        "usages": 6
+    },
+    "W\u0101": {
+        "id": 1117,
+        "usages": 1
+    },
+    "W\u0101hine": {
+        "id": 1118,
+        "usages": 1
+    },
+    "Wehe": {
+        "id": 1119,
+        "usages": 1
+    },
+    "Wikimania": {
+        "id": 1120,
+        "usages": 4
+    },
+    "Wikiperia": {
+        "id": 1121,
+        "usages": 2
+    },
+    "Wikipikia": {
+        "id": 1122,
+        "usages": 1
+    },
+    "Wikipiria": {
+        "id": 1123,
+        "usages": 1
+    },
+    "Wiremu": {
+        "id": 1124,
+        "usages": 2
+    },
+    "Wiwi": {
+        "id": 1125,
+        "usages": 1
+    },
+    "W\u012bw\u012b": {
+        "id": 1126,
+        "usages": 26
+    },
+    "wae": {
+        "id": 1127,
+        "usages": 3
+    },
+    "waenganui": {
+        "id": 1128,
+        "usages": 5
+    },
+    "wai": {
+        "id": 1129,
+        "usages": 12
+    },
+    "waiho": {
+        "id": 1130,
+        "usages": 2
+    },
+    "waimemehatanga": {
+        "id": 1131,
+        "usages": 1
+    },
+    "wairua": {
+        "id": 1132,
+        "usages": 7
+    },
+    "waitohu": {
+        "id": 1133,
+        "usages": 2
+    },
+    "waha": {
+        "id": 1134,
+        "usages": 1
+    },
+    "wahi": {
+        "id": 1135,
+        "usages": 3
+    },
+    "wahine": {
+        "id": 1136,
+        "usages": 1
+    },
+    "waho": {
+        "id": 1137,
+        "usages": 5
+    },
+    "waka": {
+        "id": 1138,
+        "usages": 13
+    },
+    "wareware": {
+        "id": 1139,
+        "usages": 1
+    },
+    "waru": {
+        "id": 1140,
+        "usages": 1
+    },
+    "w\u0101": {
+        "id": 1141,
+        "usages": 26
+    },
+    "w\u0101hanga": {
+        "id": 1142,
+        "usages": 4
+    },
+    "w\u0101hi": {
+        "id": 1143,
+        "usages": 13
+    },
+    "w\u0101hine": {
+        "id": 1144,
+        "usages": 1
+    },
+    "w\u0101nanga": {
+        "id": 1145,
+        "usages": 1
+    },
+    "w\u0101pu": {
+        "id": 1146,
+        "usages": 1
+    },
+    "w\u0101tea": {
+        "id": 1147,
+        "usages": 4
+    },
+    "w\u0101teatanga": {
+        "id": 1148,
+        "usages": 1
+    },
+    "wehe": {
+        "id": 1149,
+        "usages": 5
+    },
+    "weheruatia": {
+        "id": 1150,
+        "usages": 1
+    },
+    "wehuriatia": {
+        "id": 1151,
+        "usages": 1
+    },
+    "weta": {
+        "id": 1152,
+        "usages": 1
+    },
+    "wetereo": {
+        "id": 1153,
+        "usages": 2
+    },
+    "Nga": {
+        "id": 1154,
+        "usages": 7
+    },
+    "Ngai": {
+        "id": 1155,
+        "usages": 1
+    },
+    "Ngata": {
+        "id": 1156,
+        "usages": 2
+    },
+    "Ngati": {
+        "id": 1157,
+        "usages": 2
+    },
+    "Ng\u0101": {
+        "id": 1158,
+        "usages": 11
+    },
+    "nga": {
+        "id": 1159,
+        "usages": 121
+    },
+    "ngakau": {
+        "id": 1160,
+        "usages": 1
+    },
+    "ngarau": {
+        "id": 1161,
+        "usages": 2
+    },
+    "ngaro": {
+        "id": 1162,
+        "usages": 3
+    },
+    "ngata": {
+        "id": 1163,
+        "usages": 1
+    },
+    "ng\u0101": {
+        "id": 1164,
+        "usages": 170
+    },
+    "ng\u0101kau": {
+        "id": 1165,
+        "usages": 1
+    },
+    "ng\u0113tehi": {
+        "id": 1166,
+        "usages": 2
+    },
+    "Whauwhau": {
+        "id": 1167,
+        "usages": 1
+    },
+    "Whakaahua": {
+        "id": 1168,
+        "usages": 1
+    },
+    "Whakaakoranga": {
+        "id": 1169,
+        "usages": 4
+    },
+    "Whakaata": {
+        "id": 1170,
+        "usages": 3
+    },
+    "Whakakori": {
+        "id": 1171,
+        "usages": 3
+    },
+    "Whakakotahi": {
+        "id": 1172,
+        "usages": 1
+    },
+    "Whakamana": {
+        "id": 1173,
+        "usages": 4
+    },
+    "Whakamutunga": {
+        "id": 1174,
+        "usages": 2
+    },
+    "Whakap\u0101": {
+        "id": 1175,
+        "usages": 1
+    },
+    "Whakapehitanga": {
+        "id": 1176,
+        "usages": 1
+    },
+    "Whakapono": {
+        "id": 1177,
+        "usages": 3
+    },
+    "Whakatau": {
+        "id": 1178,
+        "usages": 1
+    },
+    "Whakat\u016bpato": {
+        "id": 1179,
+        "usages": 1
+    },
+    "Whanau": {
+        "id": 1180,
+        "usages": 4
+    },
+    "Whanga": {
+        "id": 1181,
+        "usages": 2
+    },
+    "Whanganui": {
+        "id": 1182,
+        "usages": 4
+    },
+    "Wh\u0101nautanga": {
+        "id": 1183,
+        "usages": 2
+    },
+    "Wh\u0101nui": {
+        "id": 1184,
+        "usages": 4
+    },
+    "Whenua": {
+        "id": 1185,
+        "usages": 9
+    },
+    "Whiri": {
+        "id": 1186,
+        "usages": 9
+    },
+    "Whiringa": {
+        "id": 1187,
+        "usages": 11
+    },
+    "Whironui": {
+        "id": 1188,
+        "usages": 1
+    },
+    "Whirotetupua": {
+        "id": 1189,
+        "usages": 1
+    },
+    "Whiti": {
+        "id": 1190,
+        "usages": 1
+    },
+    "Whoatu": {
+        "id": 1191,
+        "usages": 1
+    },
+    "wha": {
+        "id": 1192,
+        "usages": 1
+    },
+    "whai": {
+        "id": 1193,
+        "usages": 10
+    },
+    "whaihua": {
+        "id": 1194,
+        "usages": 1
+    },
+    "whaimana": {
+        "id": 1195,
+        "usages": 1
+    },
+    "whairawa": {
+        "id": 1196,
+        "usages": 1
+    },
+    "whakaae": {
+        "id": 1197,
+        "usages": 4
+    },
+    "whakaaetia": {
+        "id": 1198,
+        "usages": 1
+    },
+    "whakaahua": {
+        "id": 1199,
+        "usages": 3
+    },
+    "whakaahuatia": {
+        "id": 1200,
+        "usages": 1
+    },
+    "whakaakoranga": {
+        "id": 1201,
+        "usages": 1
+    },
+    "whakaaro": {
+        "id": 1202,
+        "usages": 21
+    },
+    "whakaatu": {
+        "id": 1203,
+        "usages": 5
+    },
+    "whakaawe": {
+        "id": 1204,
+        "usages": 1
+    },
+    "whakairia": {
+        "id": 1205,
+        "usages": 1
+    },
+    "whakairo": {
+        "id": 1206,
+        "usages": 1
+    },
+    "whakaiti": {
+        "id": 1207,
+        "usages": 2
+    },
+    "whakaoho": {
+        "id": 1208,
+        "usages": 1
+    },
+    "whakaora": {
+        "id": 1209,
+        "usages": 2
+    },
+    "whakaoratanga": {
+        "id": 1210,
+        "usages": 1
+    },
+    "whakaoranga": {
+        "id": 1211,
+        "usages": 1
+    },
+    "whakaoti": {
+        "id": 1212,
+        "usages": 1
+    },
+    "whakauru": {
+        "id": 1213,
+        "usages": 1
+    },
+    "whakautu": {
+        "id": 1214,
+        "usages": 2
+    },
+    "whaka\u016b": {
+        "id": 1215,
+        "usages": 1
+    },
+    "whakahaere": {
+        "id": 1216,
+        "usages": 2
+    },
+    "whakahaeretia": {
+        "id": 1217,
+        "usages": 1
+    },
+    "whakahau": {
+        "id": 1218,
+        "usages": 1
+    },
+    "whakah\u0113": {
+        "id": 1219,
+        "usages": 3
+    },
+    "whakahinap\u014duri": {
+        "id": 1220,
+        "usages": 1
+    },
+    "whakahirahira": {
+        "id": 1221,
+        "usages": 2
+    },
+    "whakahoutia": {
+        "id": 1222,
+        "usages": 1
+    },
+    "whakahoki": {
+        "id": 1223,
+        "usages": 2
+    },
+    "whakahokinga": {
+        "id": 1224,
+        "usages": 1
+    },
+    "whakahonore": {
+        "id": 1225,
+        "usages": 2
+    },
+    "whakahua": {
+        "id": 1226,
+        "usages": 4
+    },
+    "whakakaha": {
+        "id": 1227,
+        "usages": 1
+    },
+    "whakak\u0101hore": {
+        "id": 1228,
+        "usages": 3
+    },
+    "whakakikokiko": {
+        "id": 1229,
+        "usages": 1
+    },
+    "whakakore": {
+        "id": 1230,
+        "usages": 3
+    },
+    "whakakorea": {
+        "id": 1231,
+        "usages": 1
+    },
+    "whakakorengia": {
+        "id": 1232,
+        "usages": 2
+    },
+    "whakakori": {
+        "id": 1233,
+        "usages": 1
+    },
+    "whakamaoritia": {
+        "id": 1234,
+        "usages": 2
+    },
+    "whakamaua": {
+        "id": 1235,
+        "usages": 1
+    },
+    "whakamaumahara": {
+        "id": 1236,
+        "usages": 1
+    },
+    "whakamaumaharatanga": {
+        "id": 1237,
+        "usages": 1
+    },
+    "whakamahi": {
+        "id": 1238,
+        "usages": 1
+    },
+    "whakamahia": {
+        "id": 1239,
+        "usages": 7
+    },
+    "whakamahinga": {
+        "id": 1240,
+        "usages": 1
+    },
+    "whakamana": {
+        "id": 1241,
+        "usages": 3
+    },
+    "whakamanahia": {
+        "id": 1242,
+        "usages": 1
+    },
+    "whakam\u0101ori": {
+        "id": 1243,
+        "usages": 3
+    },
+    "whakam\u0101oritanga": {
+        "id": 1244,
+        "usages": 2
+    },
+    "whakam\u0101oritia": {
+        "id": 1245,
+        "usages": 2
+    },
+    "whakam\u0101rama": {
+        "id": 1246,
+        "usages": 3
+    },
+    "whakam\u0101ramatanga": {
+        "id": 1247,
+        "usages": 1
+    },
+    "whakam\u0101tautau": {
+        "id": 1248,
+        "usages": 2
+    },
+    "whakamihi": {
+        "id": 1249,
+        "usages": 3
+    },
+    "whakaminemine": {
+        "id": 1250,
+        "usages": 2
+    },
+    "whakaminenga": {
+        "id": 1251,
+        "usages": 2
+    },
+    "whakam\u014dhiotanga": {
+        "id": 1252,
+        "usages": 1
+    },
+    "whakam\u014dt\u012b": {
+        "id": 1253,
+        "usages": 1
+    },
+    "whakamua": {
+        "id": 1254,
+        "usages": 1
+    },
+    "whakamutunga": {
+        "id": 1255,
+        "usages": 1
+    },
+    "whakanui": {
+        "id": 1256,
+        "usages": 4
+    },
+    "whakanuia": {
+        "id": 1257,
+        "usages": 1
+    },
+    "whakapai": {
+        "id": 1258,
+        "usages": 2
+    },
+    "whakapahu": {
+        "id": 1259,
+        "usages": 1
+    },
+    "whakapahupahu": {
+        "id": 1260,
+        "usages": 1
+    },
+    "whakapapa": {
+        "id": 1261,
+        "usages": 1
+    },
+    "whakap\u0101oho": {
+        "id": 1262,
+        "usages": 1
+    },
+    "whakapehi": {
+        "id": 1263,
+        "usages": 1
+    },
+    "whakapono": {
+        "id": 1264,
+        "usages": 4
+    },
+    "whakap\u014dreareatia": {
+        "id": 1265,
+        "usages": 1
+    },
+    "whakapuare": {
+        "id": 1266,
+        "usages": 1
+    },
+    "whakaputa": {
+        "id": 1267,
+        "usages": 1
+    },
+    "whakap\u016bmau": {
+        "id": 1268,
+        "usages": 2
+    },
+    "whakararo": {
+        "id": 1269,
+        "usages": 1
+    },
+    "whakar\u0101rangi": {
+        "id": 1270,
+        "usages": 1
+    },
+    "whakar\u0101rangitia": {
+        "id": 1271,
+        "usages": 1
+    },
+    "whakarerek\u0113": {
+        "id": 1272,
+        "usages": 1
+    },
+    "whakarerek\u0113ngia": {
+        "id": 1273,
+        "usages": 1
+    },
+    "whakaritenga": {
+        "id": 1274,
+        "usages": 1
+    },
+    "whakaroa": {
+        "id": 1275,
+        "usages": 1
+    },
+    "whakarongo": {
+        "id": 1276,
+        "usages": 1
+    },
+    "whakatairanga": {
+        "id": 1277,
+        "usages": 2
+    },
+    "whakatairangatia": {
+        "id": 1278,
+        "usages": 2
+    },
+    "whakatau": {
+        "id": 1279,
+        "usages": 5
+    },
+    "whakatauki": {
+        "id": 1280,
+        "usages": 1
+    },
+    "whakatauk\u012b": {
+        "id": 1281,
+        "usages": 1
+    },
+    "whakatakato": {
+        "id": 1282,
+        "usages": 1
+    },
+    "whakatak\u0113": {
+        "id": 1283,
+        "usages": 1
+    },
+    "whakatakoto": {
+        "id": 1284,
+        "usages": 2
+    },
+    "whakatakotohia": {
+        "id": 1285,
+        "usages": 1
+    },
+    "whakatapu": {
+        "id": 1286,
+        "usages": 1
+    },
+    "whakatapua": {
+        "id": 1287,
+        "usages": 2
+    },
+    "whakater\u0101whiti": {
+        "id": 1288,
+        "usages": 1
+    },
+    "whakatere": {
+        "id": 1289,
+        "usages": 3
+    },
+    "whakatewhatewha": {
+        "id": 1290,
+        "usages": 1
+    },
+    "whakatikatika": {
+        "id": 1291,
+        "usages": 1
+    },
+    "whakaturia": {
+        "id": 1292,
+        "usages": 1
+    },
+    "whakatuwhera": {
+        "id": 1293,
+        "usages": 2
+    },
+    "whakat\u016bhia": {
+        "id": 1294,
+        "usages": 2
+    },
+    "whakat\u016bria": {
+        "id": 1295,
+        "usages": 4
+    },
+    "whakat\u016bwhera": {
+        "id": 1296,
+        "usages": 1
+    },
+    "whakawai": {
+        "id": 1297,
+        "usages": 1
+    },
+    "whakaw\u0101": {
+        "id": 1298,
+        "usages": 1
+    },
+    "whakangahau": {
+        "id": 1299,
+        "usages": 1
+    },
+    "whakang\u0101": {
+        "id": 1300,
+        "usages": 1
+    },
+    "whakawhanauihia": {
+        "id": 1301,
+        "usages": 1
+    },
+    "whakawh\u0101nui": {
+        "id": 1302,
+        "usages": 1
+    },
+    "whakawhiti": {
+        "id": 1303,
+        "usages": 1
+    },
+    "whakawhitiwhiti": {
+        "id": 1304,
+        "usages": 1
+    },
+    "whakawhiwhia": {
+        "id": 1305,
+        "usages": 35
+    },
+    "whanaunga": {
+        "id": 1306,
+        "usages": 3
+    },
+    "whanaketanga": {
+        "id": 1307,
+        "usages": 1
+    },
+    "whanuitia": {
+        "id": 1308,
+        "usages": 1
+    },
+    "whareherehere": {
+        "id": 1309,
+        "usages": 1
+    },
+    "wharekai": {
+        "id": 1310,
+        "usages": 1
+    },
+    "wharite": {
+        "id": 1311,
+        "usages": 1
+    },
+    "whawhai": {
+        "id": 1312,
+        "usages": 1
+    },
+    "wh\u0101": {
+        "id": 1313,
+        "usages": 2
+    },
+    "wh\u0101ia": {
+        "id": 1314,
+        "usages": 1
+    },
+    "wh\u0101nau": {
+        "id": 1315,
+        "usages": 5
+    },
+    "wh\u0101nui": {
+        "id": 1316,
+        "usages": 6
+    },
+    "wh\u0101nuitia": {
+        "id": 1317,
+        "usages": 1
+    },
+    "wh\u0101rangi": {
+        "id": 1318,
+        "usages": 12
+    },
+    "wh\u0101wh\u0101": {
+        "id": 1319,
+        "usages": 28
+    },
+    "whea": {
+        "id": 1320,
+        "usages": 1
+    },
+    "wheketere": {
+        "id": 1321,
+        "usages": 1
+    },
+    "whenua": {
+        "id": 1322,
+        "usages": 33
+    },
+    "wherori": {
+        "id": 1323,
+        "usages": 1
+    },
+    "whetu": {
+        "id": 1324,
+        "usages": 1
+    },
+    "whirinaki": {
+        "id": 1325,
+        "usages": 1
+    },
+    "whiti": {
+        "id": 1326,
+        "usages": 2
+    },
+    "whitu": {
+        "id": 1327,
+        "usages": 3
+    },
+    "whiwhi": {
+        "id": 1328,
+        "usages": 2
+    }
+}
