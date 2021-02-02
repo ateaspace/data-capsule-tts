@@ -80,3 +80,7 @@ When installing MYSQL from [here](https://github.com/ateaspace/data-capsule-tts/
 
 #### Cleaning the database (After step 2.2)
 MaryTTS still struggles to *properly* clean up the database correctly in step 2.2, due to this we built [this tool](https://github.com/ateaspace/data-capsule-tts/blob/master/marytts-complete/mysql_cleanup/word_cleaner.py) which should be run after step 2.2 has completed. Simply follow the prompts shown and you should be good to continue installation
+
+#### Running the featuremaker (Before step 5)
+MaryTTS  will attempt to create sentences n such out of your database text, however, you should [run this script](https://github.com/ateaspace/data-capsule-tts/blob/master/marytts-complete/mysql_cleanup/FeatureMakerCleaner.py) first in order to clean out the excessive 'web code' (Html, css, js, etc) that gets caught up in the database.
+
