@@ -77,3 +77,6 @@ MaryTTS requires you run MYSQL 5.7, this version is no longer easily obtainable 
 `MYSQLHOST=localhost` should become `MYSQLHOST=localhost:6606`
 
 When installing MYSQL from [here](https://github.com/ateaspace/data-capsule-tts/tree/master/mysql-complete) please take note to change the `MYSQL_USER` setting to `mary` and `MYSQL_ROOT_PASSWORD` to `wiki123`
+
+#### Cleaning the database (After step 2.2)
+MaryTTS still struggles to *properly* clean up the database correctly in step 2.2, due to this we built [this tool](https://github.com/ateaspace/data-capsule-tts/blob/master/marytts-complete/mysql_cleanup/word_cleaner.py) which should be run after step 2.2 has completed. Simply follow the prompts shown and you should be good to continue installation
