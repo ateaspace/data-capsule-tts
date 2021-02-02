@@ -84,3 +84,5 @@ MaryTTS still struggles to *properly* clean up the database correctly in step 2.
 #### Running the featuremaker (Before step 5)
 MaryTTS  will attempt to create sentences n such out of your database text, however, you should [run this script](https://github.com/ateaspace/data-capsule-tts/blob/master/marytts-complete/mysql_cleanup/FeatureMakerCleaner.py) first in order to clean out the excessive 'web code' (Html, css, js, etc) that gets caught up in the database.
 
+#### Database Selection (After step 6)
+[This script](https://github.com/ateaspace/data-capsule-tts/blob/master/marytts-complete/mysql_cleanup/DatabaseSelection.py) aims to do what step 6 *should do*. This script will transfer the the correct database tables over so the following steps actually work.
