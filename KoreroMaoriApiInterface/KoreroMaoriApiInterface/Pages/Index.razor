@@ -1,0 +1,49 @@
+﻿@page "/"
+@using KoreroMaoriApiInterface.Models;
+@using Refit;
+@using System.IO;
+@using System.Threading;
+@inject IKoreroMaoriApi KoreroMaoriApi;
+
+<h1>Transcribe File</h1>
+
+This endpoint will attempt to transcribe an audio file containing spoken reo Maori.
+
+<br />
+<br />
+<TranscriptionRequestView OnValidSubmit="OnValidRequestSubmit" />
+
+@if (Result is not null)
+{
+    <br />
+    <TranscriptionResultView Result="@Result" />
+}
+
+@code {
+    private CancellationTokenSource _cts;
+
+    public TranscriptionResult Result;
+
+    protected override void OnInitialized()
+    {
+        _cts = new CancellationTokenSource();
+    }
+
+    private async Task OnValidRequestSubmit(TranscriptionRequest request, CancellationToken token)
+    {
+        using Stream audioData = request.File.OpenReadStream(request.File.Size, token);
+        StreamPart fileStreamPart = new StreamPart(audioData, request.File.Name);
+        TranscriptionResult res = await KoreroMaoriApi.Transcribe(fileStreamPart, token).ConfigureAwait(false);
+
+        await InvokeAsync(() =>
+        {
+            Result = res;
+            StateHasChanged();
+        });
+    }
+
+    public void Dispose()
+    {
+        _cts.Cancel();
+    }
+}
