@@ -1,4 +1,4 @@
-# Korero Maori - Old API
+# Korero Maori - API
 
 **URL:** https://asr.koreromaori.io/
 
