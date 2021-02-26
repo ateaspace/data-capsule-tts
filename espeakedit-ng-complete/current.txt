@@ -1,0 +1,53 @@
+Current Status: Building espeakedit-ng
+
+GTK+ build issue - fails to generate gdk/gdkresources.c due to symbol lookup error: undefined symbol: g_task_set_name
+=====
+Resolution: point compiler towards x86_64 libraries
+=====
+
+GDK-PIXBUF build issue - Fails to load and parse external entity "http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl"
+=====
+Possible bandaid fix - disable man page building
+
++ make, cmake m4, autoconf, automake, libtool, pkg-config zlib, python3, meson, ninja -> failed, needs glib
++ libffi, glib -> failure, needs image handling libraries
++ libpng, libjpeg, libtiff -> failure, needs shared-mime-info
++ libxml, itstool, xmlto, shared-mime-info -> failed
+- xmlto -> success
+
+Conclusion: xmlto is causing issues
+Speculative fix: Remove xmlto from the build pipeline, as shared-mime-info is the only package that depends on it
+Status: Partial fix. Works on some builds and not others. Using bandaid fix
+=====
+
+DBUS build issue
+=====
+Debug steps: Cumulatively add in packages from the pipeline until we get a build failure
+
++ make, m4, autoconf, automake, libtool, python3 -> failure, python needs zlib
++ zlib -> success
++ python2, python3 -> success
++ openssl -> success
++ libxml -> success
++ itstool, xmlto -> failure, build issue hit
+- xmlto -> success
+
+Conclusion: xmlto is causing issues
+Speculative fix: Place xmlto in custom prefix
+Status: Resolved
+=====
+
+
+Note from shared-mime-info:
+====
+Note that '/Scratch/cs260/source/data-capsule-tts/espeakedit-ng-complete/linux/share' is not in the search path
+set by the XDG_DATA_HOME and XDG_DATA_DIRS
+environment variables, so applications may not
+be able to find it until you set them. The
+directories currently searched are:
+
+- /home/cs260/.local/share
+- /usr/local/share
+- /usr/share
+- /var/lib/snapd/desktop
+=====

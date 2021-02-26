@@ -289,7 +289,6 @@ opt_run_configure()
     fi
 }
 
-
 opt_run_perl_configure()
 {
   local force_config=$1; shift

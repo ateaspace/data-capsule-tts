@@ -1,0 +1,10 @@
+# Ignore the install directory
+linux/
+
+# Ignore untarred files, but keep the archives and make scripts
+packages/*
+!packages/*.tar.*
+!packages/*.zip
+!packages/CASCADE-MAKE-SCRIPTS/
+!packages/*.sh
+
