@@ -1,5 +1,7 @@
 # eSpeak NG - Complete Package Setup
 
+Includes `mi-espeak-ng`, a version of eSpeak-NG modified to better support te reo Maori.
+
 This package contains a standalone collection of libraries and packages required to run the [eSpeak NG](https://github.com/espeak-ng/espeak-ng) program. The latest revision is setup to run **version 1.50** of eSpeak NG.
 
 This package builds eSpeak NG to use `PulseAudio` as the audio output engine.
@@ -24,6 +26,18 @@ Now the `espeak` command will be on your path, as long as you remain in the same
 source setup.bash
 espeak ...
 ```
+
+### Running
+
+Having sourced `setup.bash` as per [Setup](#Setup), use the following command to run eSpeak and pipe the output to your computer speakers.
+
+```
+espeak -v mi "text to speak"
+```
+
+- Add the `-w "file"` flag to output the audio to a WAV file instead.
+- Use the `-f "text file"` flag to read the input text from a text file instead.
+- Use the `--stdin` flag to read the input text from standard in instead.
 
 ### Dependency Tree
 

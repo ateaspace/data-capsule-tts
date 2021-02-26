@@ -12,7 +12,7 @@ An API token and dashboard account can be activated by contacting the Korero Mao
 
 It is important to note that the majority of the API is broken. Hence, the possibly HTTP actions and routes that could be used actually serve no purpose, and are not documented here given that it is already deprecated.
 
-The API can transcribe up to 10s of audio (when using `?method=stream`, see below).
+The API can transcribe up to 10s of audio (when using `?method=stream`, see below). This can be lengthened depending on use case by contacting the API administrators.
 
 #### Authorization
 
