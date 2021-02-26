@@ -1,0 +1,37 @@
+﻿@page "/transcribewithmetadata"
+@using KoreroMaoriApiInterface.Models;
+@using Refit;
+@using System.IO;
+@using System.Threading;
+@inject IKoreroMaoriApi KoreroMaoriApi;
+
+<h1>Transcribe File with Metadata</h1>
+
+This endpoint will attempt to transcribe an audio file containing spoken reo Maori. Additional metadata concerning information about the transcription of individual characters is included.
+
+<br />
+<br />
+<TranscriptionRequestView OnValidSubmit="OnValidRequestSubmit" />
+
+@if (Result is not null)
+{
+    <br />
+    <TranscriptionWithMetadataResultView Result="@Result" />
+}
+
+@code {
+    public TranscriptionWithMetadataResult Result;
+
+    private async Task OnValidRequestSubmit(TranscriptionRequest request, CancellationToken token)
+    {
+        using Stream audioData = request.File.OpenReadStream(request.File.Size, token);
+        StreamPart fileStreamPart = new StreamPart(audioData, request.File.Name);
+        TranscriptionWithMetadataResult res = await KoreroMaoriApi.TranscribeWithMetadata(fileStreamPart, token).ConfigureAwait(false);
+
+        await InvokeAsync(() =>
+        {
+            Result = res;
+            StateHasChanged();
+        });
+    }
+}

@@ -1,0 +1,35 @@
+﻿@using KoreroMaoriApiInterface.Models;
+
+<div class="card">
+    <div class="card-body">
+        @if (Result.Success)
+        {
+            <div class="alert alert-success">Transcription Succeeded!</div>
+
+            <br />
+            <FileDownload ButtonText="Download Transcription (.txt)" FileName="transcription" ContentType="text/plain" ConstructFile="ConstructTranscriptionFile" />
+
+            <p>
+                <strong>Transcription:</strong> @Result.Transcription<br />
+                <strong>Log:</strong> @Result.Log<br />
+                <strong>Model Version:</strong> @Result.ModelVersion
+            </p>
+        }
+        else
+        {
+            <div class="alert alert-warning">Transcription Failed!</div>
+        }
+    </div>
+</div>
+
+@code {
+    private string _alertClass => Result is not null && Result.Success ? "alert-success" : "alert-danger";
+
+    [Parameter]
+    public TranscriptionResult Result { get; set; }
+
+    public byte[] ConstructTranscriptionFile()
+    {
+        return System.Text.Encoding.UTF8.GetBytes(Result.Transcription);
+    }
+}

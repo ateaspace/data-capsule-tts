@@ -1,0 +1,74 @@
+﻿@using CsvHelper;
+@using KoreroMaoriApiInterface.Models;
+@using System.Globalization;
+@using System.IO;
+
+<div class="card">
+    <div class="card-body">
+        @if (Result.Success)
+        {
+            <div class="alert alert-success">Transcription Succeeded!</div>
+
+            <FileDownload ButtonText="Download Transcription (.txt)" FileName="transcription.txt" ContentType="text/plain" ConstructFile="ConstructTranscriptionFile" />
+            <br />
+            <br />
+            <FileDownload ButtonText="Download Metadata (.csv)" FileName="metadata.csv" ContentType="text/csv" ConstructFile="ConstructMetadataFile" />
+
+            <br />
+            <br />
+            <p>
+                <strong>Transcription:</strong> @Result.Transcription<br />
+                <strong>Log:</strong> @Result.Log<br />
+                <strong>Model Version:</strong> @Result.ModelVersion
+            </p>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Character</th>
+                        <th scope="col">Start Time</th>
+                        <th scope="col">Confidence</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (TranscriptionMetadata m in Result.Metadata)
+                    {
+                        <tr>
+                            <th scope="row">@m.Character</th>
+                            <th>@m.StartTime</th>
+                            <th>@m.Confidence</th>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <div class="alert alert-warning">Transcription Failed!</div>
+        }
+    </div>
+</div>
+
+@code {
+    private string _alertClass => Result is not null && Result.Success ? "alert-success" : "alert-danger";
+
+    [Parameter]
+    public TranscriptionWithMetadataResult Result { get; set; }
+
+    public byte[] ConstructTranscriptionFile()
+    {
+        return System.Text.Encoding.UTF8.GetBytes(Result.Transcription);
+    }
+
+    public byte[] ConstructMetadataFile()
+    {
+        using MemoryStream ms = new MemoryStream();
+        using StreamWriter sw = new StreamWriter(ms);
+        using CsvWriter cw = new CsvWriter(sw, CultureInfo.InvariantCulture);
+
+        cw.WriteRecords(Result.Metadata);
+        cw.Flush();
+
+        return ms.GetBuffer();
+    }
+}

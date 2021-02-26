@@ -1,0 +1,33 @@
+﻿@inject IJSRuntime JSRuntime
+
+<button class="btn btn-primary" @onclick="StartDownload">@ButtonText</button>
+
+@code {
+    [Parameter]
+    public string ButtonText { get; set; }
+
+    [Parameter]
+    public string FileName { get; set; }
+
+    [Parameter]
+    public string ContentType { get; set; }
+
+    [Parameter]
+    public Func<byte[]> ConstructFile { get; set; }
+
+    public async Task StartDownload()
+    {
+        byte[] fileData = ConstructFile.Invoke();
+
+        // Check if the IJSRuntime is the WebAssembly implementation of the JSRuntime
+        if (JSRuntime is IJSUnmarshalledRuntime webAssemblyJSRuntime)
+        {
+            webAssemblyJSRuntime.InvokeUnmarshalled<string, string, byte[], bool>("BlazorDownloadFileFast", FileName, ContentType, fileData);
+        }
+        else
+        {
+            // Fall back to the slow method if not in WebAssembly
+            await JSRuntime.InvokeVoidAsync("BlazorDownloadFile", FileName, ContentType, fileData);
+        }
+    }
+}
